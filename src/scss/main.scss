@@ -1,0 +1,21 @@
+// Main SCSS file - import all your styles here
+
+// Load setup once - this forwards variables to all files below
+@use 'setup' as *;
+
+// Use base styles (variables available via setup)
+@use 'base';
+
+// Use components (variables available via setup)
+@use 'components/header';
+@use 'components/footer';
+@use 'components/buttons';
+
+// Use sections (variables available via setup)
+@use 'sections/collection-list';
+@use 'sections/banner';
+@use 'sections/marquee-slider';
+@use 'sections/rich-text';
+
+// Use utilities (variables available via setup)
+@use 'utilities';

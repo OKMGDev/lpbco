@@ -1,0 +1,48 @@
+.marquee-slider {
+  background-color: #6FBAAE;
+  padding: 2rem 0px;
+  position: relative;
+  z-index: 12;
+  top: -50%;
+  transform: translateY(-50%) rotate(1.4deg);
+
+  .marquee-swiper {
+    overflow: hidden;
+    width: 100%;
+
+    .swiper-wrapper {
+      width: 100%;
+      transition-timing-function: linear !important;
+
+      .swiper-slide {
+        width: auto;
+
+        .marquee-slide {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          white-space: nowrap;
+
+          .marquee-icon {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 4rem;
+              height: 4rem;
+              object-fit: contain;
+            }
+          }
+
+          .marquee-text {
+            color: white;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+}

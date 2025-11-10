@@ -1,0 +1,12 @@
+// Header component styles
+// This will be used in main.scss
+
+// Use setup to get variables (setup forwards variables, so they're loaded once)
+@use '../setup' as *;
+
+.header {
+  // Your header styles here
+  // Example:
+  // padding: $spacing-md;
+  // background-color: $color-night-sky;
+}

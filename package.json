@@ -1,0 +1,14 @@
+{
+  "name": "lpbc-shopify-theme",
+  "version": "1.0.0",
+  "description": "Long Point Brewing Co Shopify Theme",
+  "scripts": {
+    "sass": "sass src/scss:assets --watch --no-source-map",
+    "sass:build": "sass src/scss:assets --style=compressed --no-source-map",
+    "sass:dev": "sass src/scss:assets --watch --style=expanded --source-map"
+  },
+  "devDependencies": {
+    "sass": "^1.77.0"
+  }
+}
+

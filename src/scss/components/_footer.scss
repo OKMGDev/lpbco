@@ -1,0 +1,181 @@
+// Footer component styles
+
+// Use setup to get variables (setup forwards variables, so they're loaded once)
+@use '../setup' as *;
+// Use base to get mixins
+@use '../base' as *;
+
+footer.footer {
+  background-color: $color-sand;
+  color: #6F6F6F;
+
+
+  .footer__content-top {
+    padding-top: 4.4rem;
+    padding-bottom: 4.4rem;
+
+
+    .footer__main-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2.4rem;
+
+      @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+        gap: 2.4rem;
+      }
+
+      .footer__main-content-left {
+        max-width: 34.3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @media (max-width: $breakpoint-mobile) {
+          max-width: 100%;
+        }
+
+        h4 {
+          @include fs_24;
+          color: inherit;
+          margin-bottom: 3.2rem;
+
+          @media (max-width: $breakpoint-mobile) {
+            margin-bottom: 2rem;
+          }
+
+        }
+
+        p {
+          @include fs_14;
+          color: inherit;
+          font-family: $font-family-public-sans;
+          margin: 0px;
+        }
+
+        .footer__social {
+          ul {
+            justify-content: flex-start;
+            gap: 1.6rem;
+
+            a {
+              padding: 0px;
+            }
+          }
+        }
+      }
+
+      .footer__logo {
+        @media (max-width: $breakpoint-mobile) {
+          max-width: 12.1rem;
+          width: 100%;
+        }
+      }
+
+      .footer__main-content-right {
+        max-width: 34.3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        @media (max-width: $breakpoint-mobile) {
+          max-width: 100%;
+        }
+
+        .footer__quick-links {
+          h2 {
+            @include fs_24;
+            color: inherit;
+            margin-bottom: 3.2rem;
+
+            @media (max-width: $breakpoint-mobile) {
+              margin-bottom: 2rem;
+            }
+          }
+
+          ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.6rem;
+
+            @media (max-width: $breakpoint-mobile) {
+              gap: 1rem;
+            }
+
+            li {
+              line-height: 1.2;
+
+
+              a {
+                @include fs_14;
+                color: inherit;
+                text-transform: uppercase;
+                font-weight: 400;
+                text-transform: uppercase;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer__content-bottom {
+    padding-top: 2.5rem;
+    padding-bottom: 5.5rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      padding-left: calc(4rem / var(--font-body-scale));
+      padding-right: calc(4rem / var(--font-body-scale));
+    }
+
+    .footer__content-bottom-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2.4rem;
+
+      @media (max-width: $breakpoint-mobile) {
+        gap: 1.6rem;
+      }
+
+      .footer__copyright {
+        margin: 0px;
+        line-height: 1.2;
+
+        small {
+          color: #6F6F6F;
+          font-family: $font-family-public-sans;
+          font-weight: 400;
+          @include fs_12;
+        }
+      }
+
+      ul.footer__terms-menu {
+
+        display: flex;
+        gap: 1.6rem;
+
+        li {
+          line-height: 1.2;
+          padding-left: 1.6rem;
+          border-left: 1px solid #6F6F6F;
+          display: flex;
+
+          &:first-child {
+            padding-left: 0px;
+            border-left: none;
+          }
+
+          a {
+            @include fs_12;
+            font-family: $font-family-public-sans;
+          }
+        }
+
+      }
+    }
+  }
+}

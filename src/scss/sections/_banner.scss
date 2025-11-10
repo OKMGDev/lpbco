@@ -1,0 +1,26 @@
+.banner {
+  padding-top: 103px;
+  position: relative;
+
+  .banner__content {
+    min-height: calc(100vh - 103px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .banner__box {
+      text-align: center;
+      color: white;
+
+      h1 {
+        color: inherit;
+      }
+
+      .banner__buttons {
+        margin-top: 3.2rem;
+
+      }
+    }
+  }
+}

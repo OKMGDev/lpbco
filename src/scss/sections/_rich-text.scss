@@ -1,0 +1,89 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+
+.rich-text-section {
+  color: #373737;
+
+  .rich-text__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .rich-text__title {
+    @include heading_h4;
+
+    &.rich-text__title--bigger {
+      @include heading_h1;
+      line-height: 1.1em !important;
+      padding-right: 0.1em;
+      transform: rotate(-2deg);
+      position: relative;
+      justify-self: center;
+      align-self: center;
+      text-align: left;
+      background-position: bottom right;
+      background-size: 1.3em auto;
+      background-repeat: no-repeat;
+      background-image: url('https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Group_3_1.svg?v=1762759938');
+      margin-bottom: 0.2em;
+    }
+  }
+
+  .rich-text__subtitle {
+    @include fs_32;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .rich-text__textbox {
+    @include fs_24;
+    color: $color-text-light;
+  }
+
+  .rich-text__buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rich-text__image-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-height: 20rem;
+    max-width: 20rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+
+  .rich-text__image-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    max-height: 20rem;
+    max-width: 20rem;
+    z-index: 1;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: right;
+  }
+}
