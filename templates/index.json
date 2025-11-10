@@ -9,28 +9,21 @@
  */
 {
   "sections": {
-    "rich_text_AwDKcw": {
-      "type": "rich-text",
+    "image_banner_LqbUq6": {
+      "type": "image-banner",
       "blocks": {
-        "heading_RNfxxF": {
+        "heading_B4JPPX": {
           "type": "heading",
           "settings": {
-            "heading": "Talk about your brand",
-            "heading_size": "h1"
+            "heading": "Born IN <span class=\"text-bg\">KENNEDY BAY.</span><br>MADE for <span class=\"text-bg blue\">THE COAST.</span>"
           }
         },
-        "text_iiWjnG": {
-          "type": "text",
+        "buttons_K7MYzN": {
+          "type": "buttons",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
-          }
-        },
-        "button_reCUCR": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
+            "button_label_1": "Book A Table",
+            "button_link_1": "https://www.longpointbrewingco.com.au/",
+            "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
             "button_style_secondary_2": false
@@ -38,22 +31,139 @@
         }
       },
       "block_order": [
-        "heading_RNfxxF",
-        "text_iiWjnG",
-        "button_reCUCR"
+        "heading_B4JPPX",
+        "buttons_K7MYzN"
       ],
-      "name": "t:sections.rich-text.presets.name",
+      "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
+        "background_image": "shopify://shop_images/68a64ad274359784d6b2d02a5cae201183ab57f8.jpg",
+        "overlay_opacity": 40,
+        "banner_type": "homepage"
+      }
+    },
+    "marqee_slider_aGitdy": {
+      "type": "marqee-slider",
+      "blocks": {
+        "slide_VeFtXd": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_25.svg",
+            "text": "Great Beer"
+          }
+        },
+        "slide_tnHCxi": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_23.svg",
+            "text": "Fresh Food"
+          }
+        },
+        "slide_xjJjiE": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_24.svg",
+            "text": "Live events"
+          }
+        },
+        "slide_QNhtD7": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Group_62.svg",
+            "text": "Good Times"
+          }
+        }
+      },
+      "block_order": [
+        "slide_VeFtXd",
+        "slide_tnHCxi",
+        "slide_xjJjiE",
+        "slide_QNhtD7"
+      ],
+      "name": "Marquee Slider",
+      "settings": {}
+    },
+    "rich_text_PLYgyE": {
+      "type": "rich-text",
+      "blocks": {
+        "title_thy496": {
+          "type": "title",
+          "settings": {
+            "title": "YOUR NEW<br>\n<span class=\"text-bg blue\">LOCAL</span>",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_UWCe7X": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
+          }
+        },
+        "textbox_KT77mX": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+          }
+        },
+        "button_8ny7xf": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "See what’s on",
+            "button_link_1": "shopify://pages/events",
+            "button_label_2": "View Location",
+            "button_link_2": "shopify://pages/locations"
+          }
+        }
+      },
+      "block_order": [
+        "title_thy496",
+        "subtitle_UWCe7X",
+        "textbox_KT77mX",
+        "button_8ny7xf"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_iaWN6j": {
+      "type": "rich-text",
+      "blocks": {
+        "title_jkmhD6": {
+          "type": "title",
+          "settings": {
+            "title": "Beer tastes <span class=\"text-bg blue\">better</span> when it’s brewed with  <span class=\"text-bg green\">care</span>.",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_YrKNU8": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>At Long Point Brewing Co., we take looking after our patch of coastline seriously. We’re lucky enough to call the Kennedy Bay foreshore home — an environment shaped by the ancient Beecher Dune Formation, a system of coastal limestone ridges and dunes that have been sculpted over thousands of years by wind, waves, and shifting sands. Nestled here is one of WA’s rare Threatened Ecological Communities, home to unique plants and wildlife that deserve to be celebrated and protected.</p><p>So, while we’re in the business of brewing beer and serving good food, we’re also in the business of being good neighbours to our environment.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_jkmhD6",
+        "textbox_YrKNU8"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "image_top_left": "shopify://shop_images/Vector_26.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_27_f628fb05-da13-4edc-823c-a710dd78cd9e.svg",
+        "padding_top": 100,
+        "padding_bottom": 84
       }
     }
   },
   "order": [
-    "rich_text_AwDKcw"
+    "image_banner_LqbUq6",
+    "marqee_slider_aGitdy",
+    "rich_text_PLYgyE",
+    "rich_text_iaWN6j"
   ]
 }
