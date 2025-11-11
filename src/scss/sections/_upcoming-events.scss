@@ -1,0 +1,263 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.upcoming-events-section {
+  .upcoming-events__title {
+    @include heading_h3;
+    text-align: center;
+    margin-bottom: 5rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .upcoming-events-swiper {
+    position: relative;
+
+
+    .swiper-button-prev {
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .swiper-button-next {
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      transform: translateY(-50%);
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+  }
+
+}
+
+.upcoming-events__card {
+  width: 100%;
+  display: flex;
+
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
+
+  .upcoming-events__image {
+    width: 40%;
+    max-width: 55rem;
+    aspect-ratio: 1/1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .upcoming-events__image-overlay {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .upcoming-events__content {
+    padding: 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-grow: 1;
+
+    @media (max-width: $breakpoint-tablet) {
+      padding: 4rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1.5rem;
+    }
+
+
+
+    .upcoming-events__content-inner {
+      position: relative;
+      z-index: 2;
+      background-color: #F9AD8E;
+      padding: 4rem;
+      padding-right: 20%;
+      color: white;
+      flex-grow: 1;
+
+      @media (max-width: $breakpoint-mobile) {
+        padding: 2rem;
+      }
+
+      .upcoming-events__badge {
+        position: absolute;
+        top: 4rem;
+        right: 4rem;
+        max-width: 20%;
+        width: 116px;
+        height: 175px;
+
+        object-fit: contain;
+        z-index: 1;
+
+        @media (max-width: $breakpoint-mobile) {
+          top: 1rem;
+          max-width: 30%;
+          right: 1rem;
+          width: 50px;
+          height: 75px;
+        }
+      }
+
+      .upcoming-events__event-title {
+        font-size: 5.2rem;
+        line-height: 1.1em;
+        margin-bottom: 2rem;
+        color: white;
+        max-width: 80%;
+
+        @media (max-width: $breakpoint-tablet) {
+          font-size: 4.2rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 3rem;
+        }
+      }
+
+      .upcoming-events__dates {
+        margin-bottom: 3rem;
+        @include fs_32;
+        transform: uppercase;
+
+        @media (max-width: $breakpoint-mobile) {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      .upcoming-events__details {
+        @include fs_20;
+      }
+
+      a {
+
+        margin-top: 2rem;
+        transform: rotate(2deg);
+
+        @media (max-width: $breakpoint-mobile) {
+          margin-top: 1.5rem;
+          margin-bottom: 1rem;
+        }
+      }
+
+    }
+
+    .icon-top-left {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .icon-middle-left {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    .icon-bottom-left {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 9rem;
+      height: 9rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .icon-bottom-center {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 12rem;
+      height: 12rem;
+      object-fit: cover;
+      z-index: 1;
+
+    }
+
+    .icon-bottom-right {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10rem;
+      height: 15rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .icon-moddle-right {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      width: 15rem;
+      height: 15rem;
+      object-fit: cover;
+      z-index: 1;
+      transform: translateY(-50%);
+    }
+
+    .icon-top-center {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+
+  }
+}

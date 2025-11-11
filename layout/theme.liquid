@@ -22,6 +22,9 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
@@ -48,6 +51,47 @@
     %}
 
     {% style %}
+      /* Highway Gothic Font Faces */
+      @font-face {
+        font-family: 'Highway Gothic';
+        src: url('{{ 'fonts/highway-gothic.TTF' | asset_url }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Highway Gothic Narrow';
+        src: url('{{ 'fonts/highway-gothic-narrow.TTF' | asset_url }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Highway Gothic Condensed';
+        src: url('{{ 'fonts/highway-gothic-condensed.TTF' | asset_url }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Highway Gothic Wide';
+        src: url('{{ 'fonts/highway-gothic-wide.TTF' | asset_url }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: 'Highway Gothic Expanded';
+        src: url('{{ 'fonts/highway-gothic-expanded.TTF' | asset_url }}') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
       {{ body_font_italic | font_face: font_display: 'swap' }}

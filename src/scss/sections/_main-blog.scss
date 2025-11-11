@@ -1,0 +1,128 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.main-blog-section {
+  position: relative;
+  color: white;
+
+  .main-blog__image-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30rem; // 30rem
+    height: 30rem;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+
+  .main-blog__image-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30rem;
+    height: 30rem;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right;
+    }
+  }
+
+  .main-blog__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+
+    .main-blog__title {
+      @include heading_h3;
+      text-align: center;
+      color: inherit;
+    }
+
+    .main-blog__textbox {
+      @include fs_24;
+      text-align: center;
+      margin-bottom: 2.4rem;
+      color: inherit;
+    }
+
+    .main-blog__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3.2rem;
+
+      @media (max-width: $breakpoint-tablet) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .main-blog__article {}
+    }
+
+  }
+}
+
+.card--standard>.card__content {
+  .card__information {
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+
+    .caption-with-letter-spacing {
+      @include fs_12;
+      margin-bottom: 0.8rem;
+      color: inherit;
+      opacity: 0.5;
+    }
+
+    h3 {
+      @include heading_h5;
+      margin-bottom: 0.5rem;
+      color: inherit;
+      font-family: $font-family-narrow;
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 3.6rem;
+      }
+
+      @media (max-width: $breakpoint-xs) {
+        font-size: 2.8rem;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    p.article-card__excerpt {
+      @include fs_18;
+      opacity: 0.7;
+
+    }
+  }
+}

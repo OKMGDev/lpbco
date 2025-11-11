@@ -18,6 +18,13 @@ a.button {
   line-height: 1em;
   transition: 0.3s ease;
 
+  @media (max-width: $breakpoint-mobile) {
+    padding: 1rem 2rem;
+    min-width: calc(12rem + var(--buttons-border-width) * 2);
+    min-height: calc(4.5rem + var(--buttons-border-width) * 2);
+    font-size: 1.4rem;
+  }
+
   &:hover {
     background-color: $color-night-sky;
   }
@@ -25,6 +32,16 @@ a.button {
   &.button--orange {
     color: $color-night-sky;
     background-color: $color-golden-sun;
+
+    &:hover {
+      color: white;
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--white {
+    color: $color-night-sky;
+    background-color: white;
 
     &:hover {
       color: white;

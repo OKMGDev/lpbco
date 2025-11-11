@@ -16,6 +16,9 @@
 @use 'sections/banner';
 @use 'sections/marquee-slider';
 @use 'sections/rich-text';
+@use 'sections/find-us';
+@use 'sections/main-blog';
+@use 'sections/upcoming-events';
 
 // Use utilities (variables available via setup)
 @use 'utilities';

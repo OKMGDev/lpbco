@@ -1,6 +1,3 @@
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-
 <div class="marquee-slider" id="MarqueeSlider-{{ section.id }}">
   <div class="swiper marquee-swiper">
     <div class="swiper-wrapper">
@@ -51,10 +48,17 @@
       allowTouchMove: false,
       freeMode: true,
       freeModeMomentum: false,
+      breakpoints: {
+        1024: {
+          spaceBetween: 20,
+        },
+      },
+      100: {
+        spaceBetween: 20,
+      },
     });
   });
 </script>
-
 
 {% schema %}
 {

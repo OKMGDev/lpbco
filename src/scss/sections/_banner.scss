@@ -1,3 +1,6 @@
+@use '../setup' as *;
+@use '../base' as *;
+
 .banner {
   padding-top: 103px;
   position: relative;
@@ -15,6 +18,10 @@
 
       h1 {
         color: inherit;
+
+        @media (max-width: $breakpoint-xs) {
+          max-width: 275px;
+        }
       }
 
       .banner__buttons {

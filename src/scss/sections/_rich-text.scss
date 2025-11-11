@@ -13,6 +13,8 @@
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    position: relative;
+    z-index: 2;
   }
 
   .rich-text__title {
@@ -32,6 +34,8 @@
       background-repeat: no-repeat;
       background-image: url('https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Group_3_1.svg?v=1762759938');
       margin-bottom: 0.2em;
+
+      @media (max-width: $breakpoint-tablet) {}
     }
   }
 
@@ -53,6 +57,10 @@
     gap: 2.4rem;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.6rem;
+    }
   }
 
   .rich-text__image-top-left {

@@ -1,0 +1,268 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign events_metaobject_type = section.settings.metaobject_type | default: 'events'
+  assign events_metaobject = shop.metaobjects[events_metaobject_type]
+  if events_metaobject != blank
+    assign events = events_metaobject.values
+  else
+    assign events = blank
+  endif
+-%}
+
+<div class="upcoming-events-section section-{{ section.id }}-padding" id="UpcomingEvents-{{ section.id }}">
+  <div class="page-width ">
+    {%- if section.settings.title != blank -%}
+      <h2 class="upcoming-events__title">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+
+    {%- if events != blank and events.size > 0 -%}
+      <div class="upcoming-events__slider-wrapper">
+        <div class="swiper upcoming-events-swiper" id="UpcomingEventsSwiper-{{ section.id }}">
+          <div class="swiper-wrapper">
+            {%- for event in events -%}
+              <div class="swiper-slide">
+                <div
+                  class="upcoming-events__card"
+                  {%- if event.color != blank -%}
+                    style="background-color: {{ event.color }};"
+                  {%- else -%}
+                    style="background-color: #B6DFE9;"
+                  {%- endif -%}
+                >
+                  {%- if event.image != blank -%}
+                    <div class="upcoming-events__image">
+                      <img
+                        src="{{ event.image | image_url: width: 800 }}"
+                        alt="{{ event.title | escape }}"
+                        loading="lazy"
+                        width="{{ event.image.width }}"
+                        height="{{ event.image.height }}"
+                      >
+                      <img
+                        src="{{ 'events-image-overlay.svg' | asset_url }}"
+                        alt="Events Image Overlay"
+                        class="upcoming-events__image-overlay"
+                        width="600"
+                        height="600"
+                      >
+                    </div>
+                  {%- endif -%}
+
+                  <div class="upcoming-events__content">
+                    {% render 'event-card-icons' %}
+                    <div class="upcoming-events__content-inner">
+                      <img
+                        class="upcoming-events__badge"
+                        src="{{'LPBCo-Badge-B 1.png' | asset_url }}"
+                        alt="LPBCo Badge"
+                        width="116"
+                        height="175"
+                      >
+                      {%- if event.title != blank -%}
+                        <h3 class="upcoming-events__event-title">
+                          {{ event.title }}
+                        </h3>
+                      {%- endif -%}
+
+                      {%- if event.start_date != blank or event.end_date != blank -%}
+                        <div class="upcoming-events__dates">
+                          {%- if event.start_date != blank -%}
+                            {%- assign formatted_start_date = event.start_date | date: '%b %d' -%}
+                            <span class="upcoming-events__start-date">{{ formatted_start_date }}</span>
+                          {%- endif -%}
+                          {%- if event.start_date != blank and event.end_date != blank -%}
+                            <span class="upcoming-events__date-separator"> - </span>
+                          {%- endif -%}
+                          {%- if event.end_date != blank -%}
+                            {%- assign formatted_end_date = event.end_date | date: '%b %d' -%}
+                            <span class="upcoming-events__end-date">{{ formatted_end_date }}</span>
+                          {%- endif -%}
+                        </div>
+                      {%- endif -%}
+
+                      {%- if event.details != blank -%}
+                        <div class="upcoming-events__details" data-event-index="{{ forloop.index0 }}">
+                          {%- comment -%} Content will be rendered by JavaScript {%- endcomment -%}
+                        </div>
+                        <script type="application/json" id="event-details-{{ section.id }}-{{ forloop.index0 }}">
+                          {{ event.details }}
+                        </script>
+                      {%- endif -%}
+
+                      {%- if event.link != blank -%}
+                        <a
+                          href="{{ event.link }}"
+                          class="button button--white"
+                        >
+                          {{ event.button_label | default: 'Book your seats' }}
+                        </a>
+                      {%- endif -%}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <div class="swiper-button-prev upcoming-events__nav-prev">
+            {{ 'arrow-prev.svg' | inline_asset_content }}
+          </div>
+          <div class="swiper-button-next upcoming-events__nav-next">
+            {{ 'arrow-next.svg' | inline_asset_content }}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to render richtext JSON to HTML
+    function renderRichtext(node) {
+      if (!node || !node.type) return '';
+
+      let html = '';
+
+      if (node.type === 'text') {
+        return node.value || '';
+      }
+
+      if (node.children && node.children.length > 0) {
+        const childrenHtml = node.children.map((child) => renderRichtext(child)).join('');
+
+        switch (node.type) {
+          case 'root':
+            html = childrenHtml;
+            break;
+          case 'paragraph':
+            html = '<p>' + childrenHtml + '</p>';
+            break;
+          case 'heading':
+            const level = node.level || 1;
+            html = '<h' + level + '>' + childrenHtml + '</h' + level + '>';
+            break;
+          case 'list':
+            const listTag = node.listType === 'ordered' ? 'ol' : 'ul';
+            html = '<' + listTag + '>' + childrenHtml + '</' + listTag + '>';
+            break;
+          case 'list-item':
+            html = '<li>' + childrenHtml + '</li>';
+            break;
+          case 'link':
+            html = '<a href="' + (node.url || '#') + '">' + childrenHtml + '</a>';
+            break;
+          case 'bold':
+            html = '<strong>' + childrenHtml + '</strong>';
+            break;
+          case 'italic':
+            html = '<em>' + childrenHtml + '</em>';
+            break;
+          default:
+            html = childrenHtml;
+        }
+      }
+
+      return html;
+    }
+
+    // Render all richtext fields
+    const richtextElements = document.querySelectorAll('#UpcomingEvents-{{ section.id }} .upcoming-events__details');
+    richtextElements.forEach(function (element) {
+      try {
+        const eventIndex = element.getAttribute('data-event-index');
+        const scriptTag = document.getElementById('event-details-{{ section.id }}-' + eventIndex);
+        if (scriptTag) {
+          const richtextData = JSON.parse(scriptTag.textContent);
+          const html = renderRichtext(richtextData);
+          element.innerHTML = html;
+        }
+      } catch (e) {
+        console.error('Error parsing richtext:', e);
+      }
+    });
+
+    // Initialize Swiper
+    const upcomingEventsSwiper = new Swiper('#UpcomingEventsSwiper-{{ section.id }}', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: false,
+      navigation: {
+        nextEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-next',
+        prevEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-prev',
+      },
+      breakpoints: {
+        750: {
+          slidesPerView: 1,
+          spaceBetween: 30,
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Upcoming Events",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "metaobject_type",
+      "label": "Metaobject type handle",
+      "default": "events",
+      "info": "Enter the handle of your events metaobject type (e.g., 'events')"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Upcoming Events"
+    }
+  ]
+}
+{% endschema %}
