@@ -129,34 +129,94 @@
         "padding_bottom": 100
       }
     },
-    "rich_text_iaWN6j": {
+    "upcoming_events_N7P4Tx": {
+      "type": "upcoming-events",
+      "name": "Upcoming Events",
+      "settings": {
+        "title": "Upcoming at <span class=\"text-bg\">Long Point</span>",
+        "metaobject_type": "events",
+        "padding_top": 100,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_wzWV6e": {
       "type": "rich-text",
       "blocks": {
-        "title_jkmhD6": {
-          "type": "title",
+        "subtitle_dwRBcY": {
+          "type": "subtitle",
           "settings": {
-            "title": "Beer tastes <span class=\"text-bg blue\">better</span> when it’s brewed with  <span class=\"text-bg green\">care</span>.",
-            "title_size": "smaller"
-          }
-        },
-        "textbox_YrKNU8": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>At Long Point Brewing Co., we take looking after our patch of coastline seriously. We’re lucky enough to call the Kennedy Bay foreshore home — an environment shaped by the ancient Beecher Dune Formation, a system of coastal limestone ridges and dunes that have been sculpted over thousands of years by wind, waves, and shifting sands. Nestled here is one of WA’s rare Threatened Ecological Communities, home to unique plants and wildlife that deserve to be celebrated and protected.</p><p>So, while we’re in the business of brewing beer and serving good food, we’re also in the business of being good neighbours to our environment.<br/></p>"
+            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
           }
         }
       },
       "block_order": [
-        "title_jkmhD6",
-        "textbox_YrKNU8"
+        "subtitle_dwRBcY"
       ],
-      "name": "Rich Text",
+      "name": "Insta Label",
       "settings": {
-        "content_max_width": 1000,
-        "image_top_left": "shopify://shop_images/Vector_26.svg",
-        "image_bottom_right": "shopify://shop_images/Vector_27_f628fb05-da13-4edc-823c-a710dd78cd9e.svg",
+        "content_max_width": 930,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "176284026737b77010": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_wKGVVe": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_wKGVVe"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main_blog_gARkQE": {
+      "type": "main-blog",
+      "name": "Main Blog",
+      "settings": {
+        "background_color": "#53bcae",
+        "image_top_left": "shopify://shop_images/Vector_28.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_29.svg",
+        "title": "INSIGHTS FROM OUR BREWHOUSE",
+        "textbox": "",
+        "blog": "insights-1",
+        "button_text": "View all",
+        "button_link": "shopify://blogs/insights-1",
         "padding_top": 100,
-        "padding_bottom": 84
+        "padding_bottom": 100
+      }
+    },
+    "find_us_f6mzeW": {
+      "type": "find-us",
+      "name": "Find Us",
+      "settings": {
+        "background_color": "#4e3e3e",
+        "background_image": "shopify://shop_images/Rectangle_36.jpg",
+        "overlay_image": "shopify://shop_images/Subtract.svg",
+        "title": "Cheers from <span class=\"text-bg \">the Bay</span>",
+        "subtitle": "FIND US:  KENNEDY BAY, WA",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
@@ -164,6 +224,10 @@
     "image_banner_LqbUq6",
     "marqee_slider_aGitdy",
     "rich_text_PLYgyE",
-    "rich_text_iaWN6j"
+    "upcoming_events_N7P4Tx",
+    "rich_text_wzWV6e",
+    "176284026737b77010",
+    "main_blog_gARkQE",
+    "find_us_f6mzeW"
   ]
 }
