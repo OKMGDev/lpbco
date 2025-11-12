@@ -36,11 +36,155 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_4CM8XN": {
+      "type": "rich-text",
+      "blocks": {
+        "title_eLT8Yr": {
+          "type": "title",
+          "settings": {
+            "title": "Locals first, <span class=\"text-bg green\">always.\n</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_mDiDMz": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Long Point Brewing Co. isn’t just plonked on the Kennedy Bay foreshore — we’re born and bred here. Our team grew up along this stretch of coast, played in the local sporting clubs, and still run into old mates at the shops. We’re proudly part of the Rockingham and Peel community, and reckon a brewery is only as strong as the people around it.</p><p>That’s why LPBCo. is more than just a spot for a pint. It’s a place to connect, to celebrate, to start something new. Whether it’s the local footy club’s end-of-season wind-up, a Sunday sesh with the crew, or a brand-new group of mates swapping numbers after trivia night, we love being the backdrop to people coming together.</p>"
+          }
+        },
+        "button_4qHjEn": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_eLT8Yr",
+        "textbox_mDiDMz",
+        "button_4qHjEn"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 900,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_8kYWGr": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_k3UteF": {
+          "type": "title",
+          "settings": {
+            "title": "We’re <span class=\"text-bg blue\">big on:</span>"
+          }
+        },
+        "list_item_qYHiT7": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_44.svg",
+            "title": "",
+            "textbox": "<p>Supporting local sporting clubs and community groups.</p>"
+          }
+        },
+        "list_item_GrXpTA": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_44.svg",
+            "title": "",
+            "textbox": "<p>Hosting events that get people mingling (and dancing).</p>"
+          }
+        },
+        "list_item_dQKK6e": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_44.svg",
+            "title": "",
+            "textbox": "<p>Backing local producers and makers — because their success is our success.</p>"
+          }
+        },
+        "list_item_RMYqRC": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_44.svg",
+            "title": "",
+            "textbox": "<p>Being the kind of venue where anyone feels welcome, from tradies in work boots to grandparents chasing the grandkids around the beer garden.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_k3UteF",
+        "list_item_qYHiT7",
+        "list_item_GrXpTA",
+        "list_item_dQKK6e",
+        "list_item_RMYqRC"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_5931.png",
+        "image_overlay": "shopify://shop_images/Subtract_4.svg",
+        "section_bg_color": "#f0e7d8",
+        "image_top_left": "shopify://shop_images/Vector_42.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_43.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "call_to_action_LwXhpp": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_Yapbq3": {
+          "type": "title",
+          "settings": {
+            "title": "Our promise"
+          }
+        },
+        "textbox_67Vb3W": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Long Point Brewing Co. will always be a place where the community comes first. A place to belong, connect, and forge the next generation of stories, clubs, and traditions.<br/></p>"
+          }
+        },
+        "button_NKc6cy": {
+          "type": "button",
+          "settings": {
+            "button_label": "Get in touch",
+            "button_link": "shopify://pages/contact",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_Yapbq3",
+        "textbox_67Vb3W",
+        "button_NKc6cy"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_5932_1.png",
+        "image_overlay": "shopify://shop_images/Subtract_5.svg",
+        "background_color": "",
+        "card_background_color": "#fbad48",
+        "background_icons_color": "#f68e4e",
+        "inner_background_color": "#f0e7d8",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_community",
-    "main"
+    "main",
+    "rich_text_4CM8XN",
+    "image_with_text_8kYWGr",
+    "call_to_action_LwXhpp"
   ]
 }
-

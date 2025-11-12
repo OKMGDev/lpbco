@@ -9,24 +9,131 @@
  */
 {
   "sections": {
-    "image_banner_sustainability": {
+    "image_banner_wLENEC": {
       "type": "image-banner",
       "blocks": {
-        "heading_sustainability": {
+        "heading_g6wmWK": {
           "type": "heading",
           "settings": {
-            "heading": "Sustainability"
+            "heading": "sustainability"
           }
         }
       },
       "block_order": [
-        "heading_sustainability"
+        "heading_g6wmWK"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "banner_type": "inner-pages"
+      }
+    },
+    "rich_text_VmrEjp": {
+      "type": "rich-text",
+      "blocks": {
+        "title_i47nE3": {
+          "type": "title",
+          "settings": {
+            "title": "Beer tastes <span class=\"text-bg\">better</span> when it’s brewed with <span class=\"text-bg blue\">care.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_i6LzTb": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>At Long Point Brewing Co., we take looking after our patch of coastline seriously. We’re lucky enough to call the <strong>Kennedy Bay foreshore</strong> home — an environment shaped by the ancient <strong>Beecher Dune Formation,</strong> a system of coastal limestone ridges and dunes that have been sculpted over thousands of years by wind, waves, and shifting sands. Nestled here is one of WA’s rare <strong>Threatened Ecological Communities</strong>, home to unique plants and wildlife that deserve to be celebrated and protected.</p><p>So, while we’re in the business of brewing beer and serving good food, we’re also in the business of being good neighbours to our environment.<br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_i47nE3",
+        "textbox_i6LzTb"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "#f9ad8e",
+        "image_top_left": "shopify://shop_images/Vector_26.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_27_f628fb05-da13-4edc-823c-a710dd78cd9e.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_FbCcVc": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_qntByq": {
+          "type": "title",
+          "settings": {
+            "title": "Here’s how we put that into <span class=\"text-bg green\">practice:</span>"
+          }
+        },
+        "list_item_8dKCMc": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_36.svg",
+            "title": "Local first:",
+            "textbox": "<p>Wherever possible, we procure from local suppliers — WA grain, WA hops, WA produce. Supporting local growers and makers means fresher food, better beer, and stronger community ties.</p>"
+          }
+        },
+        "list_item_GB9Agd": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_37.svg",
+            "title": "Brew with purpose:",
+            "textbox": "<p>Spent grain from our brewhouse heads straight to local farms to feed cattle, not landfill.</p>"
+          }
+        },
+        "list_item_QYELda": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_38.svg",
+            "title": "Celebrate produce:",
+            "textbox": "<p>Our menu is built to showcase the region’s best — flame-grilled proteins, fresh greens, and seasonal WA ingredients.</p>"
+          }
+        },
+        "list_item_dKDbT6": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_39.svg",
+            "title": "Energy & water smarts:",
+            "textbox": "<p>We’re working towards solar power and water treatment systems that recycle and reduce waste.</p>"
+          }
+        },
+        "list_item_6yJHdU": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_40.svg",
+            "title": "Minimal plastics:",
+            "textbox": "<p>We’re phasing out single-use plastics wherever we can, favouring reusable, recyclable, and compostable alternatives.</p>"
+          }
+        },
+        "list_item_XGKpJm": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_41.svg",
+            "title": "Protect what’s special:",
+            "textbox": "<p>We recognise we’re operating within a sensitive coastal environment. From the way we manage waste to how we design our landscaping, we’re committed to minimising our footprint on this rare ecological community.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_qntByq",
+        "list_item_8dKCMc",
+        "list_item_GB9Agd",
+        "list_item_QYELda",
+        "list_item_dKDbT6",
+        "list_item_6yJHdU",
+        "list_item_XGKpJm"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "section_bg_color": "#f0e7d8",
+        "image_top_left": "shopify://shop_images/Vector_42.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_43.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "main": {
@@ -36,10 +143,54 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "call_to_action_Uq9E3m": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_dHhrTg": {
+          "type": "title",
+          "settings": {
+            "title": "Bottom line?"
+          }
+        },
+        "textbox_hmhtkC": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We want future generations to enjoy the same sunsets, beaches, and coastal life that inspire our beers today.</p>"
+          }
+        },
+        "button_GMY6C7": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join Our team",
+            "button_link": "shopify://pages/work-with-us",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_dHhrTg",
+        "textbox_hmhtkC",
+        "button_GMY6C7"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_5932.png",
+        "image_overlay": "shopify://shop_images/Subtract_3.svg",
+        "background_color": "",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#53bcae",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
-    "image_banner_sustainability",
-    "main"
+    "image_banner_wLENEC",
+    "rich_text_VmrEjp",
+    "image_with_text_FbCcVc",
+    "main",
+    "call_to_action_Uq9E3m"
   ]
 }

@@ -15,7 +15,7 @@
         "heading_tours": {
           "type": "heading",
           "settings": {
-            "heading": "Tours"
+            "heading": "brewery tours"
           }
         }
       },
@@ -36,11 +36,141 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_WiXfpB": {
+      "type": "rich-text",
+      "blocks": {
+        "title_GygpLb": {
+          "type": "title",
+          "settings": {
+            "title": "Go behind <span class=\"text-bg green\">the tanks.\n</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_pxtBHy": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "EVER WONDERED WHAT GOES INTO YOUR PINT (BESIDES LOVE, HOPS, AND A BIT OF BREWER’S SWEAT)? COME FIND OUT."
+          }
+        },
+        "textbox_hgW4PD": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Join Head Brewer Jackson Purser and the LPBCo. crew for a guided wander through our brewhouse. You’ll learn how our beers go from grain to glass, taste a few along the way, and maybe even pick up enough lingo to impress your mates at the pub.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_GygpLb",
+        "subtitle_pxtBHy",
+        "textbox_hgW4PD"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 860,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Vector_32.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_d6QMfT": {
+      "type": "image-with-text",
+      "blocks": {
+        "list_item_9cDxWD": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_47.svg",
+            "title": "Group size:",
+            "textbox": "<p>Up to 16 legends at a time.</p>"
+          }
+        },
+        "list_item_NtdXRM": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_46.svg",
+            "title": "Includes:",
+            "textbox": "<p>Brewery tour, chat with Jackson & team, guided tastings.</p>"
+          }
+        },
+        "list_item_eVYXmf": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_45.svg",
+            "title": "Good for:",
+            "textbox": "<p>Beer nerds, curious locals, or anyone who just wants to see how the magic happens.</p>"
+          }
+        },
+        "textbox_zKQ73X": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>To book your spot, drop us a line at <a href=\"mailto:hello@longpointbrewingco.com.au\" title=\"mailto:hello@longpointbrewingco.com.au\"><strong>hello@longpointbrewingco.com.au</strong></a></p>",
+            "accent_color": "#53bcae"
+          }
+        }
+      },
+      "block_order": [
+        "list_item_9cDxWD",
+        "list_item_NtdXRM",
+        "list_item_eVYXmf",
+        "textbox_zKQ73X"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_50.png",
+        "image_overlay": "shopify://shop_images/Subtract_6.svg",
+        "section_bg_color": "",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "call_to_action_FzJbzL": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_fCpm6e": {
+          "type": "title",
+          "settings": {
+            "title": "Warning"
+          }
+        },
+        "textbox_t7TiWc": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>You may leave with a newfound respect for yeast (and a stronger urge to hang around the bar).</p>"
+          }
+        },
+        "button_fKdLFW": {
+          "type": "button",
+          "settings": {
+            "button_label": "CONTACT US",
+            "button_link": "shopify://pages/contact",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_fCpm6e",
+        "textbox_t7TiWc",
+        "button_fKdLFW"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_5932.png",
+        "image_overlay": "shopify://shop_images/Subtract_7.svg",
+        "background_color": "",
+        "card_background_color": "#fbad48",
+        "background_icons_color": "#f68e4e",
+        "inner_background_color": "#f0e7d8",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_tours",
-    "main"
+    "main",
+    "rich_text_WiXfpB",
+    "image_with_text_d6QMfT",
+    "call_to_action_FzJbzL"
   ]
 }
-

@@ -15,7 +15,7 @@
         "heading_work_with_us": {
           "type": "heading",
           "settings": {
-            "heading": "Work With Us"
+            "heading": "work with us"
           }
         }
       },
@@ -24,7 +24,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
+        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages"
       }
@@ -36,11 +36,93 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_jmLgw3": {
+      "type": "rich-text",
+      "blocks": {
+        "title_GyBN3H": {
+          "type": "title",
+          "settings": {
+            "title": "Love good beer, great food, and the WA coast? <span class=\"text-bg orange\">So do we.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_m893qx": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>At Long Point Brewing Co., we’re always on the lookout for legends to join our crew — from front-of-house smiles to back-of-house wizards, brewers, chefs, and event pros. If you’re passionate, local, and not afraid to get your hands a little foamy, we’d love to hear from you.</p><p>Drop us a line at <a href=\"mailto:hello@longpointbrewingco.com.au \" title=\"mailto:hello@longpointbrewingco.com.au \"><strong>hello@longpointbrewingco.com.au </strong></a>with your CV and a quick note about yourself.<br/></p>"
+          }
+        },
+        "button_iPBxry": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_GyBN3H",
+        "textbox_m893qx",
+        "button_iPBxry"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "#fbae47",
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "call_to_action_X3hTwU": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_rtbbyF": {
+          "type": "title",
+          "settings": {
+            "title": "Perks?"
+          }
+        },
+        "textbox_DCwCVt": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p> Cold beers, ocean sunsets, a cracking team, and the occasional staff surf/check of the jetty “for quality assurance purposes.”</p>"
+          }
+        },
+        "button_Aqe8YN": {
+          "type": "button",
+          "settings": {
+            "button_label": "SAY HELLO!",
+            "button_link": "",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_rtbbyF",
+        "textbox_DCwCVt",
+        "button_Aqe8YN"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/Rectangle_5932_2.png",
+        "image_overlay": "shopify://shop_images/Subtract_8.svg",
+        "background_color": "",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#53bcae",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_work_with_us",
-    "main"
+    "main",
+    "rich_text_jmLgw3",
+    "call_to_action_X3hTwU"
   ]
 }
-

@@ -24,8 +24,8 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
-        "overlay_opacity": 20,
+        "background_image": "shopify://shop_images/Rectangle_26.jpg",
+        "overlay_opacity": 10,
         "banner_type": "inner-pages"
       }
     },
@@ -36,11 +36,202 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_LGDGNJ": {
+      "type": "rich-text",
+      "blocks": {
+        "title_nyUbFK": {
+          "type": "title",
+          "settings": {
+            "title": "Your event. Our beer. <br><span class=\"text-bg blue\">Perfect match.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_Y4FKHB": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "WHETHER IT’S A WEDDING, AN ENGAGEMENT, A MILESTONE BIRTHDAY, YOUR FOOTY TEAM’S END-OF-SEASON WIND-UP, OR THAT CORPORATE EVENT YOU’D RATHER CALL A “LONG LUNCH” — LPBCO. IS MADE FOR CELEBRATING."
+          }
+        },
+        "textbox_9cKzyX": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>The perfect destination for your next event. We’ve got a range of spaces to fit your vibe:</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_nyUbFK",
+        "subtitle_Y4FKHB",
+        "textbox_9cKzyX"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_pYwk8i": {
+      "type": "image-with-text",
+      "blocks": {
+        "list_item_kraTPQ": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_48.svg",
+            "title": "Tastings Area",
+            "textbox": "<p>Up to 30 people. Perfect for intimate gatherings, small parties, or “just one more round.”</p>"
+          }
+        },
+        "list_item_xPaiF4": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_48.svg",
+            "title": "Beach Bar",
+            "textbox": "<p>Up to 50 people. Sun, shade, pints, and people-watching.</p>"
+          }
+        },
+        "list_item_CpGRVU": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_48.svg",
+            "title": "Sunset Lounge (Level 1)",
+            "textbox": "<p>Ocean views that do half the hosting for you. Seats up to 120, or 200 standing for cocktail-style events.</p>"
+          }
+        },
+        "textbox_cjaAxn": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>All fully catered by our kitchen, with menus designed to keep everyone happy (even the picky eaters). Add our house-brewed beers, local wines, and a team that knows how to host, and you’ve got yourself a celebration worth remembering.</p>",
+            "accent_color": ""
+          }
+        }
+      },
+      "block_order": [
+        "list_item_kraTPQ",
+        "list_item_xPaiF4",
+        "list_item_CpGRVU",
+        "textbox_cjaAxn"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/8e25543c3890b43b992547748b73737b19eeccc0.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_7.svg",
+        "section_bg_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_XrwiER": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_tPAznQ": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "DOWNLOAD OUR EVENTS PACKAGES TO SEE FOOD & DRINK OPTIONS, OR GET IN TOUCH TO START PLANNING."
+          }
+        },
+        "button_mnQMPF": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "DOWNLOAD PACKAGES",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_tPAznQ",
+        "button_mnQMPF"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 80
+      }
+    },
+    "rich_text_PMQGEm": {
+      "type": "rich-text",
+      "blocks": {
+        "title_E3mjWw": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_d9FnFA": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
+          }
+        },
+        "button_XpgCTU": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_E3mjWw",
+        "subtitle_d9FnFA",
+        "button_XpgCTU"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 800,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "176293616349814b47": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_ag4RnG": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_ag4RnG"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner_functions",
-    "main"
+    "main",
+    "rich_text_LGDGNJ",
+    "image_with_text_pYwk8i",
+    "rich_text_XrwiER",
+    "rich_text_PMQGEm",
+    "176293616349814b47"
   ]
 }
-

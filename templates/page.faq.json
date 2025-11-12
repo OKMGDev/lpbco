@@ -15,7 +15,7 @@
         "heading_faq": {
           "type": "heading",
           "settings": {
-            "heading": "FAQ"
+            "heading": "Frequently asked<br>\nquestions"
           }
         }
       },
@@ -25,7 +25,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "banner_type": "inner-pages"
       }
     },
@@ -36,11 +36,121 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "faqs_cJQ4aJ": {
+      "type": "faqs",
+      "blocks": {
+        "accordion_4WTNiw": {
+          "type": "accordion",
+          "settings": {
+            "title": "Are you dog friendly?",
+            "textbox": "<p>Yep! Well-behaved pups are welcome in the Beach Bar (water bowls supplied). Just keep them on a lead and maybe don’t let them order their own pint.</p>"
+          }
+        },
+        "accordion_VYyGPr": {
+          "type": "accordion",
+          "settings": {
+            "title": "Can I bring the kids?",
+            "textbox": "<p>Of course — we’re a family-friendly venue. The little legends can tuck into kids’ meals, babycinos at <em>Little Point</em>, and run off some energy on the foreshore playground.</p>"
+          }
+        },
+        "accordion_tzMkGg": {
+          "type": "accordion",
+          "settings": {
+            "title": "Do I need to book?",
+            "textbox": "<p>We recommend booking a table, especially on weekends and for groups. Walk-ins are welcome too — the beer garden usually has space for those “spur of the moment” catch-ups.</p>"
+          }
+        },
+        "accordion_nnAtCy": {
+          "type": "accordion",
+          "settings": {
+            "title": "What kind of food do you serve?",
+            "textbox": "<p>Think flame-grilled proteins, fresh WA produce, share plates, and plenty of options for vegetarians, vegans, and gluten-free guests. Basically, food that makes beer taste even better.</p>"
+          }
+        },
+        "accordion_GmncjD": {
+          "type": "accordion",
+          "settings": {
+            "title": "Do you have drinks other than beer?",
+            "textbox": "<p>Yep. Local wines, house-distilled gin, cocktails, non-alc beers, seltzers, kombucha, soft drinks, coffee, babycinos… you name it.</p>"
+          }
+        },
+        "accordion_MXdkRn": {
+          "type": "accordion",
+          "settings": {
+            "title": "Can I book a function or wedding?",
+            "textbox": "<p>Absolutely. We’ve got spaces from intimate tastings (30 people) to full Level 1 hire (200 people cocktail-style). Fully catered, ocean views included. 👉 </p>"
+          }
+        },
+        "accordion_dY7FMJ": {
+          "type": "accordion",
+          "settings": {
+            "title": "Do you run brewery tours?",
+            "textbox": "<p>Yes! Join Head Brewer Jackson Purser and team for a behind-the-tanks look at how our beers are made. Groups up to 16. Book via 👉 <a href=\"mailto:hello@longpointbrewingco.com.au\" title=\"mailto:hello@longpointbrewingco.com.au\">hello@longpointbrewingco.com.au</a>.</p>"
+          }
+        },
+        "accordion_HKfBRJ": {
+          "type": "accordion",
+          "settings": {
+            "title": "What’s the parking situation?",
+            "textbox": "<p>Plenty of on-site parking, plus the foreshore has space for bikes, scooters, and prams if you’re going car-free.</p>"
+          }
+        },
+        "accordion_VpicNX": {
+          "type": "accordion",
+          "settings": {
+            "title": "Where are you located?",
+            "textbox": "<p>We’re right on the Kennedy Bay foreshore in Port Kennedy — about 36km south of Fremantle, 45 minutes from Perth CBD, and only 10 minutes from Rockingham.</p><p></p>"
+          }
+        },
+        "accordion_cffRqy": {
+          "type": "accordion",
+          "settings": {
+            "title": "Do you do takeaways?",
+            "textbox": "<p>Yep. Grab a four-pack, a carton, or a growler to-go. <em>Little Point</em> also does great coffee and pastries for takeaway in the mornings.</p>"
+          }
+        },
+        "accordion_3F3k8i": {
+          "type": "accordion",
+          "settings": {
+            "title": "Are you open every day?",
+            "textbox": "<p>We’re open 7 days a week. Hours may vary slightly by season, so check our socials or Google listing before you head down.</p>"
+          }
+        },
+        "accordion_pATFjf": {
+          "type": "accordion",
+          "settings": {
+            "title": "Can I buy gift vouchers?",
+            "textbox": "<p>Yes — digital ones online (emailed instantly), or physical gift cards from the venue. Perfect for when you don’t know what to buy but know they love beer.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "accordion_4WTNiw",
+        "accordion_VYyGPr",
+        "accordion_tzMkGg",
+        "accordion_nnAtCy",
+        "accordion_GmncjD",
+        "accordion_MXdkRn",
+        "accordion_dY7FMJ",
+        "accordion_HKfBRJ",
+        "accordion_VpicNX",
+        "accordion_cffRqy",
+        "accordion_3F3k8i",
+        "accordion_pATFjf"
+      ],
+      "name": "FAQs",
+      "settings": {
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_faq",
-    "main"
+    "main",
+    "faqs_cJQ4aJ"
   ]
 }
-

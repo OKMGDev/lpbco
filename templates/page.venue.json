@@ -24,7 +24,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
+        "background_image": "shopify://shop_images/Rectangle_26.jpg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages"
       }
@@ -36,11 +36,148 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_TLVCyP": {
+      "type": "rich-text",
+      "blocks": {
+        "title_3dBrzb": {
+          "type": "title",
+          "settings": {
+            "title": "LPBC. Not just another shed <span class=\"text-bg blue\">full of tanks.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_KCt46y": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": " SURE, WE BREW A CRACKING BEER. BUT WE ALSO PRIDE OURSELVES ON OUR KITCHEN — QUALITY PRODUCE, SKILLED STAFF, AND A MENU THAT’LL EVEN IMPRESS THE MOTHER-IN-LAW."
+          }
+        },
+        "textbox_Q4Giz7": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We do weddings, birthdays, Sundays, first dates (good luck), and that after-work round with the crew.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_3dBrzb",
+        "subtitle_KCt46y",
+        "textbox_Q4Giz7"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "simple_image_PNTgRT": {
+      "type": "simple-image",
+      "name": "Simple Image",
+      "settings": {
+        "image": "shopify://shop_images/7caf56f8c86cbe735ba10ff260d33f08c926fe0c.png",
+        "image_width": "full",
+        "image_custom_width": 250,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_iQNiet": {
+      "type": "rich-text",
+      "blocks": {
+        "textbox_abtfdD": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>And the best bit? We’re right on the Kennedy Bay foreshore, with the brand-new 150-metre jetty at our doorstep, parks and playgrounds for the kids, and one of WA’s best stretches of beach just a sandy-toed stroll away.  </p><p>Only 36km from Fremantle and a quick 45-minute trip from Perth CBD, Long Point Brewing is far enough to feel like a getaway, but close enough that you can still make it home in time to walk the dog (or not, we won’t tell).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "textbox_abtfdD"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 36,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_jb46JA": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_z7pKae": {
+          "type": "title",
+          "settings": {
+            "title": "Lock in <br><span class=\"text-bg green\">your spot</span>"
+          }
+        },
+        "list_item_f4EtWH": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_49.svg",
+            "title": "Private Functions & Weddings:",
+            "textbox": "<p>We do weddings, birthdays, Sundays, first dates (good luck), and that after-work round with the crew.</p>"
+          }
+        },
+        "list_item_MG4VUM": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_50.svg",
+            "title": "Brewery Tours:",
+            "textbox": "<p>Go behind the tanks, sniff some hops, and learn why these brewers have suspiciously strong forearms.</p>"
+          }
+        },
+        "list_item_wBHQVX": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_51.svg",
+            "title": "Tables:",
+            "textbox": "<p>Book online in two clicks, or roll the dice as a walk-in.</p>"
+          }
+        },
+        "buttons_njrBFc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "BOOK A TABLE",
+            "button_link_1": "",
+            "button_class_1": "",
+            "button_label_2": "Function Enquiries",
+            "button_link_2": "shopify://pages/contact",
+            "button_class_2": "",
+            "button_label_3": "TOUR BOOKINGS",
+            "button_link_3": "shopify://pages/contact",
+            "button_class_3": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_z7pKae",
+        "list_item_f4EtWH",
+        "list_item_MG4VUM",
+        "list_item_wBHQVX",
+        "buttons_njrBFc"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/8e25543c3890b43b992547748b73737b19eeccc0.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_7.svg",
+        "section_bg_color": "#fbad48",
+        "image_top_left": "shopify://shop_images/Vector_52.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_54.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_venue",
-    "main"
+    "main",
+    "rich_text_TLVCyP",
+    "simple_image_PNTgRT",
+    "rich_text_iQNiet",
+    "image_with_text_jb46JA"
   ]
 }
-
