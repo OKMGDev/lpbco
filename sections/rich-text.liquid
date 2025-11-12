@@ -14,6 +14,9 @@
   #shopify-section-{{ section.id }} {
     position: relative;
     overflow: hidden;
+    {%- if section.settings.accent_color != blank -%}
+      --accent-color: {{ section.settings.accent_color }};
+    {%- endif -%}
   }
 {%- endstyle -%}
 
@@ -102,6 +105,15 @@
       "unit": "px",
       "label": "Content max width",
       "default": 600
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Accent color"
     },
     {
       "type": "header",

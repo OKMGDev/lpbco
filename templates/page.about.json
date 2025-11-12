@@ -25,7 +25,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
-        "overlay_opacity": 20,
+        "overlay_opacity": 30,
         "banner_type": "inner-pages"
       }
     },
@@ -36,10 +36,115 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "image_with_text_7FgpXy": {
+      "type": "image-with-text",
+      "blocks": {
+        "textbox_HHh4mE": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Long Point Brewing Co was dreamt up by <strong>Shane & Sally Wormall </strong>- locals who love the Peel coast almost as much as they love a good pint. </p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into a schooner of ice cold beer).</p>",
+            "accent_color": "#f9ad8e"
+          }
+        }
+      },
+      "block_order": [
+        "textbox_HHh4mE"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_1.svg",
+        "section_bg_color": "#ffffff",
+        "image_top_left": "shopify://shop_images/Vector_32.svg",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "quote_WHXy47": {
+      "type": "quote",
+      "blocks": {
+        "textbox_MNmD8r": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink wink!).</p>"
+          }
+        },
+        "quote_pCwxmc": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Let’s make a brewery that feels like home.</p>"
+          }
+        },
+        "textbox_7Wywkt": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Today, Long Point Brewing Co. is more than just a brewery. It’s a place to gather, celebrate, and soak up everything we love about this patch of the WA coast.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "textbox_MNmD8r",
+        "quote_pCwxmc",
+        "textbox_7Wywkt"
+      ],
+      "name": "Quote",
+      "settings": {
+        "background_color": "#53bcae",
+        "image_left": "shopify://shop_images/Vector_33.svg",
+        "image_right": "shopify://shop_images/Vector_35.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "call_to_action_h7hywW": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_zT6d4P": {
+          "type": "title",
+          "settings": {
+            "title": "Our mission"
+          }
+        },
+        "textbox_GGFpfT": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Make beer that’s tasty, moments that matter, and memories you maybe-sort-of remember the next day.</p>"
+          }
+        },
+        "button_pNAEYR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join the team",
+            "button_link": "shopify://pages/work-with-us",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_zT6d4P",
+        "textbox_GGFpfT",
+        "button_pNAEYR"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/2c726a0879e8b09d53f9986609e543232a7c1cda.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_2.svg",
+        "background_color": "#ffffff",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#f9ad8e",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_JW6ywj",
-    "main"
+    "main",
+    "image_with_text_7FgpXy",
+    "quote_WHXy47",
+    "call_to_action_h7hywW"
   ]
 }

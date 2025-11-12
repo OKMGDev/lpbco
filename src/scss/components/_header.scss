@@ -29,4 +29,14 @@
       }
     }
   }
+
+  .header__submenu {
+    border-color: transparent;
+
+    li {
+      a {
+        color: $color-night-sky;
+      }
+    }
+  }
 }

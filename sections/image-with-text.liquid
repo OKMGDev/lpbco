@@ -20,7 +20,10 @@
   }
 {%- endstyle -%}
 
-<div class="image-with-text-section section-{{ section.id }}-padding" id="ImageWithText-{{ section.id }}">
+<div
+  class="image-with-text-section section-{{ section.id }}-padding {% if section.settings.image == blank %}no-image{% endif %}"
+  id="ImageWithText-{{ section.id }}"
+>
   {%- if section.settings.image_top_left != blank -%}
     <div class="image-with-text__image-top-left">
       {{

@@ -48,6 +48,11 @@
   .rich-text__textbox {
     @include fs_24;
     color: $color-text-light;
+
+    b,
+    strong {
+      color: var(--accent-color);
+    }
   }
 
   .rich-text__buttons {

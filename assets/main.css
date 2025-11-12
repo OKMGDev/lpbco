@@ -142,7 +142,7 @@ h6,
 @media (max-width: 768px) {
   h6,
   .heading_h6 {
-    font-size: 2.4em;
+    font-size: 2.4rem;
     line-height: 1.5em;
   }
 }
@@ -250,6 +250,12 @@ h6,
     width: 2.2rem;
     height: 2.2rem;
   }
+}
+.header .header__submenu {
+  border-color: transparent;
+}
+.header .header__submenu li a {
+  color: #252831;
 }
 
 footer.footer {
@@ -818,6 +824,10 @@ button.shopify-payment-button__button--unbranded {
 }
 .rich-text-section .rich-text__textbox {
   color: #5A5A5A;
+}
+.rich-text-section .rich-text__textbox b,
+.rich-text-section .rich-text__textbox strong {
+  color: var(--accent-color);
 }
 .rich-text-section .rich-text__buttons {
   margin-top: 2rem;
@@ -1405,7 +1415,7 @@ button.shopify-payment-button__button--unbranded {
   align-items: stretch;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   gap: 8rem;
 }
 @media (max-width: 1024px) {
@@ -1536,7 +1546,7 @@ button.shopify-payment-button__button--unbranded {
 }
 @media (max-width: 768px) {
   .image-with-text-section .image-with-text__content .image-with-text__content-inner .image-with-text__list-item .image-with-text__list-item-content .image-with-text__list-item-title {
-    font-size: 2.4em;
+    font-size: 2.4rem;
     line-height: 1.5em;
   }
 }
@@ -1547,6 +1557,19 @@ button.shopify-payment-button__button--unbranded {
 }
 .image-with-text-section .image-with-text__content .image-with-text__content-inner .image-with-text__list-item .image-with-text__list-item-content .image-with-text__list-item-textbox {
   line-height: 1.2;
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .image-with-text-section .image-with-text__content .image-with-text__content-inner .image-with-text__list-item .image-with-text__list-item-content .image-with-text__list-item-textbox {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .image-with-text-section .image-with-text__content .image-with-text__content-inner .image-with-text__list-item .image-with-text__list-item-content .image-with-text__list-item-textbox {
+    font-size: 1.8rem;
+  }
 }
 .image-with-text-section .image-with-text__content .image-with-text__content-inner .image-with-text__buttons {
   display: flex;
@@ -1622,6 +1645,29 @@ button.shopify-payment-button__button--unbranded {
   height: 100%;
   object-fit: cover;
   object-position: right;
+}
+
+.no-image.image-with-text-section .image-with-text__content .image-with-text__content-inner {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.no-image.image-with-text-section .image-with-text__content .image-with-text__title {
+  width: 100%;
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+}
+.no-image.image-with-text-section .image-with-text__content .image-with-text__list-item {
+  width: calc(50% - 48px);
+}
+@media only screen and (max-width: 767px) {
+  .no-image.image-with-text-section .image-with-text__content .image-with-text__list-item {
+    width: 100%;
+  }
 }
 
 .quote-section {
@@ -1990,6 +2036,132 @@ button.shopify-payment-button__button--unbranded {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
   }
+}
+
+.faqs-section .faqs__content {
+  max-width: 80rem;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+.faqs-section .faqs__content .faqs__accordion {
+  padding: 3rem 0px;
+  border-top: 0px solid #252831;
+}
+@media (max-width: 768px) {
+  .faqs-section .faqs__content .faqs__accordion {
+    padding: 2rem 0px;
+  }
+}
+.faqs-section .faqs__content .faqs__accordion .accordion__content {
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .faqs-section .faqs__content .faqs__accordion .accordion__content {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+}
+.faqs-section .faqs__content .faqs__accordion .accordion__content {
+  line-height: 1.4em;
+  padding-left: 0px;
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__summary:hover .faqs__title {
+  color: #B5E0E9;
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__summary .faqs__title {
+  transition: 0.3s ease;
+  font-size: 3.2rem;
+  line-height: 1.35em;
+}
+@media (max-width: 1024px) {
+  .faqs-section .faqs__content .faqs__accordion .faqs__summary .faqs__title {
+    font-size: 2.4rem;
+    line-height: 1.35em;
+  }
+}
+@media (max-width: 768px) {
+  .faqs-section .faqs__content .faqs__accordion .faqs__summary .faqs__title {
+    font-size: 2rem;
+    line-height: 1.35em;
+  }
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__summary .faqs__title {
+  text-transform: capitalize;
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.faqs-section .faqs__content .faqs__accordion .faqs__icon svg {
+  width: 100%;
+  height: 100%;
+}
+.faqs-section .faqs__content .faqs__accordion details[open] .faqs__icon--open {
+  display: none !important;
+}
+.faqs-section .faqs__content .faqs__accordion details[open] .faqs__icon--close {
+  display: block !important;
+}
+.faqs-section .faqs__content .faqs__accordion details:not([open]) .faqs__icon--open {
+  display: block !important;
+}
+.faqs-section .faqs__content .faqs__accordion details:not([open]) .faqs__icon--close {
+  display: none !important;
+}
+.faqs-section .faqs__image-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 30rem;
+  height: 30rem;
+}
+@media (max-width: 768px) {
+  .faqs-section .faqs__image-top-left {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+.faqs-section .faqs__image-top-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;
+}
+.faqs-section .faqs__image-bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+  width: 30rem;
+  height: 30rem;
+}
+@media (max-width: 768px) {
+  .faqs-section .faqs__image-bottom-right {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+.faqs-section .faqs__image-bottom-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 .text-center {
