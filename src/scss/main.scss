@@ -19,6 +19,9 @@
 @use 'sections/find-us';
 @use 'sections/main-blog';
 @use 'sections/upcoming-events';
+@use 'sections/image-with-text';
+@use 'sections/quote';
+@use 'sections/call-to-action';
 
 // Use utilities (variables available via setup)
 @use 'utilities';

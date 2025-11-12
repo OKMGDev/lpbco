@@ -1,0 +1,131 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.quote-section {
+  position: relative;
+  overflow: hidden;
+
+
+  .quote__content {
+    position: relative;
+    z-index: 2;
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      gap: 4rem;
+      max-width: 90%;
+    }
+
+    .quote__textbox {
+      @include fs_24;
+    }
+
+    .quote__quote {
+      font-size: 10rem;
+      line-height: 1.1;
+      font-weight: 400;
+      font-style: italic;
+      font-family: var(--font-family-heading);
+      text-align: center;
+      margin-bottom: 0;
+      padding: 0px;
+      margin: 0px;
+      border: none;
+      color: inherit;
+      font-style: normal;
+      position: relative;
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 6.2rem;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 3.6rem;
+      }
+
+      .quote__quote-icon-left {
+        position: absolute;
+        bottom: 80%;
+        right: 100%;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 4rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          bottom: 80%;
+          right: 95%;
+        }
+
+      }
+
+      .quote__quote-icon-right {
+        position: absolute;
+        top: 80%;
+        left: 100%;
+
+        @media (max-width: $breakpoint-tablet) {
+          width: 4rem;
+        }
+
+        @media (max-width: $breakpoint-mobile) {
+          left: 95%;
+        }
+      }
+
+      p {
+        margin: 0px;
+      }
+    }
+  }
+
+  .quote__image-left {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 25%;
+    height: 70%;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 15%;
+      height: 50%;
+    }
+
+
+
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .quote__image-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 25%;
+    height: 70%;
+    z-index: 1;
+
+    @media (max-width: $breakpoint-tablet) {
+      width: 15%;
+      height: 50%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

@@ -9,18 +9,18 @@
  */
 {
   "sections": {
-    "image_banner_JW6ywj": {
+    "image_banner_whats_on": {
       "type": "image-banner",
       "blocks": {
-        "heading_HNXXxt": {
+        "heading_whats_on": {
           "type": "heading",
           "settings": {
-            "heading": "About Us"
+            "heading": "What's On"
           }
         }
       },
       "block_order": [
-        "heading_HNXXxt"
+        "heading_whats_on"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -39,7 +39,8 @@
     }
   },
   "order": [
-    "image_banner_JW6ywj",
+    "image_banner_whats_on",
     "main"
   ]
 }
+

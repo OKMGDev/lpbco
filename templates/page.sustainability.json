@@ -9,18 +9,18 @@
  */
 {
   "sections": {
-    "image_banner_JW6ywj": {
+    "image_banner_sustainability": {
       "type": "image-banner",
       "blocks": {
-        "heading_HNXXxt": {
+        "heading_sustainability": {
           "type": "heading",
           "settings": {
-            "heading": "About Us"
+            "heading": "Sustainability"
           }
         }
       },
       "block_order": [
-        "heading_HNXXxt"
+        "heading_sustainability"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -39,7 +39,8 @@
     }
   },
   "order": [
-    "image_banner_JW6ywj",
+    "image_banner_sustainability",
     "main"
   ]
 }
+

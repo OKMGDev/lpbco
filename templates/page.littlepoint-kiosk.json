@@ -9,18 +9,18 @@
  */
 {
   "sections": {
-    "image_banner_JW6ywj": {
+    "image_banner_littlepoint_kiosk": {
       "type": "image-banner",
       "blocks": {
-        "heading_HNXXxt": {
+        "heading_littlepoint_kiosk": {
           "type": "heading",
           "settings": {
-            "heading": "About Us"
+            "heading": "Littlepoint Kiosk"
           }
         }
       },
       "block_order": [
-        "heading_HNXXxt"
+        "heading_littlepoint_kiosk"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
@@ -39,7 +39,8 @@
     }
   },
   "order": [
-    "image_banner_JW6ywj",
+    "image_banner_littlepoint_kiosk",
     "main"
   ]
 }
+

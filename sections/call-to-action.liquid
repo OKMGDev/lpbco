@@ -1,0 +1,235 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+    position: relative;
+    overflow: hidden;
+  }
+
+  .call-to-action__card {
+    {%- if section.settings.card_background_color != blank -%}
+      background-color: {{ section.settings.card_background_color }};
+    {%- endif -%}
+  }
+
+  .call-to-action__content-inner {
+    {%- if section.settings.inner_background_color != blank -%}
+      background-color: {{ section.settings.inner_background_color }};
+    {%- endif -%}
+  }
+
+  .call-to-action__content svg {
+    {%- if section.settings.background_icons_color != blank -%}
+      color: {{ section.settings.background_icons_color }};
+    {%- endif -%}
+  }
+{%- endstyle -%}
+
+<div class="call-to-action-section section-{{ section.id }}-padding" id="CallToAction-{{ section.id }}">
+  <div class="page-width">
+    <div class="call-to-action__card">
+      <div class="call-to-action__content">
+        {% render 'event-card-icons' %}
+        <div class="call-to-action__content-inner">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'title' -%}
+                <h2 class="call-to-action__title" {{ block.shopify_attributes }}>
+                  {{ block.settings.title }}
+                </h2>
+              {%- when 'textbox' -%}
+                <div class="call-to-action__textbox rte" {{ block.shopify_attributes }}>
+                  {{ block.settings.textbox }}
+                </div>
+              {%- when 'button' -%}
+                <div class="call-to-action__button" {{ block.shopify_attributes }}>
+                  {%- if block.settings.button_label != blank -%}
+                    <a
+                      {% if block.settings.button_link == blank %}
+                        role="link" aria-disabled="true"
+                      {% else %}
+                        href="{{ block.settings.button_link }}"
+                      {% endif %}
+                      class="button {{ block.settings.button_class }}"
+                    >
+                      {{- block.settings.button_label | escape -}}
+                    </a>
+                  {%- endif -%}
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+      {%- if section.settings.image != blank -%}
+        <div class="call-to-action__image">
+          {{
+            section.settings.image
+            | image_url: width: 800
+            | image_tag: loading: 'lazy', alt: section.settings.image.alt
+            | default: 'Image'
+          }}
+          {%- if section.settings.image_overlay != blank -%}
+            <div class="call-to-action__image-overlay">
+              {{
+                section.settings.image_overlay
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', alt: section.settings.image_overlay.alt
+                | default: 'Image'
+              }}
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Call to Action",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_overlay",
+      "label": "Image overlay"
+    },
+    {
+      "type": "header",
+      "content": "Background Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color"
+    },
+    {
+      "type": "color",
+      "id": "background_icons_color",
+      "label": "Background icons color"
+    },
+    {
+      "type": "color",
+      "id": "inner_background_color",
+      "label": "Inner background color"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    },
+    {
+      "type": "textbox",
+      "name": "Textbox",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "textbox",
+          "label": "Textbox"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "Button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
+        },
+        {
+          "type": "text",
+          "id": "button_class",
+          "label": "Button custom class",
+          "info": "Add custom CSS classes (e.g., 'button--orange', 'button--secondary')"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Call to Action",
+      "blocks": [
+        {
+          "type": "title"
+        },
+        {
+          "type": "textbox"
+        },
+        {
+          "type": "button"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
