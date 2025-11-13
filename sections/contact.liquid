@@ -1,0 +1,243 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="contact-section section-{{ section.id }}-padding" id="Contact-{{ section.id }}">
+  {%- if section.settings.image_top_left != blank -%}
+    <div class="contact__image-top-left">
+      {{
+        section.settings.image_top_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_top_left.alt
+      }}
+    </div>
+  {%- endif -%}
+  <div class="page-width">
+    <div class="contact__content-wrapper">
+      <div class="contact__details-wrapper">
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }}>
+            {%- case block.type -%}
+              {%- when 'map' -%}
+                <div class="contact__map-block">
+                  {%- if block.settings.map_image != blank -%}
+                    <a href="{{ block.settings.map_link }}" class="contact__map-link">
+                      {{
+                        block.settings.map_image
+                        | image_url: width: 1200
+                        | image_tag: loading: 'lazy', alt: block.settings.map_image.alt
+                      }}
+                    </a>
+                  {%- endif -%}
+                </div>
+
+              {%- when 'contact_item' -%}
+                <div class="contact__item-block">
+                  <a href="{{ block.settings.link }}" class="contact__item-link" target="_blank">
+                    {%- if block.settings.icon != blank -%}
+                      <div class="contact__item-icon">
+                        {{
+                          block.settings.icon
+                          | image_url: width: 100
+                          | image_tag: loading: 'lazy', alt: block.settings.icon.alt
+                        }}
+                      </div>
+                    {%- endif -%}
+                    <div class="contact__item-content">
+                      {%- if block.settings.title != blank -%}
+                        <h3 class="contact__item-title">{{ block.settings.title }}</h3>
+                      {%- endif -%}
+                      {%- if block.settings.textbox != blank -%}
+                        <div class="contact__item-textbox">{{ block.settings.textbox }}</div>
+                      {%- endif -%}
+                    </div>
+                  </a>
+                </div>
+
+              {%- when 'social_links' -%}
+                <div class="contact__social-block">
+                  {%- if block.settings.label != blank -%}
+                    <h3 class="contact__social-label">{{ block.settings.label }}</h3>
+                  {%- endif -%}
+                  {% render 'social-icons' %}
+                </div>
+            {%- endcase -%}
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="contact__tabs-section">
+        <div class="contact__tabs-wrapper">
+          <div class="contact__tabs-nav">
+            <button class="contact__tab-button active" data-tab="contact">CONTACT</button>
+            <button class="contact__tab-button" data-tab="wholesale">WHOLESALE ENQUIRIES</button>
+            <button class="contact__tab-button" data-tab="feedback">PRODUCT FEEDBACK</button>
+          </div>
+
+          <div class="contact__tabs-content">
+            {% render 'contact-tab-contact', section_id: section.id %}
+            {% render 'contact-tab-wholesale', section_id: section.id %}
+            {% render 'contact-tab-feedback', section_id: section.id %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {%- if section.settings.image_bottom_right != blank -%}
+    <div class="contact__image-bottom-right">
+      {{
+        section.settings.image_bottom_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_bottom_right.alt
+      }}
+    </div>
+  {%- endif -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons = document.querySelectorAll('#Contact-{{ section.id }} .contact__tab-button');
+    const tabPanels = document.querySelectorAll('#Contact-{{ section.id }} .contact__tab-panel');
+
+    tabButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        const targetTab = this.getAttribute('data-tab');
+
+        // Remove active class from all buttons and panels
+        tabButtons.forEach(function (btn) {
+          btn.classList.remove('active');
+        });
+        tabPanels.forEach(function (panel) {
+          panel.classList.remove('active');
+        });
+
+        // Add active class to clicked button and corresponding panel
+        this.classList.add('active');
+        document.getElementById('tab-' + targetTab).classList.add('active');
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Contact",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_left",
+      "label": "Image top left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_right",
+      "label": "Image bottom right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "map",
+      "name": "Map",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "map_image",
+          "label": "Map Image"
+        },
+        {
+          "type": "url",
+          "id": "map_link",
+          "label": "Map Link"
+        }
+      ]
+    },
+    {
+      "type": "contact_item",
+      "name": "Contact Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "richtext",
+          "id": "textbox",
+          "label": "Textbox"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        },
+        {
+          "type": "text",
+          "id": "link_label",
+          "label": "Link Label"
+        }
+      ]
+    },
+    {
+      "type": "social_links",
+      "name": "Social Links",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact"
+    }
+  ]
+}
+{% endschema %}

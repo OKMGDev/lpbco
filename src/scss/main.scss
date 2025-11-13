@@ -10,6 +10,7 @@
 @use 'components/header';
 @use 'components/footer';
 @use 'components/buttons';
+@use 'components/shop';
 
 // Use sections (variables available via setup)
 @use 'sections/collection-list';
@@ -23,6 +24,9 @@
 @use 'sections/quote';
 @use 'sections/call-to-action';
 @use 'sections/faq';
+@use 'sections/grid-cards';
+@use 'sections/all-events-section';
+@use 'sections/contact';
 
 // Use utilities (variables available via setup)
 @use 'utilities';

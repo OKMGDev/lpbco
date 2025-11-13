@@ -17,8 +17,39 @@
     z-index: 2;
   }
 
+  .rich-text__stamp {
+    @include fs_24;
+
+    position: absolute;
+    z-index: 1;
+    border: 4px dashed var(--stamp-color);
+    padding: 0.5em 1em;
+    color: var(--stamp-color);
+    background-color: color-mix(in srgb, var(--stamp-color) 10%, transparent);
+    line-height: 1;
+    transform: rotate(20deg);
+
+
+    @media (max-width: $breakpoint-mobile) {
+      transform: rotate(10deg);
+      position: relative !important;
+      left: unset !important;
+      right: unset !important;
+      align-self: center;
+      padding: 0.3em 0.6em;
+      border-width: 2px;
+
+    }
+
+    p {
+      margin: 0px;
+    }
+  }
+
   .rich-text__title {
     @include heading_h4;
+    justify-self: center;
+    align-self: center;
 
     &.rich-text__title--bigger {
       @include heading_h1;

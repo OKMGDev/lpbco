@@ -1,0 +1,98 @@
+{%- comment -%}
+  Renders the Product Feedback tab panel
+
+  Accepts:
+  - section_id: {String} Section ID for unique form identifiers
+
+  Usage:
+  {% render 'contact-tab-feedback', section_id: section.id %}
+{%- endcomment -%}
+
+<div class="contact__tab-panel" id="tab-feedback">
+  <h2 class="contact__tab-heading">Product Feedback</h2>
+  <div class="contact__tab-textbox">
+    <p>We value your feedback. Share your thoughts about our products.</p>
+  </div>
+  {%- form 'contact', id: 'ContactForm-Feedback', class: 'contact__form' -%}
+    {%- if form.posted_successfully? -%}
+      <div class="contact__form-message success">
+        <h2>Thank you! Your message has been sent.</h2>
+      </div>
+    {%- elsif form.errors -%}
+      <div class="contact__form-message error">
+        <h2>Please correct the following errors:</h2>
+        <ul>
+          {%- for field in form.errors -%}
+            <li>{{ form.errors[field] }}</li>
+          {%- endfor -%}
+        </ul>
+      </div>
+    {%- endif -%}
+    <div class="contact__form-fields">
+      <div class="contact__form-row">
+        <div class="contact__form-field">
+          <label for="ContactForm-firstname-feedback">First Name</label>
+          <input
+            type="text"
+            id="ContactForm-firstname-feedback"
+            name="contact[first_name]"
+            value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+            required
+          >
+        </div>
+        <div class="contact__form-field">
+          <label for="ContactForm-lastname-feedback">Last Name</label>
+          <input
+            type="text"
+            id="ContactForm-lastname-feedback"
+            name="contact[last_name]"
+            value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+            required
+          >
+        </div>
+      </div>
+      <div class="contact__form-row">
+        <div class="contact__form-field">
+          <label for="ContactForm-phone-feedback">Phone Number</label>
+          <input
+            type="tel"
+            id="ContactForm-phone-feedback"
+            name="contact[phone]"
+            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+          >
+        </div>
+        <div class="contact__form-field">
+          <label for="ContactForm-email-feedback">Email Address <span>*</span></label>
+          <input
+            type="email"
+            id="ContactForm-email-feedback"
+            name="contact[email]"
+            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+            required
+          >
+        </div>
+      </div>
+      <div class="contact__form-field">
+        <label for="ContactForm-contact-method-feedback">How would you like to be contacted?</label>
+        <select id="ContactForm-contact-method-feedback" name="contact[contact_method]">
+          <option value="">Select an option</option>
+          <option value="email">Email</option>
+          <option value="phone">Phone</option>
+          <option value="either">Either</option>
+        </select>
+      </div>
+      <div class="contact__form-field">
+        <label for="ContactForm-message-feedback">Your message</label>
+        <textarea
+          id="ContactForm-message-feedback"
+          name="contact[body]"
+          rows="6"
+          required
+        >{{ form.body }}</textarea>
+      </div>
+      <input type="hidden" name="contact[form_type]" value="Product Feedback">
+      <button type="submit" class="button contact__form-submit">Submit</button>
+    </div>
+  {%- endform -%}
+</div>
+

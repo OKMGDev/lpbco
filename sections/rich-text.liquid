@@ -74,6 +74,20 @@
               </a>
             {%- endif -%}
           </div>
+        {%- when 'stamp' -%}
+          {%- if block.settings.textbox != blank -%}
+            <div
+              class="rich-text__stamp"
+              {{ block.shopify_attributes }}
+              style="
+                --stamp-color: {{ block.settings.color }};
+                left: {{ block.settings.position_left }}%;
+                top: {{ block.settings.position_top }}%;
+              "
+            >
+              {{ block.settings.textbox }}
+            </div>
+          {%- endif -%}
       {%- endcase -%}
     {%- endfor -%}
   </div>
@@ -235,6 +249,43 @@
           "type": "url",
           "id": "button_link_2",
           "label": "Button 2 link"
+        }
+      ]
+    },
+    {
+      "type": "stamp",
+      "name": "Stamp",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "textbox",
+          "label": "Textbox"
+        },
+        {
+          "type": "color",
+          "id": "color",
+          "label": "Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "position_left",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position left",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "position_top",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Position top",
+          "default": 0
         }
       ]
     }

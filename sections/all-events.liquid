@@ -22,20 +22,28 @@
   endif
 -%}
 
-<div class="upcoming-events-section section-{{ section.id }}-padding" id="UpcomingEvents-{{ section.id }}">
-  <div class="page-width ">
-    {%- if section.settings.title != blank -%}
-      <h2 class="upcoming-events__title">
-        {{ section.settings.title }}
-      </h2>
-    {%- endif -%}
+<div class="all-events-section section-{{ section.id }}-padding" id="AllEvents-{{ section.id }}">
+  <div class="page-width">
+    {%- if events != blank -%}
+      {%- assign loop_index = 0 -%}
 
-    {%- if events != blank and events.size > 0 -%}
-      <div class="upcoming-events__slider-wrapper">
-        {%- for event in events -%}
-          {% render 'event-card', event: event, section_id: section.id, event_index: forloop.index0 %}
-        {%- endfor -%}
-      </div>
+      {%- for event in events -%}
+        {%- if loop_index == 0 -%}
+          <h2 class="all-events__heading">Upcoming events</h2>
+          {% render 'event-card', event: event, section_id: section.id, event_index: 0 %}
+        {%- else -%}
+          {%- if loop_index == 1 -%}
+            <h2 class="all-events__heading">All events</h2>
+            <div class="all-events__grid">
+          {%- endif -%}
+          {% render 'events-grid-card', event: event %}
+        {%- endif -%}
+        {%- assign loop_index = loop_index | plus: 1 -%}
+      {%- endfor -%}
+
+      {%- if loop_index > 1 -%}
+        </div>
+      {%- endif -%}
     {%- endif -%}
   </div>
 </div>
@@ -91,7 +99,7 @@
     }
 
     // Render all richtext fields
-    const richtextElements = document.querySelectorAll('#UpcomingEvents-{{ section.id }} .upcoming-events__details');
+    const richtextElements = document.querySelectorAll('#AllEvents-{{ section.id }} .upcoming-events__details');
     richtextElements.forEach(function (element) {
       try {
         const eventIndex = element.getAttribute('data-event-index');
@@ -105,37 +113,15 @@
         console.error('Error parsing richtext:', e);
       }
     });
-
-    // Initialize Swiper
-    const upcomingEventsSwiper = new Swiper('#UpcomingEventsSwiper-{{ section.id }}', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: false,
-      navigation: {
-        nextEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-next',
-        prevEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-prev',
-      },
-      breakpoints: {
-        750: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-      },
-    });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Upcoming Events",
+  "name": "All Events",
   "tag": "section",
   "class": "section",
   "settings": [
-    {
-      "type": "html",
-      "id": "title",
-      "label": "Title"
-    },
     {
       "type": "text",
       "id": "metaobject_type",
@@ -170,7 +156,7 @@
   ],
   "presets": [
     {
-      "name": "Upcoming Events"
+      "name": "All Events"
     }
   ]
 }
