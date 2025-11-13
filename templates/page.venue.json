@@ -84,6 +84,54 @@
         "padding_bottom": 0
       }
     },
+    "cards_grid_xPybXG": {
+      "type": "cards-grid",
+      "blocks": {
+        "card_3N6B9i": {
+          "type": "card",
+          "settings": {
+            "title": "Beach Bar:",
+            "textbox": "<p> Sun, shade, pints, and world-class people-watching.</p>",
+            "bg_icon": "shopify://shop_images/Vector_58.svg"
+          }
+        },
+        "card_U3ikQ3": {
+          "type": "card",
+          "settings": {
+            "title": "Restaurant & Brewhouse:",
+            "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views..</p>",
+            "bg_icon": "shopify://shop_images/Vector_56.svg"
+          }
+        },
+        "card_XTNAE9": {
+          "type": "card",
+          "settings": {
+            "title": "Sunset Lounge (Level 1):",
+            "textbox": "<p>A function space made for big moments (or just staring at the Indian Ocean while pretending to listen to your mates).</p>",
+            "bg_icon": "shopify://shop_images/Vector_57.svg"
+          }
+        },
+        "card_JJ7pjY": {
+          "type": "card",
+          "settings": {
+            "title": "Little Point Kiosk:",
+            "textbox": "<p>Our breezy kiosk slinging coffees, pastries, and coastal favourites from the wee hours.</p>",
+            "bg_icon": "shopify://shop_images/Vector_58.svg"
+          }
+        }
+      },
+      "block_order": [
+        "card_3N6B9i",
+        "card_U3ikQ3",
+        "card_XTNAE9",
+        "card_JJ7pjY"
+      ],
+      "name": "Cards Grid",
+      "settings": {
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
     "rich_text_iQNiet": {
       "type": "rich-text",
       "blocks": {
@@ -101,7 +149,7 @@
       "settings": {
         "content_max_width": 1000,
         "accent_color": "",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 100
       }
     },
@@ -177,6 +225,7 @@
     "main",
     "rich_text_TLVCyP",
     "simple_image_PNTgRT",
+    "cards_grid_xPybXG",
     "rich_text_iQNiet",
     "image_with_text_jb46JA"
   ]

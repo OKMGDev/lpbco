@@ -24,7 +24,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
+        "background_image": "shopify://shop_images/Rectangle_26.jpg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages"
       }
@@ -36,11 +36,120 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_FeF3Em": {
+      "type": "rich-text",
+      "blocks": {
+        "stamp_74c7ma": {
+          "type": "stamp",
+          "settings": {
+            "textbox": "<p>*pun <br/>intended</p>",
+            "color": "#f9ad8e",
+            "position_left": 80,
+            "position_top": 0
+          }
+        },
+        "title_WHdQJf": {
+          "type": "title",
+          "settings": {
+            "title": "There’s always<br> something  <span class=\"text-bg \">brewing*</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_cQch8N": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "SUNDAY SESSIONS, TRIVIA NIGHTS, LIVE MUSIC, BEER LAUNCHES, THE ODD FESTIVAL — WE LIKE TO KEEP THINGS LIVELY."
+          }
+        },
+        "textbox_eDjDVH": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Check the calendar, grab your mates, and call it “plans”.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "stamp_74c7ma",
+        "title_WHdQJf",
+        "subtitle_cQch8N",
+        "textbox_eDjDVH"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 900,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Vector_59.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "all_events_WXBRNL": {
+      "type": "all-events",
+      "name": "All Events",
+      "settings": {
+        "metaobject_type": "events",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_G6PA7m": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_NUNNUX": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_NUNNUX"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 32
+      }
+    },
+    "17630168472d3a959c": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_6FbB9R": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_6FbB9R"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
     "image_banner_whats_on",
-    "main"
+    "main",
+    "rich_text_FeF3Em",
+    "all_events_WXBRNL",
+    "rich_text_G6PA7m",
+    "17630168472d3a959c"
   ]
 }
-

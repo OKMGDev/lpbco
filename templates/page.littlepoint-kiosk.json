@@ -15,7 +15,7 @@
         "heading_littlepoint_kiosk": {
           "type": "heading",
           "settings": {
-            "heading": "Littlepoint Kiosk"
+            "heading": "Little point Kiosk"
           }
         }
       },
@@ -24,7 +24,7 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
+        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages"
       }
@@ -36,11 +36,106 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_xXkwa3": {
+      "type": "rich-text",
+      "blocks": {
+        "stamp_8FatBR": {
+          "type": "stamp",
+          "settings": {
+            "textbox": "<p>ON THE <br/>FORESHORE</p>",
+            "color": "#f68e51",
+            "position_left": 78,
+            "position_top": 0
+          }
+        },
+        "title_U6g7hH": {
+          "type": "title",
+          "settings": {
+            "title": "Big flavour, \n<br><span class=\"text-bg orange\">little name.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_CYGVee": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "WHILE THE BREWERY WAKES UP, LITTLE POINT IS ALREADY BUZZING. OPEN FROM THE EARLY HOURS, OUR KIOSK IS ALL ABOUT KEEPING THE FORESHORE FUELLED."
+          }
+        },
+        "textbox_4LjWhB": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re slinging all the favourites — from flat whites and long blacks to iced lattes, teas, and yes… babycinos for the little legends. Grab a pastry, a toastie, or something quick to take on your morning walk along the beach. </p><p>Whether you’re a dog-walker, a surfer wishing there were waves, or just someone who thinks coffee counts as breakfast (we see you), Little Point’s got you covered.</p>"
+          }
+        },
+        "button_hjh6Fg": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "stamp_8FatBR",
+        "title_U6g7hH",
+        "subtitle_CYGVee",
+        "textbox_4LjWhB",
+        "button_hjh6Fg"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 800,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "simple_image_yahzec": {
+      "type": "simple-image",
+      "name": "Simple Image",
+      "settings": {
+        "image": "shopify://shop_images/Group_47198.png",
+        "image_width": "custom",
+        "image_custom_width": 1100,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_bpcBBj": {
+      "type": "rich-text",
+      "blocks": {
+        "button_Qrm7E9": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "View KIOSK menu",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_Qrm7E9"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 600,
+        "accent_color": "",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "image_banner_littlepoint_kiosk",
-    "main"
+    "main",
+    "rich_text_xXkwa3",
+    "simple_image_yahzec",
+    "rich_text_bpcBBj"
   ]
 }
-

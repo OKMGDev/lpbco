@@ -9,6 +9,38 @@
  */
 {
   "sections": {
+    "rich_text_7EdVAP": {
+      "type": "rich-text",
+      "blocks": {
+        "title_i3prKW": {
+          "type": "title",
+          "settings": {
+            "title": "SHOP",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_LUUk3F": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Take a piece of LPBCo. "
+          }
+        }
+      },
+      "block_order": [
+        "title_i3prKW",
+        "subtitle_LUUk3F"
+      ],
+      "custom_css": [
+        ".rich-text__title--bigger {background: unset;}"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -31,7 +63,7 @@
           "type": "variant_picker",
           "settings": {
             "picker_type": "button",
-            "swatch_shape": "circle"
+            "swatch_shape": "square"
           }
         },
         "quantity_selector": {
@@ -41,7 +73,7 @@
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": true,
+            "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
         },
@@ -67,12 +99,12 @@
         "share"
       ],
       "settings": {
-        "enable_sticky_info": true,
+        "enable_sticky_info": false,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "small",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "mobile_thumbnails": "hide",
         "media_position": "left",
         "image_zoom": "lightbox",
@@ -102,6 +134,7 @@
     }
   },
   "order": [
+    "rich_text_7EdVAP",
     "main",
     "related-products"
   ]

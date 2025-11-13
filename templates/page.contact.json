@@ -9,26 +9,99 @@
  */
 {
   "sections": {
+    "image_banner_exzFAq": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_DQhE8g": {
+          "type": "heading",
+          "settings": {
+            "heading": "Contact us"
+          }
+        }
+      },
+      "block_order": [
+        "heading_DQhE8g"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
+        "overlay_opacity": 30,
+        "banner_type": "inner-pages"
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
       }
     },
-    "form": {
-      "type": "contact-form",
+    "contact_DYxp9k": {
+      "type": "contact",
+      "blocks": {
+        "map_WNznHk": {
+          "type": "map",
+          "settings": {
+            "map_image": "shopify://shop_images/Rectangle_5966.png",
+            "map_link": "https://maps.app.goo.gl/2ixW2SmkmZXn92418"
+          }
+        },
+        "contact_item_bQyTT3": {
+          "type": "contact_item",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_33.svg",
+            "title": "Address",
+            "textbox": "<p>1 Sea Beach Way, <br/>Kennedy Bay WA</p>",
+            "link": "https://maps.app.goo.gl/2ixW2SmkmZXn92418",
+            "link_label": ""
+          }
+        },
+        "contact_item_B4G7Fi": {
+          "type": "contact_item",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_34.svg",
+            "title": "Email",
+            "textbox": "<p>hello@longpointbrewingco.com.au</p>",
+            "link": "mailto:hello@longpointbrewingco.com.au",
+            "link_label": ""
+          }
+        },
+        "contact_item_NaDUtr": {
+          "type": "contact_item",
+          "settings": {
+            "icon": "shopify://shop_images/Frame_35.svg",
+            "title": "Phone",
+            "textbox": "<p>1234567890</p>",
+            "link": "tel:1234567890",
+            "link_label": ""
+          }
+        },
+        "social_links_yPwb7U": {
+          "type": "social_links",
+          "settings": {
+            "label": "Social links"
+          }
+        }
+      },
+      "block_order": [
+        "map_WNznHk",
+        "contact_item_bQyTT3",
+        "contact_item_B4G7Fi",
+        "contact_item_NaDUtr",
+        "social_links_yPwb7U"
+      ],
+      "name": "Contact",
       "settings": {
-        "heading": "",
-        "heading_size": "h1",
-        "color_scheme": "scheme-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "image_top_left": "shopify://shop_images/Vector_61.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
   "order": [
+    "image_banner_exzFAq",
     "main",
-    "form"
+    "contact_DYxp9k"
   ]
 }
