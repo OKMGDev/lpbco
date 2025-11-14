@@ -19,9 +19,20 @@
         "sticky_header_type": "none",
         "transparent_background": true
       }
+    },
+    "age-verification": {
+      "type": "age-verification",
+      "settings": {
+        "logo": "shopify://shop_images/lpbc-logo.svg",
+        "text": "<p>Are you old enough to have lived through at least one devastating Bunnings snag price hike?</p>",
+        "subtext": "<p>If you click yes, you are verifying that you are 18+</p>",
+        "confirm_button_text": "Yes I am 18+",
+        "exit_button_text": "What is inflation?"
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "age-verification"
   ]
 }

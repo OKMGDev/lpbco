@@ -1,0 +1,62 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.collection-hero {
+  .collection-hero__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    h1.collection-hero__title {
+      margin: 0px;
+      @include heading_h2;
+      color: #406174;
+    }
+
+    .subtitle {
+      @include fs_24;
+      color: #406174;
+      margin-bottom: 3rem
+    }
+
+    .collection-hero__description {
+      @include fs_24;
+      margin: 0 auto;
+    }
+
+    .collection-hero__menu {
+      margin-top: 7rem;
+
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0px;
+
+        @media (max-width: $breakpoint-mobile) {
+          gap: 2rem;
+        }
+
+
+        li {
+          list-style: none;
+
+          a {
+            @include fs_24;
+            color: #53BCAE;
+            text-transform: uppercase;
+
+            &.collection-hero__menu-link--active {
+              color: #F68E51;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

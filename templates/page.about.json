@@ -135,6 +135,7 @@
         "card_background_color": "#b6dfe9",
         "background_icons_color": "#f8f5ed",
         "inner_background_color": "#f9ad8e",
+        "text_color": "#ffffff",
         "padding_top": 100,
         "padding_bottom": 100
       }

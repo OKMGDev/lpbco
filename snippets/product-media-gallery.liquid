@@ -56,11 +56,31 @@
     <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
       {{ 'accessibility.skip_to_product_info' | t }}
     </a>
+    {%- liquid
+      assign media_bg_color = product.metafields.custom.accent_color
+      assign media_bg_graphic = product.metafields.custom.background_graphic
+    -%}
     <ul
       id="Slider-Gallery-{{ section.id }}"
       class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile"
       role="list"
+      {%- if media_bg_color != blank -%}
+        style="background-color: {{ media_bg_color }}; position: relative;"
+      {%- else -%}
+        style="position: relative;"
+      {%- endif -%}
     >
+      {%- if media_bg_graphic != blank -%}
+        <div
+          class="product__media-bg-graphic"
+        >
+          {{
+            media_bg_graphic
+            | image_url: width: 1200
+            | image_tag: loading: 'lazy', alt: media_bg_graphic.alt, class: 'product__media-bg-image'
+          }}
+        </div>
+      {%- endif -%}
       {%- if product.selected_or_first_available_variant.featured_media != null -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li

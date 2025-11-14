@@ -34,7 +34,7 @@
   }
 
   .list-menu {
-    list-style: none; 
+    list-style: none;
     padding: 0;
     margin: 0;
   }
@@ -172,17 +172,15 @@
     {%- endif -%}
 
     {%- comment -%} Right Menu {%- endcomment -%}
-    
 
     {%- comment -%} Icons on Right {%- endcomment -%}
     <div class="header__icons">
-
-    {%- if section.settings.right_menu_handle != blank -%}
-      {%- assign right_menu = linklists[section.settings.right_menu_handle] -%}
-      {%- if right_menu != blank -%}
-        {%- render 'header-menu', menu: right_menu, menu_id: 'right' -%}
+      {%- if section.settings.right_menu_handle != blank -%}
+        {%- assign right_menu = linklists[section.settings.right_menu_handle] -%}
+        {%- if right_menu != blank -%}
+          {%- render 'header-menu', menu: right_menu, menu_id: 'right' -%}
+        {%- endif -%}
       {%- endif -%}
-    {%- endif -%}
       {% render 'header-search', input_id: 'Search-In-Modal' %}
 
       {%- if shop.customer_accounts_enabled -%}
@@ -232,10 +230,7 @@
 </{{ header_tag }}>
 
 {%- if settings.cart_type == 'notification' -%}
-  {%- render 'cart-notification',
-    color_scheme: 'scheme-1',
-    desktop_menu_type: 'dropdown'
-  -%}
+  {%- render 'cart-notification', color_scheme: 'scheme-1', desktop_menu_type: 'dropdown' -%}
 {%- endif -%}
 
 <script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
@@ -299,12 +294,12 @@
       "label": "Right menu handle",
       "info": "Enter the handle of the menu to display on the right (e.g., 'right-menu')"
     },
-      { 
+    {
       "type": "select",
       "id": "sticky_header_type",
       "options": [
         {
-          "value": "none", 
+          "value": "none",
           "label": "t:sections.header.settings.sticky_header_type.options__1.label"
         },
         {

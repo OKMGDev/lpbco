@@ -5,6 +5,25 @@
 .rich-text-section {
   color: #373737;
 
+  &.product-page-banner {
+    .rich-text__content {
+      .rich-text__title {
+        @include heading_h2;
+        line-height: 1em;
+        color: #406174;
+
+      }
+
+      .rich-text__subtitle {
+        color: #406174;
+        text-transform: uppercase;
+        @include fs_24;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
   .rich-text__content {
     display: flex;
     flex-direction: column;

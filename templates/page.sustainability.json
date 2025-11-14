@@ -52,6 +52,7 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "#f9ad8e",
         "image_top_left": "shopify://shop_images/Vector_26.svg",
@@ -181,6 +182,7 @@
         "card_background_color": "#b6dfe9",
         "background_icons_color": "#f8f5ed",
         "inner_background_color": "#53bcae",
+        "text_color": "#ffffff",
         "padding_top": 100,
         "padding_bottom": 100
       }

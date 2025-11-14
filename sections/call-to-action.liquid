@@ -15,6 +15,10 @@
     {%- if section.settings.background_color != blank -%}
       background-color: {{ section.settings.background_color }};
     {%- endif -%}
+    {%- if section.settings.text_color != blank -%}
+      --text-color: {{ section.settings.text_color }};
+      color: var(--text-color);
+    {%- endif -%}
     position: relative;
     overflow: hidden;
   }
@@ -140,6 +144,11 @@
       "type": "color",
       "id": "inner_background_color",
       "label": "Inner background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
     },
     {
       "type": "header",

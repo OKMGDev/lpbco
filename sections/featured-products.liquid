@@ -1,0 +1,207 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'component-price.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+    position: relative;
+    overflow: hidden;
+  }
+{%- endstyle -%}
+
+<div class="featured-products-section section-{{ section.id }}-padding" id="FeaturedProducts-{{ section.id }}">
+  {%- if section.settings.image_top_left != blank -%}
+    <div class="featured-products__image-top-left">
+      {{
+        section.settings.image_top_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_top_left.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.image_top_right != blank -%}
+    <div class="featured-products__image-top-right">
+      {{
+        section.settings.image_top_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_top_right.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="featured-products__title">
+        {{ section.settings.title }}
+      </h2>
+    {%- endif -%}
+
+    {%- if section.settings.collection != blank and section.settings.collection.products.size > 0 -%}
+      <div class="featured-products__slider-wrapper">
+        <div class="swiper featured-products-swiper" id="FeaturedProductsSwiper-{{ section.id }}">
+          <div class="swiper-wrapper">
+            {%- for product in section.settings.collection.products limit: section.settings.products_to_show -%}
+              <div class="swiper-slide">
+                {% render 'card-product', card_product: product %}
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    {%- else -%}
+      <div class="featured-products__empty">
+        <p>No products found in this collection.</p>
+      </div>
+    {%- endif -%}
+  </div>
+
+  {%- if section.settings.image_bottom_left != blank -%}
+    <div class="featured-products__image-bottom-left">
+      {{
+        section.settings.image_bottom_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_bottom_left.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.image_bottom_right != blank -%}
+    <div class="featured-products__image-bottom-right">
+      {{
+        section.settings.image_bottom_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_bottom_right.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const featuredProductsSwiper = new Swiper('#FeaturedProductsSwiper-{{ section.id }}', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: false,
+      breakpoints: {
+        750: {
+          slidesPerView: 2,
+          spaceBetween: 30,
+        },
+        990: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 25,
+      "step": 1,
+      "default": 4,
+      "label": "Maximum products to show"
+    },
+    {
+      "type": "html",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "Decorative Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_left",
+      "label": "Image top left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_right",
+      "label": "Image top right"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_left",
+      "label": "Image bottom left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_right",
+      "label": "Image bottom right"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}

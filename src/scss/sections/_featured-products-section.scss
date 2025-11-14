@@ -1,0 +1,10 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.featured-products-section {
+  .featured-products__title {
+    @include heading_h3;
+    color: #406174;
+    margin-bottom: 3.2rem;
+  }
+}

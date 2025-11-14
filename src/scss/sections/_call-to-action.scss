@@ -178,7 +178,7 @@
       position: relative;
       z-index: 2;
       padding: 4rem;
-      color: white;
+      color: var(--text-color);
       flex-grow: 1;
       width: 100%;
       display: flex;
@@ -193,7 +193,7 @@
         font-size: 5.2rem;
         line-height: 1.1em;
         margin-bottom: 2rem;
-        color: white;
+        color: var(--text-color);
         max-width: 80%;
 
         @media (max-width: $breakpoint-tablet) {
@@ -208,14 +208,15 @@
       .call-to-action__textbox {
         @include fs_20;
         margin-bottom: 2rem;
-        color: white;
+        color: var(--text-color);
 
         @media (max-width: $breakpoint-mobile) {
           margin-bottom: 1.5rem;
         }
 
         p {
-          color: white;
+          color: var(--text-color);
+
         }
       }
 

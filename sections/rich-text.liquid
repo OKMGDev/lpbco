@@ -20,7 +20,10 @@
   }
 {%- endstyle -%}
 
-<div class="rich-text-section page-width section-{{ section.id }}-padding" id="RichText-{{ section.id }}">
+<div
+  class="rich-text-section page-width section-{{ section.id }}-padding{% if section.settings.custom_class != blank %} {{ section.settings.custom_class }}{% endif %}"
+  id="RichText-{{ section.id }}"
+>
   {%- if section.settings.image_top_left != blank -%}
     <div class="rich-text__image-top-left">
       {{
@@ -110,6 +113,12 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "text",
+      "id": "custom_class",
+      "label": "Custom class",
+      "info": "Add a custom CSS class to the section"
+    },
     {
       "type": "range",
       "id": "content_max_width",

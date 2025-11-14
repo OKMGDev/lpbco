@@ -70,6 +70,7 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 900,
         "accent_color": "",
         "image_top_left": "shopify://shop_images/Union_7.svg",
@@ -175,6 +176,7 @@
         "card_background_color": "#fbad48",
         "background_icons_color": "#f68e4e",
         "inner_background_color": "#f0e7d8",
+        "text_color": "#373737",
         "padding_top": 100,
         "padding_bottom": 100
       }

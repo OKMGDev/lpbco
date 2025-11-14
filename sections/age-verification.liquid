@@ -1,0 +1,158 @@
+<div id="AgeVerification-{{ section.id }}" class="age-verification-popup" style="display: none;">
+  <div class="age-verification-overlay"></div>
+  <div class="age-verification-content">
+    <img
+      src="{{ 'age-verification-bg.svg' | asset_url }}"
+      alt=""
+      class="age-verification-bg-image"
+      loading="lazy"
+      width="100%"
+      height="100%"
+    >
+    <div class="age-verification-content-inner">
+      {%- if section.settings.logo != blank -%}
+        <div class="age-verification-logo">
+          {{
+            section.settings.logo
+            | image_url: width: 200
+            | image_tag: loading: 'lazy', alt: section.settings.logo.alt, class: 'age-verification-logo-image'
+          }}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="age-verification-text">
+          {{ section.settings.text }}
+        </div>
+      {%- endif -%}
+
+      <div class="age-verification-buttons">
+        <button
+          type="button"
+          class="age-verification-button age-verification-button--confirm button button--orange"
+          id="AgeVerificationConfirm-{{ section.id }}"
+        >
+          {{ section.settings.confirm_button_text | default: 'Yes I am 18+' }}
+        </button>
+        <button
+          type="button"
+          class="age-verification-button age-verification-button--exit button button--orange"
+          id="AgeVerificationExit-{{ section.id }}"
+        >
+          {{ section.settings.exit_button_text | default: 'What is inflation?' }}
+        </button>
+      </div>
+      {%- if section.settings.subtext != blank -%}
+        <div class="age-verification-subtext">
+          {{ section.settings.subtext }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const popupId = 'AgeVerification-{{ section.id }}';
+    const cookieName = 'age_verification_accepted';
+    const cookieExpiryDays = 1;
+
+    // Check if cookie exists
+    function getCookie(name) {
+      const nameEQ = name + '=';
+      const ca = document.cookie.split(';');
+      for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    // Set cookie
+    function setCookie(name, value, days) {
+      const date = new Date();
+      date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+      const expires = 'expires=' + date.toUTCString();
+      document.cookie = name + '=' + value + ';' + expires + ';path=/';
+    }
+
+    // Check if user has already verified
+    const hasVerified = getCookie(cookieName);
+
+    if (!hasVerified) {
+      // Show popup
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.style.display = 'block';
+
+        // Confirm button - close and set cookie
+        const confirmButton = document.getElementById('AgeVerificationConfirm-{{ section.id }}');
+        if (confirmButton) {
+          confirmButton.addEventListener('click', function () {
+            setCookie(cookieName, 'true', cookieExpiryDays);
+            popup.style.display = 'none';
+          });
+        }
+
+        // Exit button - redirect to google.com
+        const exitButton = document.getElementById('AgeVerificationExit-{{ section.id }}');
+        if (exitButton) {
+          exitButton.addEventListener('click', function () {
+            window.location.href = 'https://google.com';
+          });
+        }
+
+        // Prevent closing on overlay click
+        const overlay = popup.querySelector('.age-verification-overlay');
+        if (overlay) {
+          overlay.addEventListener('click', function (e) {
+            e.stopPropagation();
+          });
+        }
+      }
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Age Verification",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text"
+    },
+    {
+      "type": "richtext",
+      "id": "subtext",
+      "label": "Subtext"
+    },
+    {
+      "type": "text",
+      "id": "confirm_button_text",
+      "label": "Confirm Button Text",
+      "default": "Yes I am 18+"
+    },
+    {
+      "type": "text",
+      "id": "exit_button_text",
+      "label": "Exit Button Text",
+      "default": "What is inflation"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Age Verification"
+    }
+  ]
+}
+{% endschema %}

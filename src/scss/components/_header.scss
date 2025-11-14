@@ -4,38 +4,62 @@
 // Use setup to get variables (setup forwards variables, so they're loaded once)
 @use '../setup' as *;
 
-.header {
-  @media (max-width: $breakpoint-mobile) {
-    padding: 1rem 2rem !important;
-  }
 
-  .header__icon {
-    .svg-wrapper {
+.header-wrapper {
+  border-bottom: 1px solid #3737371A;
 
-      @media (max-width: $breakpoint-mobile) {
-        width: 4.2rem;
-        height: 4.2rem;
+  .header {
 
-        .icon {
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1rem 2rem !important;
+    }
+
+    .header__icon {
+      color: $color-night-sky !important;
+    }
+
+    .header__inline-menu {
+      ul {
+        li {
+
+          .header__menu-item,
+          .header__active-menu-item {
+            color: $color-night-sky !important;
+          }
+        }
+      }
+
+    }
+
+    .header__icon {
+      .svg-wrapper {
+
+        @media (max-width: $breakpoint-mobile) {
           width: 4.2rem;
           height: 4.2rem;
 
+          .icon {
+            width: 4.2rem;
+            height: 4.2rem;
 
-          &.icon-search {
-            width: 2.2rem;
-            height: 2.2rem;
+
+            &.icon-search {
+              width: 2.2rem;
+              height: 2.2rem;
+            }
           }
         }
       }
     }
-  }
 
-  .header__submenu {
-    border-color: transparent;
+    .header__submenu {
+      border-color: transparent;
 
-    li {
-      a {
-        color: $color-night-sky;
+      li {
+        a {
+          color: $color-night-sky;
+        }
       }
     }
   }

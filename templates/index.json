@@ -122,9 +122,24 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 1000,
+        "accent_color": "",
         "image_top_left": "shopify://shop_images/Union_7.svg",
         "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "featured_products_KDzWEW": {
+      "type": "featured-products",
+      "name": "Featured Products",
+      "settings": {
+        "collection": "beer",
+        "products_to_show": 3,
+        "columns_desktop": 3,
+        "title": "Brewed for <br>\n<span class=\"text-bg\">the Coast</span>",
+        "background_color": "#f0e7d8",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -136,7 +151,7 @@
         "title": "Upcoming at <span class=\"text-bg\">Long Point</span>",
         "metaobject_type": "events",
         "padding_top": 100,
-        "padding_bottom": 36
+        "padding_bottom": 100
       }
     },
     "rich_text_wzWV6e": {
@@ -154,8 +169,10 @@
       ],
       "name": "Insta Label",
       "settings": {
+        "custom_class": "",
         "content_max_width": 930,
-        "padding_top": 36,
+        "accent_color": "",
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
@@ -224,6 +241,7 @@
     "image_banner_LqbUq6",
     "marqee_slider_aGitdy",
     "rich_text_PLYgyE",
+    "featured_products_KDzWEW",
     "upcoming_events_N7P4Tx",
     "rich_text_wzWV6e",
     "176284026737b77010",

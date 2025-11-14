@@ -74,8 +74,45 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+          <a href="{{ routes.root_url }}" class="breadcrumbs__link">Home</a>
+        </li>
+        <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
+
+        {%- if product.collections.size > 0 -%}
+          {%- assign first_collection = product.collections.first -%}
+          <li class="breadcrumbs__item">
+            <a href="{{ first_collection.url }}" class="breadcrumbs__link">{{ first_collection.title }}</a>
+          </li>
+          <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
+        {%- endif -%}
+        <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+          <span>{{ product.title }}</span>
+        </li>
+      </ol>
+    </nav>
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
-      <div class="grid__item product__media-wrapper">
+      {%- liquid
+        assign media_bg_color = product.metafields.custom.background_color
+        assign media_overlay_image = product.metafields.custom.overlay_image
+      -%}
+      <div
+        class="grid__item product__media-wrapper"
+        {%- if media_bg_color != blank -%}
+          style="background-color: {{ media_bg_color }};"
+        {%- endif -%}
+      >
+        {%- if media_overlay_image != blank -%}
+          <div class="product__media-overlay">
+            {{
+              media_overlay_image
+              | image_url: width: 1200
+              | image_tag: loading: 'lazy', alt: media_overlay_image.alt, class: 'product__media-overlay-image'
+            }}
+          </div>
+        {%- endif -%}
         {% render 'product-media-gallery', variant_images: variant_images %}
       </div>
       <div class="product__info-wrapper grid__item{% if settings.page_width > 1400 and section.settings.media_size == "small" %} product__info-wrapper--extra-padding{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
@@ -197,6 +234,25 @@
                     {{ product.description }}
                   </div>
                 {%- endif -%}
+              {%- when 'product_meta' -%}
+                <div class="product__meta" {{ block.shopify_attributes }}>
+                  {%- liquid
+                    assign alcohol_percentage = product.metafields.custom.alcohol_percentage
+                    assign flavour = product.metafields.custom.flavour
+                  -%}
+                  {%- if alcohol_percentage != blank -%}
+                    <div class="product__meta-item">
+                      <span class="product__meta-label">Alcohol Percentage:</span>
+                      <span class="product__meta-value">{{ alcohol_percentage }}</span>
+                    </div>
+                  {%- endif -%}
+                  {%- if flavour != blank -%}
+                    <div class="product__meta-item">
+                      <span class="product__meta-label">Flavour:</span>
+                      <span class="product__meta-value">{{ flavour }}</span>
+                    </div>
+                  {%- endif -%}
+                </div>
               {%- when 'sku' -%}
                 <p
                   class="product__sku{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.sku.size == 0 %} visibility-hidden{% endif %}"
@@ -932,6 +988,11 @@
       "type": "description",
       "name": "t:sections.main-product.blocks.description.name",
       "limit": 1
+    },
+    {
+      "type": "product_meta",
+      "name": "Product Meta",
+      "settings": []
     },
     {
       "type": "share",

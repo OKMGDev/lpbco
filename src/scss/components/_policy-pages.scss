@@ -1,0 +1,14 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.shopify-policy__container {
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+
+  .shopify-policy__title {
+    h1 {
+      @include heading_h2;
+      color: #406174;
+    }
+  }
+}

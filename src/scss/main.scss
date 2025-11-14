@@ -11,7 +11,11 @@
 @use 'components/footer';
 @use 'components/buttons';
 @use 'components/shop';
-
+@use 'components/collection-hero';
+@use 'components/product-grid';
+@use 'components/product';
+@use 'components/policy-pages';
+@use 'components/blog';
 // Use sections (variables available via setup)
 @use 'sections/collection-list';
 @use 'sections/banner';
@@ -27,6 +31,10 @@
 @use 'sections/grid-cards';
 @use 'sections/all-events-section';
 @use 'sections/contact';
+@use 'sections/featured-products-section';
+@use 'sections/age-verification';
+
+
 
 // Use utilities (variables available via setup)
 @use 'utilities';
