@@ -20,6 +20,7 @@
         },
         "buttons_K7MYzN": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Book A Table",
             "button_link_1": "https://www.longpointbrewingco.com.au/",
@@ -82,6 +83,116 @@
       "name": "Marquee Slider",
       "settings": {}
     },
+    "rich_text_AGicWe": {
+      "type": "rich-text",
+      "blocks": {
+        "title_eGq8Bg": {
+          "type": "title",
+          "settings": {
+            "title": "Opening<br>\n<span class=\"text-bg blue\">Early 2026</span>",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_GAFBRf": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
+          }
+        },
+        "textbox_p3mjiP": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+          }
+        },
+        "button_i49Ghk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "See what’s on",
+            "button_link_1": "shopify://pages/events",
+            "button_label_2": "View Location",
+            "button_link_2": "shopify://pages/locations"
+          }
+        }
+      },
+      "block_order": [
+        "title_eGq8Bg",
+        "subtitle_GAFBRf",
+        "textbox_p3mjiP",
+        "button_i49Ghk"
+      ],
+      "name": "LP - Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "image_top_left": "shopify://shop_images/Union_7.svg",
+        "image_bottom_right": "shopify://shop_images/Union_8.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "landing_page_banner_ABDbpK": {
+      "type": "landing-page-banner",
+      "blocks": {
+        "title_UJhFeR": {
+          "type": "title",
+          "settings": {
+            "title": "Follow Us FOR<br>\n<span class=\"text-bg\">UPDATES</span>"
+          }
+        },
+        "button_99eR7g": {
+          "type": "button",
+          "settings": {
+            "button_label": "SignUp for updates",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "title_UJhFeR",
+        "button_99eR7g"
+      ],
+      "name": "Landing Page Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1_d04417bd-fb7a-4060-869b-428b5b5c6b3d.jpg",
+        "overlay_opacity": 0,
+        "padding_top": 52,
+        "padding_bottom": 100
+      }
+    },
+    "landing_page_banner_gxEDMP": {
+      "type": "landing-page-banner",
+      "blocks": {
+        "title_nRNnQn": {
+          "type": "title",
+          "settings": {
+            "title": "Book your<br>\n<span class=\"text-bg\">function</span>"
+          }
+        },
+        "button_pBqEdA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Book now",
+            "button_link": "shopify://pages/contact",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "title_nRNnQn",
+        "button_pBqEdA"
+      ],
+      "name": "Landing Page Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/8e25543c3890b43b992547748b73737b19eeccc0.jpg",
+        "overlay_opacity": 0,
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
     "rich_text_PLYgyE": {
       "type": "rich-text",
       "blocks": {
@@ -120,6 +231,7 @@
         "textbox_KT77mX",
         "button_8ny7xf"
       ],
+      "disabled": true,
       "name": "Rich Text",
       "settings": {
         "custom_class": "",
@@ -133,11 +245,11 @@
     },
     "featured_products_KDzWEW": {
       "type": "featured-products",
+      "disabled": true,
       "name": "Featured Products",
       "settings": {
         "collection": "beer",
         "products_to_show": 3,
-        "columns_desktop": 3,
         "title": "Brewed for <br>\n<span class=\"text-bg\">the Coast</span>",
         "background_color": "#f0e7d8",
         "padding_top": 100,
@@ -146,6 +258,7 @@
     },
     "upcoming_events_N7P4Tx": {
       "type": "upcoming-events",
+      "disabled": true,
       "name": "Upcoming Events",
       "settings": {
         "title": "Upcoming at <span class=\"text-bg\">Long Point</span>",
@@ -207,6 +320,7 @@
     },
     "main_blog_gARkQE": {
       "type": "main-blog",
+      "disabled": true,
       "name": "Main Blog",
       "settings": {
         "background_color": "#53bcae",
@@ -223,6 +337,7 @@
     },
     "find_us_f6mzeW": {
       "type": "find-us",
+      "disabled": true,
       "name": "Find Us",
       "settings": {
         "background_color": "#4e3e3e",
@@ -240,6 +355,9 @@
   "order": [
     "image_banner_LqbUq6",
     "marqee_slider_aGitdy",
+    "rich_text_AGicWe",
+    "landing_page_banner_ABDbpK",
+    "landing_page_banner_gxEDMP",
     "rich_text_PLYgyE",
     "featured_products_KDzWEW",
     "upcoming_events_N7P4Tx",

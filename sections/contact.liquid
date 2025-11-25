@@ -79,14 +79,16 @@
         <div class="contact__tabs-wrapper">
           <div class="contact__tabs-nav">
             <button class="contact__tab-button active" data-tab="contact">CONTACT</button>
-            <button class="contact__tab-button" data-tab="wholesale">WHOLESALE ENQUIRIES</button>
-            <button class="contact__tab-button" data-tab="feedback">PRODUCT FEEDBACK</button>
+            {% comment %} <button class="contact__tab-button" data-tab="wholesale">WHOLESALE ENQUIRIES</button> {% endcomment %}
+            <button class="contact__tab-button" data-tab="functions">Functions</button>
+            {% comment %} <button class="contact__tab-button" data-tab="feedback">PRODUCT FEEDBACK</button> {% endcomment %}
           </div>
 
           <div class="contact__tabs-content">
             {% render 'contact-tab-contact', section_id: section.id %}
-            {% render 'contact-tab-wholesale', section_id: section.id %}
-            {% render 'contact-tab-feedback', section_id: section.id %}
+            {% render 'contact-tab-functions', section_id: section.id %}
+            {% comment %} {% render 'contact-tab-wholesale', section_id: section.id %} {% endcomment %}
+            {% comment %} {% render 'contact-tab-feedback', section_id: section.id %} {% endcomment %}
           </div>
         </div>
       </div>

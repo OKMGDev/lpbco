@@ -67,6 +67,7 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "",
         "padding_top": 100,
@@ -147,6 +148,7 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "",
         "padding_top": 0,
@@ -189,15 +191,15 @@
         "buttons_njrBFc": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "BOOK A TABLE",
-            "button_link_1": "",
-            "button_class_1": "",
-            "button_label_2": "Function Enquiries",
+            "button_label_1": "Contact us",
+            "button_link_1": "shopify://pages/contact",
+            "button_class_1": "button--white",
+            "button_label_2": "",
             "button_link_2": "shopify://pages/contact",
             "button_class_2": "",
-            "button_label_3": "TOUR BOOKINGS",
+            "button_label_3": "",
             "button_link_3": "shopify://pages/contact",
-            "button_class_3": "button--white"
+            "button_class_3": ""
           }
         }
       },

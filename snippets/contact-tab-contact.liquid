@@ -12,90 +12,99 @@
   <h2 class="contact__tab-heading">Got Questions?</h2>
   <div class="contact__tab-textbox">
     <p>
-      Hit us up about bookings, beers, dogs (yes, they're welcome in the Beach Bar), or that time your mate
-      lost his thong in the beer garden.
+      Hit us up about bookings, beers, dogs (yes, they're welcome in the Beach Bar), or that time your mate lost his
+      thong in the beer garden.
     </p>
   </div>
-  {%- form 'contact', id: 'ContactForm-Contact', class: 'contact__form' -%}
-    {%- if form.posted_successfully? -%}
-      <div class="contact__form-message success">
-        <h2>Thank you! Your message has been sent.</h2>
-      </div>
-    {%- elsif form.errors -%}
-      <div class="contact__form-message error">
-        <h2>Please correct the following errors:</h2>
-        <ul>
-          {%- for field in form.errors -%}
-            <li>{{ form.errors[field] }}</li>
-          {%- endfor -%}
-        </ul>
-      </div>
-    {%- endif -%}
-    <div class="contact__form-fields">
-      <div class="contact__form-row">
-        <div class="contact__form-field">
-          <label for="ContactForm-firstname-contact">First Name</label>
-          <input
-            type="text"
-            id="ContactForm-firstname-contact"
-            name="contact[first_name]"
-            value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
-            required
-          >
-        </div>
-        <div class="contact__form-field">
-          <label for="ContactForm-lastname-contact">Last Name</label>
-          <input
-            type="text"
-            id="ContactForm-lastname-contact"
-            name="contact[last_name]"
-            value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
-            required
-          >
-        </div>
-      </div>
-      <div class="contact__form-row">
-        <div class="contact__form-field">
-          <label for="ContactForm-phone-contact">Phone Number</label>
-          <input
-            type="tel"
-            id="ContactForm-phone-contact"
-            name="contact[phone]"
-            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-          >
-        </div>
-        <div class="contact__form-field">
-          <label for="ContactForm-email-contact">Email Address <span>*</span></label>
-          <input
-            type="email"
-            id="ContactForm-email-contact"
-            name="contact[email]"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            required
-          >
-        </div>
-      </div>
-      <div class="contact__form-field">
-        <label for="ContactForm-contact-method-contact">How would you like to be contacted?</label>
-        <select id="ContactForm-contact-method-contact" name="contact[contact_method]">
-          <option value="">Select an option</option>
-          <option value="email">Email</option>
-          <option value="phone">Phone</option>
-          <option value="either">Either</option>
-        </select>
-      </div>
-      <div class="contact__form-field">
-        <label for="ContactForm-message-contact">Your message</label>
-        <textarea
-          id="ContactForm-message-contact"
-          name="contact[body]"
-          rows="6"
-          required
-        >{{ form.body }}</textarea>
-      </div>
-      <input type="hidden" name="contact[form_type]" value="Contact">
-      <button type="submit" class="button contact__form-submit">Submit</button>
-    </div>
-  {%- endform -%}
-</div>
 
+  <div id="CONTACTA_68f0930a166642162d9fda1e"></div>
+  <script type="text/javascript" async>
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://forms.contacta.io/68f0930a166642162d9fda1e.js';
+    document.getElementsByTagName('head')[0].appendChild(script);
+  </script>
+  {% comment %}
+    {%- form 'contact', id: 'ContactForm-Contact', class: 'contact__form' -%}
+      {%- if form.posted_successfully? -%}
+        <div class="contact__form-message success">
+          <h2>Thank you! Your message has been sent.</h2>
+        </div>
+      {%- elsif form.errors -%}
+        <div class="contact__form-message error">
+          <h2>Please correct the following errors:</h2>
+          <ul>
+            {%- for field in form.errors -%}
+              <li>{{ form.errors[field] }}</li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+      <div class="contact__form-fields">
+        <div class="contact__form-row">
+          <div class="contact__form-field">
+            <label for="ContactForm-firstname-contact">First Name</label>
+            <input
+              type="text"
+              id="ContactForm-firstname-contact"
+              name="contact[first_name]"
+              value="{% if form.first_name %}{{ form.first_name }}{% elsif customer %}{{ customer.first_name }}{% endif %}"
+              required
+            >
+          </div>
+          <div class="contact__form-field">
+            <label for="ContactForm-lastname-contact">Last Name</label>
+            <input
+              type="text"
+              id="ContactForm-lastname-contact"
+              name="contact[last_name]"
+              value="{% if form.last_name %}{{ form.last_name }}{% elsif customer %}{{ customer.last_name }}{% endif %}"
+              required
+            >
+          </div>
+        </div>
+        <div class="contact__form-row">
+          <div class="contact__form-field">
+            <label for="ContactForm-phone-contact">Phone Number</label>
+            <input
+              type="tel"
+              id="ContactForm-phone-contact"
+              name="contact[phone]"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+            >
+          </div>
+          <div class="contact__form-field">
+            <label for="ContactForm-email-contact">Email Address <span>*</span></label>
+            <input
+              type="email"
+              id="ContactForm-email-contact"
+              name="contact[email]"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              required
+            >
+          </div>
+        </div>
+        <div class="contact__form-field">
+          <label for="ContactForm-contact-method-contact">How would you like to be contacted?</label>
+          <select id="ContactForm-contact-method-contact" name="contact[contact_method]">
+            <option value="">Select an option</option>
+            <option value="email">Email</option>
+            <option value="phone">Phone</option>
+            <option value="either">Either</option>
+          </select>
+        </div>
+        <div class="contact__form-field">
+          <label for="ContactForm-message-contact">Your message</label>
+          <textarea
+            id="ContactForm-message-contact"
+            name="contact[body]"
+            rows="6"
+            required
+          >{{ form.body }}</textarea>
+        </div>
+        <input type="hidden" name="contact[form_type]" value="Contact">
+        <button type="submit" class="button contact__form-submit">Submit</button>
+      </div>
+    {%- endform -%}
+  {% endcomment %}
+</div>

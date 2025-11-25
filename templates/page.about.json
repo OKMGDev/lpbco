@@ -127,6 +127,7 @@
         "textbox_GGFpfT",
         "button_pNAEYR"
       ],
+      "disabled": true,
       "name": "Call to Action",
       "settings": {
         "image": "shopify://shop_images/2c726a0879e8b09d53f9986609e543232a7c1cda.jpg",
