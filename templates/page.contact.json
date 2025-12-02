@@ -72,8 +72,8 @@
           "settings": {
             "icon": "shopify://shop_images/Frame_35.svg",
             "title": "Phone",
-            "textbox": "<p>1234567890</p>",
-            "link": "tel:1234567890",
+            "textbox": "<p>0409 818 356</p>",
+            "link": "tel:0409818356",
             "link_label": ""
           }
         },

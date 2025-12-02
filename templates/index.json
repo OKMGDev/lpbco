@@ -12,6 +12,24 @@
     "image_banner_LqbUq6": {
       "type": "image-banner",
       "blocks": {
+        "slide_image_j3DnAK": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_5932_1.png"
+          }
+        },
+        "slide_image_ipmMEG": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_26_2.jpg"
+          }
+        },
+        "slide_image_D6gwUY": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1_d04417bd-fb7a-4060-869b-428b5b5c6b3d.jpg"
+          }
+        },
         "heading_B4JPPX": {
           "type": "heading",
           "settings": {
@@ -32,14 +50,21 @@
         }
       },
       "block_order": [
+        "slide_image_j3DnAK",
+        "slide_image_ipmMEG",
+        "slide_image_D6gwUY",
         "heading_B4JPPX",
         "buttons_K7MYzN"
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "background_type": "slider",
         "background_image": "shopify://shop_images/68a64ad274359784d6b2d02a5cae201183ab57f8.jpg",
-        "overlay_opacity": 40,
-        "banner_type": "homepage"
+        "overlay_opacity": 30,
+        "banner_type": "homepage",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
       }
     },
     "marqee_slider_aGitdy": {
@@ -159,6 +184,8 @@
       "settings": {
         "background_image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1_d04417bd-fb7a-4060-869b-428b5b5c6b3d.jpg",
         "overlay_opacity": 0,
+        "image_top_left": "shopify://shop_images/Vector_59.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_43.svg",
         "padding_top": 52,
         "padding_bottom": 100
       }
@@ -189,6 +216,7 @@
       "settings": {
         "background_image": "shopify://shop_images/8e25543c3890b43b992547748b73737b19eeccc0.jpg",
         "overlay_opacity": 0,
+        "image_bottom_left": "shopify://shop_images/Vector_32.svg",
         "padding_top": 0,
         "padding_bottom": 100
       }

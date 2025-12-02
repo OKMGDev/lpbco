@@ -29,6 +29,24 @@
 {%- endstyle -%}
 
 <div id="LandingBanner-{{ section.id }}" class="landing-banner section-{{ section.id }}-padding">
+  {%- if section.settings.image_top_left != blank -%}
+    <div class="landing-banner__image-top-left">
+      {{
+        section.settings.image_top_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_top_left.alt
+      }}
+    </div>
+  {%- endif -%}
+  {%- if section.settings.image_top_right != blank -%}
+    <div class="landing-banner__image-top-right">
+      {{
+        section.settings.image_top_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_top_right.alt
+      }}
+    </div>
+  {%- endif -%}
   <div class="page-width">
     <div class="landing-banner__inner">
       <div class="landing-banner__content">
@@ -58,6 +76,24 @@
       </div>
     </div>
   </div>
+  {%- if section.settings.image_bottom_left != blank -%}
+    <div class="landing-banner__image-bottom-left">
+      {{
+        section.settings.image_bottom_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_bottom_left.alt
+      }}
+    </div>
+  {%- endif -%}
+  {%- if section.settings.image_bottom_right != blank -%}
+    <div class="landing-banner__image-bottom-right">
+      {{
+        section.settings.image_bottom_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_bottom_right.alt
+      }}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
@@ -87,6 +123,30 @@
       "unit": "%",
       "label": "Overlay opacity",
       "default": 0
+    },
+    {
+      "type": "header",
+      "content": "Corner Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_left",
+      "label": "Image top left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_top_right",
+      "label": "Image top right"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_left",
+      "label": "Image bottom left"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_bottom_right",
+      "label": "Image bottom right"
     },
     {
       "type": "header",
