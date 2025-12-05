@@ -24,9 +24,13 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
+        "background_type": "single",
         "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
         "overlay_opacity": 20,
-        "banner_type": "inner-pages"
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
       }
     },
     "main": {
@@ -40,6 +44,22 @@
     "rich_text_WiXfpB": {
       "type": "rich-text",
       "blocks": {
+        "background_graphic_gippzq": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Union_11.svg",
+            "enable_position_top": true,
+            "position_top": 25,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 280,
+            "image_size_mobile": 0
+          }
+        },
         "title_GygpLb": {
           "type": "title",
           "settings": {
@@ -61,15 +81,16 @@
         }
       },
       "block_order": [
+        "background_graphic_gippzq",
         "title_GygpLb",
         "subtitle_pxtBHy",
         "textbox_hgW4PD"
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 860,
         "accent_color": "",
-        "image_top_left": "shopify://shop_images/Vector_32.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -161,6 +182,7 @@
         "card_background_color": "#fbad48",
         "background_icons_color": "#f68e4e",
         "inner_background_color": "#f0e7d8",
+        "text_color": "",
         "padding_top": 100,
         "padding_bottom": 100
       }

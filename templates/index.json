@@ -111,6 +111,38 @@
     "rich_text_AGicWe": {
       "type": "rich-text",
       "blocks": {
+        "background_graphic_maAeCT": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_82.svg",
+            "enable_position_top": true,
+            "position_top": 3,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 210,
+            "image_size_mobile": 80
+          }
+        },
+        "background_graphic_YdELmV": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_83.svg",
+            "enable_position_top": false,
+            "position_top": 5,
+            "enable_position_bottom": true,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 180,
+            "image_size_mobile": 70
+          }
+        },
         "title_eGq8Bg": {
           "type": "title",
           "settings": {
@@ -142,6 +174,8 @@
         }
       },
       "block_order": [
+        "background_graphic_maAeCT",
+        "background_graphic_YdELmV",
         "title_eGq8Bg",
         "subtitle_GAFBRf",
         "textbox_p3mjiP",
@@ -152,8 +186,6 @@
         "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "",
-        "image_top_left": "shopify://shop_images/Union_7.svg",
-        "image_bottom_right": "shopify://shop_images/Union_8.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -224,6 +256,38 @@
     "rich_text_PLYgyE": {
       "type": "rich-text",
       "blocks": {
+        "background_graphic_Fwn6tp": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_68.svg",
+            "enable_position_top": true,
+            "position_top": 0,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
+        "background_graphic_3W3Mbw": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_69.svg",
+            "enable_position_top": false,
+            "position_top": 0,
+            "enable_position_bottom": true,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
         "title_thy496": {
           "type": "title",
           "settings": {
@@ -254,6 +318,8 @@
         }
       },
       "block_order": [
+        "background_graphic_Fwn6tp",
+        "background_graphic_3W3Mbw",
         "title_thy496",
         "subtitle_UWCe7X",
         "textbox_KT77mX",
@@ -265,8 +331,6 @@
         "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "",
-        "image_top_left": "shopify://shop_images/Union_7.svg",
-        "image_bottom_right": "shopify://shop_images/Union_8.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -348,12 +412,11 @@
     },
     "main_blog_gARkQE": {
       "type": "main-blog",
-      "disabled": true,
       "name": "Main Blog",
       "settings": {
         "background_color": "#53bcae",
-        "image_top_left": "shopify://shop_images/Vector_28.svg",
-        "image_bottom_right": "shopify://shop_images/Vector_29.svg",
+        "image_top_left": "shopify://shop_images/Vector_70.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_71.svg",
         "title": "INSIGHTS FROM OUR BREWHOUSE",
         "textbox": "",
         "blog": "insights-1",
