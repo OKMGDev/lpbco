@@ -69,7 +69,6 @@
       "settings": {
         "content_max_width": 900,
         "accent_color": "",
-        "image_top_left": "shopify://shop_images/Union_7.svg",
         "padding_top": 100,
         "padding_bottom": 0
       }
@@ -105,7 +104,6 @@
       "settings": {
         "content_max_width": 600,
         "accent_color": "",
-        "image_bottom_right": "shopify://shop_images/Union_8.svg",
         "padding_top": 52,
         "padding_bottom": 100
       }

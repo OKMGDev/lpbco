@@ -38,7 +38,6 @@
         "custom_class": "product-page-banner",
         "content_max_width": 600,
         "accent_color": "",
-        "image_top_left": "shopify://shop_images/Union_7.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }

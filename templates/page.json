@@ -62,8 +62,6 @@
       "settings": {
         "content_max_width": 1000,
         "accent_color": "#f9ad8e",
-        "image_top_left": "shopify://shop_images/Vector_26.svg",
-        "image_bottom_right": "shopify://shop_images/Vector_27_f628fb05-da13-4edc-823c-a710dd78cd9e.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }
