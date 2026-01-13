@@ -24,12 +24,6 @@
             "image": "shopify://shop_images/Rectangle_26_2.jpg"
           }
         },
-        "slide_image_D6gwUY": {
-          "type": "slide_image",
-          "settings": {
-            "image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1_d04417bd-fb7a-4060-869b-428b5b5c6b3d.jpg"
-          }
-        },
         "heading_B4JPPX": {
           "type": "heading",
           "settings": {
@@ -51,7 +45,6 @@
       "block_order": [
         "slide_image_j3DnAK",
         "slide_image_ipmMEG",
-        "slide_image_D6gwUY",
         "heading_B4JPPX",
         "buttons_K7MYzN"
       ],
