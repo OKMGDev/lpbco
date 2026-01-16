@@ -406,6 +406,7 @@
     },
     "main_blog_gARkQE": {
       "type": "main-blog",
+      "disabled": true,
       "name": "Main Blog",
       "settings": {
         "background_color": "#53bcae",
