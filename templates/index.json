@@ -33,8 +33,8 @@
         "buttons_K7MYzN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Book A Function",
-            "button_link_1": "shopify://pages/contact",
+            "button_label_1": "Book Now",
+            "button_link_1": "shopify://pages/functions",
             "button_style_secondary_1": false,
             "button_label_2": "Function pack",
             "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
