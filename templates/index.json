@@ -24,12 +24,6 @@
             "image": "shopify://shop_images/Rectangle_26_2.jpg"
           }
         },
-        "slide_image_D6gwUY": {
-          "type": "slide_image",
-          "settings": {
-            "image": "shopify://shop_images/bee64b1b1ce38c09850ce2d0a483b5f5854be278_1_d04417bd-fb7a-4060-869b-428b5b5c6b3d.jpg"
-          }
-        },
         "heading_B4JPPX": {
           "type": "heading",
           "settings": {
@@ -39,11 +33,11 @@
         "buttons_K7MYzN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Book A Function",
-            "button_link_1": "shopify://pages/contact",
+            "button_label_1": "Book Now",
+            "button_link_1": "shopify://pages/functions",
             "button_style_secondary_1": false,
-            "button_label_2": "",
-            "button_link_2": "",
+            "button_label_2": "Function pack",
+            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
             "button_style_secondary_2": false
           }
         }
@@ -51,13 +45,15 @@
       "block_order": [
         "slide_image_j3DnAK",
         "slide_image_ipmMEG",
-        "slide_image_D6gwUY",
         "heading_B4JPPX",
         "buttons_K7MYzN"
       ],
+      "custom_css": [
+        ".banner__buttons--multiple {display: flex; justify-content: center; gap: 16px;}"
+      ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_type": "slider",
+        "background_type": "single",
         "background_image": "shopify://shop_images/68a64ad274359784d6b2d02a5cae201183ab57f8.jpg",
         "overlay_opacity": 30,
         "banner_type": "homepage",
@@ -202,7 +198,7 @@
           "type": "button",
           "settings": {
             "button_label": "Book now",
-            "button_link": "shopify://pages/contact",
+            "button_link": "shopify://pages/functions",
             "button_style_secondary": true
           }
         }
@@ -226,7 +222,7 @@
         "title_UJhFeR": {
           "type": "title",
           "settings": {
-            "title": "Follow Us FOR<br>\n<span class=\"text-bg\">UPDATES</span>"
+            "title": "Signup for <br>\n<span class=\"text-bg\">UPDATES</span>"
           }
         },
         "button_99eR7g": {
@@ -410,6 +406,7 @@
     },
     "main_blog_gARkQE": {
       "type": "main-blog",
+      "disabled": true,
       "name": "Main Blog",
       "settings": {
         "background_color": "#53bcae",

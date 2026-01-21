@@ -70,7 +70,7 @@
         "subtitle_Y4FKHB": {
           "type": "subtitle",
           "settings": {
-            "subtitle": "WHETHER IT’S A WEDDING, AN ENGAGEMENT, A MILESTONE BIRTHDAY, YOUR FOOTY TEAM’S END-OF-SEASON WIND-UP, OR THAT CORPORATE EVENT YOU’D RATHER CALL A “LONG LUNCH” — LPBCO. IS MADE FOR CELEBRATING."
+            "subtitle": "WHETHER IT’S A WEDDING, AN ENGAGEMENT, A MILESTONE BIRTHDAY, YOUR FOOTY TEAM’S END-OF-SEASON WIND-UP, OR THAT CORPORATE EVENT YOU’D RATHER CALL A “LONG LUNCH” — Long Point Brewing Co. IS MADE FOR CELEBRATING."
           }
         },
         "textbox_9cKzyX": {
@@ -78,13 +78,23 @@
           "settings": {
             "textbox": "<p>The perfect destination for your next event. We’ve got a range of spaces to fit your vibe:</p>"
           }
+        },
+        "button_C9Vb8A": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Function Pack",
+            "button_link_1": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
         }
       },
       "block_order": [
         "background_graphic_ACV9Qj",
         "title_nyUbFK",
         "subtitle_Y4FKHB",
-        "textbox_9cKzyX"
+        "textbox_9cKzyX",
+        "button_C9Vb8A"
       ],
       "name": "Rich Text",
       "settings": {
@@ -103,7 +113,7 @@
           "settings": {
             "icon": "shopify://shop_images/Vector_48.svg",
             "title": "Tastings Area",
-            "textbox": "<p>Up to 30 people. Perfect for intimate gatherings, small parties, or “just one more round.”</p>"
+            "textbox": "<p>Up to 60 people. Perfect for intimate gatherings, small parties, or “just one more round.”</p>"
           }
         },
         "list_item_xPaiF4": {
@@ -111,7 +121,7 @@
           "settings": {
             "icon": "shopify://shop_images/Vector_48.svg",
             "title": "Beach Bar",
-            "textbox": "<p>Up to 50 people. Sun, shade, pints, and people-watching.</p>"
+            "textbox": "<p>Up to 200 people. Sun, shade, pints, and people-watching.</p>"
           }
         },
         "list_item_CpGRVU": {

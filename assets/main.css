@@ -3768,11 +3768,9 @@ media-gallery slider-component.thumbnail-slider li button img {
   line-height: 1.1em;
   color: inherit;
 }
-.landing-banner .landing-banner__inner .landing-banner__content .landing-banner__button {
-  align-self: flex-end;
-}
 .landing-banner .landing-banner__inner .landing-banner__content .landing-banner__button a.button {
   transform: rotate(-3deg);
+  padding: 2rem 3rem;
 }
 
 .text-center {
@@ -3786,5 +3784,3 @@ media-gallery slider-component.thumbnail-slider li button img {
 .mt-2 {
   margin-top: 2rem;
 }
-
-/*# sourceMappingURL=main.css.map */

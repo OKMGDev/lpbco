@@ -46,6 +46,7 @@
       "blocks": {
         "title_3dBrzb": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "LPBC. Not just another shed <span class=\"text-bg blue\">full of tanks.</span>",
             "title_size": "smaller"
@@ -82,7 +83,7 @@
       "type": "simple-image",
       "name": "Simple Image",
       "settings": {
-        "image": "shopify://shop_images/7caf56f8c86cbe735ba10ff260d33f08c926fe0c.png",
+        "image": "shopify://shop_images/LPBC_VENUE.jpg",
         "image_width": "full",
         "image_custom_width": 250,
         "padding_top": 0,
@@ -103,7 +104,7 @@
         "card_U3ikQ3": {
           "type": "card",
           "settings": {
-            "title": "Restaurant & Brewhouse:",
+            "title": "The Taproom",
             "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views..</p>",
             "bg_icon": "shopify://shop_images/Vector_56.svg"
           }
@@ -143,7 +144,7 @@
         "textbox_abtfdD": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>And the best bit? We’re right on the Kennedy Bay foreshore, with the brand-new 150-metre jetty at our doorstep, parks and playgrounds for the kids, and one of WA’s best stretches of beach just a sandy-toed stroll away.  </p><p>Only 36km from Fremantle and a quick 45-minute trip from Perth CBD, Long Point Brewing is far enough to feel like a getaway, but close enough that you can still make it home in time to walk the dog (or not, we won’t tell).</p>"
+            "textbox": "<p>And the best bit? We're right on the Kennedy Bay foreshore, with a brand-new 150 metre jetty under construction, parks and playgrounds for the kids, and one of WA's best stretches of beach just a sandy-toed stroll away.</p><p>Only 36km from Fremantle and a quick 45-minute trip from Perth CBD, Long Point Brewing Co. is far enough to feel like a getaway, but close enough that you can still make it home in time to walk the dog (or not, we won’t tell).</p>"
           }
         }
       },
@@ -196,7 +197,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Contact us",
-            "button_link_1": "shopify://pages/contact",
+            "button_link_1": "shopify://pages/functions",
             "button_class_1": "button--white",
             "button_label_2": "",
             "button_link_2": "shopify://pages/contact",
