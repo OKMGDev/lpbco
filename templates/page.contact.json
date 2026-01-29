@@ -24,9 +24,13 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
+        "background_type": "single",
+        "background_image": "shopify://shop_images/LPBC_3.jpg",
         "overlay_opacity": 30,
-        "banner_type": "inner-pages"
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
       }
     },
     "main": {
@@ -52,7 +56,7 @@
           "settings": {
             "icon": "shopify://shop_images/Frame_33.svg",
             "title": "Address",
-            "textbox": "<p>1 Sea Beach Way, <br/>Kennedy Bay WA</p>",
+            "textbox": "<p>16 Sea Beach Way, <br/>Kennedy Bay WA</p>",
             "link": "https://maps.app.goo.gl/2ixW2SmkmZXn92418",
             "link_label": ""
           }

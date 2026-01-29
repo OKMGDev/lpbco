@@ -34,7 +34,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Book Now",
-            "button_link_1": "shopify://pages/functions",
+            "button_link_1": "https://docs.google.com/forms/d/1HoLMzO8peYl80hdN9rkqhQJ9pzMYZw4bHzJ5BPBV70o/viewform?edit_requested=true",
             "button_style_secondary_1": false,
             "button_label_2": "Function pack",
             "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
@@ -199,7 +199,7 @@
           "settings": {
             "button_label": "Book now",
             "button_link": "shopify://pages/functions",
-            "button_style_secondary": true
+            "button_style_secondary": false
           }
         }
       },
@@ -207,9 +207,12 @@
         "title_nRNnQn",
         "button_pBqEdA"
       ],
+      "custom_css": [
+        "a {padding: 1.5em 3.5em;}"
+      ],
       "name": "Landing Page Banner",
       "settings": {
-        "background_image": "shopify://shop_images/Screenshot_2025-12-18_at_10.57.08_am.jpg",
+        "background_image": "shopify://shop_images/my-project-page-1.jpg",
         "overlay_opacity": 20,
         "image_bottom_left": "shopify://shop_images/Vector_32.svg",
         "padding_top": 0,
@@ -229,7 +232,7 @@
           "type": "button",
           "settings": {
             "button_label": "SignUp for updates",
-            "button_link": "shopify://pages/contact",
+            "button_link": "/pages/contact?tab=newsletter#tab-newsletter",
             "button_style_secondary": false
           }
         }
@@ -238,10 +241,13 @@
         "title_UJhFeR",
         "button_99eR7g"
       ],
+      "custom_css": [
+        "a {padding: 1.5em 3.5em;}"
+      ],
       "name": "Landing Page Banner",
       "settings": {
-        "background_image": "shopify://shop_images/Screenshot_2025-12-18_at_1.31.06_pm.jpg",
-        "overlay_opacity": 30,
+        "background_image": "shopify://shop_images/my-project-page-1_4.jpg",
+        "overlay_opacity": 20,
         "image_bottom_right": "shopify://shop_images/Vector_43.svg",
         "padding_top": 52,
         "padding_bottom": 100

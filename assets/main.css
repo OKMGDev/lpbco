@@ -3420,6 +3420,46 @@ media-gallery slider-component.thumbnail-slider li button img {
   object-position: left;
 }
 
+.contacta-webform-form .contacta-webform-table .heading h1 {
+  font-size: 6.4rem;
+  line-height: 1.3em;
+  letter-spacing: -0.03em;
+}
+@media (max-width: 1024px) {
+  .contacta-webform-form .contacta-webform-table .heading h1 {
+    font-size: 4.4rem;
+    line-height: 1.3em;
+  }
+}
+@media (max-width: 768px) {
+  .contacta-webform-form .contacta-webform-table .heading h1 {
+    font-size: 3.2rem;
+    line-height: 1.3em;
+  }
+}
+.contacta-webform-form .contacta-webform-table .heading h1 {
+  text-align: left;
+  margin-top: -10px;
+}
+.contacta-webform-form .contacta-webform-table .heading h5 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+@media (max-width: 1024px) {
+  .contacta-webform-form .contacta-webform-table .heading h5 {
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+}
+@media (max-width: 768px) {
+  .contacta-webform-form .contacta-webform-table .heading h5 {
+    font-size: 1.8rem;
+  }
+}
+.contacta-webform-form .contacta-webform-table .heading h5 {
+  text-align: left;
+  color: rgba(var(--color-foreground), 0.75);
+}
 @media (max-width: 768px) {
   .contacta-webform-form .contacta-webform-table .contacta-row {
     flex-direction: column;

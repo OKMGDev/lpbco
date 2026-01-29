@@ -268,6 +268,21 @@
 
 .contacta-webform-form {
   .contacta-webform-table {
+
+    .heading {
+      h1 {
+        @include heading_h4;
+        text-align: left;
+        margin-top: -10px;
+      }
+
+      h5 {
+        @include fs_24;
+        text-align: left;
+        color: rgba(var(--color-foreground), 0.75)
+      }
+    }
+
     .contacta-row {
 
       @media (max-width: $breakpoint-mobile) {
@@ -275,6 +290,8 @@
         gap: 2.4rem;
 
         .contacta-col {
+
+
 
           label {
             @include fs_24;
