@@ -70,7 +70,7 @@
         "subtitle_Y4FKHB": {
           "type": "subtitle",
           "settings": {
-            "subtitle": "WHETHER IT’S A WEDDING, AN ENGAGEMENT, A MILESTONE BIRTHDAY, YOUR FOOTY TEAM’S END-OF-SEASON WIND-UP, OR THAT CORPORATE EVENT YOU’D RATHER CALL A “LONG LUNCH” — Long Point Brewing Co. IS MADE FOR CELEBRATING."
+            "subtitle": "Whether it's a wedding, an engagement, a milestone birthday, your footy team's end-of-season wind-up, or that corporate event you'd rather call a “long lunch” — Long Point Brewing Co. is made for celebrating."
           }
         },
         "textbox_9cKzyX": {
@@ -83,8 +83,8 @@
           "type": "button",
           "settings": {
             "button_label_1": "Function Pack",
-            "button_link_1": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
-            "button_label_2": "Book Now",
+            "button_link_1": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Final_Function_PACK_83bd6243-2e28-4162-8e9d-a1cb8a1119ed.pdf?v=1770879663",
+            "button_label_2": "Enquire Now",
             "button_link_2": "https://docs.google.com/forms/d/1HoLMzO8peYl80hdN9rkqhQJ9pzMYZw4bHzJ5BPBV70o/viewform?edit_requested=true"
           }
         }
@@ -112,7 +112,7 @@
           "type": "list_item",
           "settings": {
             "icon": "shopify://shop_images/Vector_48.svg",
-            "title": "Tastings Area",
+            "title": "Tasting Room",
             "textbox": "<p>Up to 60 people. Perfect for intimate gatherings, small parties, or “just one more round.”</p>"
           }
         },
@@ -129,7 +129,7 @@
           "settings": {
             "icon": "shopify://shop_images/Vector_48.svg",
             "title": "Sunset Lounge (Level 1)",
-            "textbox": "<p>Ocean views that do half the hosting for you. Seats up to 120, or 200 standing for cocktail-style events.</p>"
+            "textbox": "<p>Ocean views that do half the hosting for you. Seats up to 150, or 200 standing for cocktail-style events.</p>"
           }
         },
         "textbox_cjaAxn": {

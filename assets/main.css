@@ -1268,7 +1268,7 @@ media-gallery slider-component.thumbnail-slider li button img {
   position: relative;
 }
 .banner.banner--inner-pages .banner__content {
-  min-height: calc(70vh - 103px);
+  min-height: calc(55vh - 103px);
 }
 .banner .banner__content {
   min-height: calc(100vh - 103px);

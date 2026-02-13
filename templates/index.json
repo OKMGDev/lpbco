@@ -33,11 +33,11 @@
         "buttons_K7MYzN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Book Now",
+            "button_label_1": "Enquire Now",
             "button_link_1": "https://docs.google.com/forms/d/1HoLMzO8peYl80hdN9rkqhQJ9pzMYZw4bHzJ5BPBV70o/viewform?edit_requested=true",
             "button_style_secondary_1": false,
             "button_label_2": "Function pack",
-            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Function_Pack_copy.pdf.pdf?v=1768459616",
+            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Final_Function_PACK_83bd6243-2e28-4162-8e9d-a1cb8a1119ed.pdf?v=1770879663",
             "button_style_secondary_2": false
           }
         }
@@ -154,7 +154,7 @@
         "textbox_p3mjiP": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+            "textbox": "<p>We’re not trying to reinvent the wheel and we just reckon beer tastes better by the ocean.             Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
           }
         },
         "button_i49Ghk": {
@@ -191,13 +191,13 @@
         "title_nRNnQn": {
           "type": "title",
           "settings": {
-            "title": "Book your<br>\n<span class=\"text-bg\">function</span>"
+            "title": "Plan your<br>\n<span class=\"text-bg\">function</span>"
           }
         },
         "button_pBqEdA": {
           "type": "button",
           "settings": {
-            "button_label": "Book now",
+            "button_label": "Enquire now",
             "button_link": "shopify://pages/functions",
             "button_style_secondary": false
           }
@@ -231,7 +231,7 @@
         "button_99eR7g": {
           "type": "button",
           "settings": {
-            "button_label": "SignUp for updates",
+            "button_label": "Join our mailing list",
             "button_link": "/pages/contact?tab=newsletter#tab-newsletter",
             "button_style_secondary": false
           }

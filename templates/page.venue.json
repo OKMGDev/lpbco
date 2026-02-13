@@ -55,13 +55,13 @@
         "subtitle_KCt46y": {
           "type": "subtitle",
           "settings": {
-            "subtitle": " SURE, WE BREW A CRACKING BEER. BUT WE ALSO PRIDE OURSELVES ON OUR KITCHEN — QUALITY PRODUCE, SKILLED STAFF, AND A MENU THAT’LL EVEN IMPRESS THE MOTHER-IN-LAW."
+            "subtitle": " Sure, we brew a cracking beer. But we also pride ourselves on our kitchen — quality produce, skilled staff, and a menu that'll even impress the mother-in-law."
           }
         },
         "textbox_Q4Giz7": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>We do weddings, birthdays, Sundays, first dates (good luck), and that after-work round with the crew.</p>"
+            "textbox": "<p>We do weddings, birthdays, Sunday sessions, first dates (good luck), and that after-work round with the crew.</p>"
           }
         }
       },
@@ -104,8 +104,8 @@
         "card_U3ikQ3": {
           "type": "card",
           "settings": {
-            "title": "The Taproom",
-            "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views..</p>",
+            "title": "The Taproom:",
+            "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views.</p>",
             "bg_icon": "shopify://shop_images/Vector_56.svg"
           }
         },
@@ -122,7 +122,7 @@
           "settings": {
             "title": "Little Point Kiosk:",
             "textbox": "<p>Our breezy kiosk slinging coffees, pastries, and coastal favourites from the wee hours.</p>",
-            "bg_icon": "shopify://shop_images/Vector_58.svg"
+            "bg_icon": "shopify://shop_images/Group_1_3.svg"
           }
         }
       },
@@ -174,7 +174,7 @@
           "settings": {
             "icon": "shopify://shop_images/Vector_49.svg",
             "title": "Private Functions & Weddings:",
-            "textbox": "<p>We do weddings, birthdays, Sundays, first dates (good luck), and that after-work round with the crew.</p>"
+            "textbox": "<p>We do weddings, birthdays, Sunday sessions, first dates (good luck), and that after-work round with the crew.</p>"
           }
         },
         "list_item_MG4VUM": {
@@ -197,7 +197,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "Contact us",
-            "button_link_1": "shopify://pages/functions",
+            "button_link_1": "https://www.longpointbrewingco.com.au/pages/contact",
             "button_class_1": "button--white",
             "button_label_2": "",
             "button_link_2": "shopify://pages/contact",
