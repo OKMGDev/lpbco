@@ -53,7 +53,7 @@
         "textbox_HHh4mE": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>Long Point Brewing Co. was dreamt up by <strong>Shane & Sally</strong> Wormall - locals who love the Peel coast almost as much as they love a good pint.</p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p>",
+            "textbox": "<p>Long Point Brewing Co. was dreamt up by <strong>Shane & Sally</strong> Wormall - locals who love the Peel coast almost as much as they love a good pint.</p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p><p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink, wink!).</p>",
             "accent_color": "#f9ad8e"
           }
         }
@@ -78,7 +78,7 @@
         "textbox_MNmD8r": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink, wink!).</p>"
+            "textbox": ""
           }
         },
         "quote_pCwxmc": {
