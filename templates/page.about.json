@@ -44,6 +44,12 @@
     "image_with_text_7FgpXy": {
       "type": "image-with-text",
       "blocks": {
+        "title_P3ztGN": {
+          "type": "title",
+          "settings": {
+            "title": "OUR STORY"
+          }
+        },
         "textbox_HHh4mE": {
           "type": "textbox",
           "settings": {
@@ -53,6 +59,7 @@
         }
       },
       "block_order": [
+        "title_P3ztGN",
         "textbox_HHh4mE"
       ],
       "name": "Image with Text",
