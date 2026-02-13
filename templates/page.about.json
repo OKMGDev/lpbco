@@ -41,35 +41,13 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_cUF8tf": {
-      "type": "rich-text",
-      "blocks": {
-        "subtitle_PREyHc": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "Long Point Brewing Co. was dreamt up by <span class=\"text-bg\">Shane & Sally</span> Wormall - locals who love the Peel coast almost as much as they love a good pint."
-          }
-        }
-      },
-      "block_order": [
-        "subtitle_PREyHc"
-      ],
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 1000,
-        "accent_color": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_7FgpXy": {
       "type": "image-with-text",
       "blocks": {
         "textbox_HHh4mE": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p>",
+            "textbox": "<p>Long Point Brewing Co. was dreamt up by <strong>Shane & Sally</strong> Wormall - locals who love the Peel coast almost as much as they love a good pint.</p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p>",
             "accent_color": "#f9ad8e"
           }
         }
@@ -83,7 +61,7 @@
         "image_overlay": "shopify://shop_images/Subtract_1.svg",
         "section_bg_color": "#ffffff",
         "image_bottom_right": "shopify://shop_images/Vector_74.svg",
-        "padding_top": 100,
+        "padding_top": 60,
         "padding_bottom": 100
       }
     },
@@ -152,7 +130,6 @@
         "textbox_GGFpfT",
         "button_pNAEYR"
       ],
-      "disabled": true,
       "name": "Call to Action",
       "settings": {
         "image": "shopify://shop_images/2c726a0879e8b09d53f9986609e543232a7c1cda.jpg",
@@ -170,7 +147,6 @@
   "order": [
     "image_banner_JW6ywj",
     "main",
-    "rich_text_cUF8tf",
     "image_with_text_7FgpXy",
     "quote_WHXy47",
     "call_to_action_h7hywW"
