@@ -25,19 +25,20 @@
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
-        <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
-        {{- collection.title | escape -}}
+        {% comment %} <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
+        {{- collection.title | escape -}} {% endcomment %}
+         COMING SOON
       </h1>
 
-      <div class="subtitle">Take a piece of LPBCo.</div>
+      {% comment %} <div class="subtitle">Take a piece of LPBCo.</div> {% endcomment %}
 
-      <div class="collection-hero__description rte">
+      {% comment %} <div class="collection-hero__description rte">
         Couldn't make it down to the foreshore? Or maybe you just want more Long Point in your life (we don't blame
         you). Our online shop has you covered:
-      </div>
+      </div> {% endcomment %}
     </div>
 
-    {%- assign collections_menu = linklists.collections -%}
+    {% comment %} {%- assign collections_menu = linklists.collections -%}
     {%- if collections_menu != blank -%}
       <nav class="collection-hero__menu">
         <ul class="collection-hero__menu-list" role="list">
@@ -56,7 +57,7 @@
           {%- endfor -%}
         </ul>
       </nav>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
   </div>
 </div>
 

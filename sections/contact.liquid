@@ -82,7 +82,7 @@
             <button class="contact__tab-button" data-tab="newsletter">NEWSLETTER</button>
             {% comment %} <button class="contact__tab-button" data-tab="wholesale">WHOLESALE ENQUIRIES</button> {% endcomment %}
             <button class="contact__tab-button" data-tab="functions">Functions</button>
-            {% comment %} <button class="contact__tab-button" data-tab="feedback">PRODUCT FEEDBACK</button> {% endcomment %}
+            <button class="contact__tab-button" data-tab="feedback">FEEDBACK</button> 
           </div>
 
           <div class="contact__tabs-content">
@@ -90,7 +90,7 @@
             {% render 'contact-tab-functions', section_id: section.id %}
             {% render 'contact-tab-newsletter', section_id: section.id %}
             {% comment %} {% render 'contact-tab-wholesale', section_id: section.id %} {% endcomment %}
-            {% comment %} {% render 'contact-tab-feedback', section_id: section.id %} {% endcomment %}
+            {% render 'contact-tab-feedback', section_id: section.id %} 
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
     const section = document.getElementById('Contact-{{ section.id }}');
     const tabButtons = section.querySelectorAll('.contact__tab-button');
     const tabPanels = section.querySelectorAll('.contact__tab-panel');
-    const validTabs = ['contact', 'newsletter', 'functions'];
+    const validTabs = ['contact', 'newsletter', 'functions', 'feedback'];
 
     function getTabFromQuery() {
       const params = new URLSearchParams(window.location.search);

@@ -15,7 +15,7 @@
         "title_i3prKW": {
           "type": "title",
           "settings": {
-            "title": "SHOP",
+            "title": "COMING SOON",
             "title_size": "smaller"
           }
         },
@@ -92,6 +92,7 @@
         "buy_buttons",
         "vendor"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": false,
         "color_scheme": "scheme-1",
@@ -110,6 +111,7 @@
     },
     "product_description_Ykyr68": {
       "type": "product-description",
+      "disabled": true,
       "name": "Product Description",
       "settings": {
         "padding_top": 100,
@@ -118,6 +120,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h0",

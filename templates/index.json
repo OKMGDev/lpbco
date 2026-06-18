@@ -37,7 +37,7 @@
             "button_link_1": "https://docs.google.com/forms/d/1HoLMzO8peYl80hdN9rkqhQJ9pzMYZw4bHzJ5BPBV70o/viewform?edit_requested=true",
             "button_style_secondary_1": false,
             "button_label_2": "Function pack",
-            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Final_Function_PACK_83bd6243-2e28-4162-8e9d-a1cb8a1119ed.pdf?v=1770879663",
+            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/FINAL_FUNCTION_PACK_072ba009-8d16-4d41-8c10-a1fc345ea04e.pdf?v=1779856087",
             "button_style_secondary_2": false
           }
         }
@@ -102,6 +102,87 @@
       ],
       "name": "Marquee Slider",
       "settings": {}
+    },
+    "rich_text_PLYgyE": {
+      "type": "rich-text",
+      "blocks": {
+        "background_graphic_Fwn6tp": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_68.svg",
+            "enable_position_top": true,
+            "position_top": 0,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
+        "background_graphic_3W3Mbw": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_69.svg",
+            "enable_position_top": false,
+            "position_top": 0,
+            "enable_position_bottom": true,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
+        "title_thy496": {
+          "type": "title",
+          "settings": {
+            "title": "YOUR NEW<br>\n<span class=\"text-bg blue\">LOCAL</span>",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_UWCe7X": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
+          }
+        },
+        "textbox_KT77mX": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+          }
+        },
+        "button_8ny7xf": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "See what’s on",
+            "button_link_1": "shopify://pages/events",
+            "button_label_2": "View Location",
+            "button_link_2": "shopify://pages/locations"
+          }
+        }
+      },
+      "block_order": [
+        "background_graphic_Fwn6tp",
+        "background_graphic_3W3Mbw",
+        "title_thy496",
+        "subtitle_UWCe7X",
+        "textbox_KT77mX",
+        "button_8ny7xf"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
     },
     "rich_text_AGicWe": {
       "type": "rich-text",
@@ -176,6 +257,7 @@
         "textbox_p3mjiP",
         "button_i49Ghk"
       ],
+      "disabled": true,
       "name": "LP - Rich Text",
       "settings": {
         "custom_class": "",
@@ -250,88 +332,6 @@
         "overlay_opacity": 20,
         "image_bottom_right": "shopify://shop_images/Vector_43.svg",
         "padding_top": 52,
-        "padding_bottom": 100
-      }
-    },
-    "rich_text_PLYgyE": {
-      "type": "rich-text",
-      "blocks": {
-        "background_graphic_Fwn6tp": {
-          "type": "background_graphic",
-          "settings": {
-            "image": "shopify://shop_images/Vector_68.svg",
-            "enable_position_top": true,
-            "position_top": 0,
-            "enable_position_bottom": false,
-            "position_bottom": 0,
-            "enable_position_left": true,
-            "position_left": 0,
-            "enable_position_right": false,
-            "position_right": 0,
-            "image_size": 200,
-            "image_size_mobile": 150
-          }
-        },
-        "background_graphic_3W3Mbw": {
-          "type": "background_graphic",
-          "settings": {
-            "image": "shopify://shop_images/Vector_69.svg",
-            "enable_position_top": false,
-            "position_top": 0,
-            "enable_position_bottom": true,
-            "position_bottom": 0,
-            "enable_position_left": false,
-            "position_left": 0,
-            "enable_position_right": true,
-            "position_right": 0,
-            "image_size": 200,
-            "image_size_mobile": 150
-          }
-        },
-        "title_thy496": {
-          "type": "title",
-          "settings": {
-            "title": "YOUR NEW<br>\n<span class=\"text-bg blue\">LOCAL</span>",
-            "title_size": "bigger"
-          }
-        },
-        "subtitle_UWCe7X": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
-          }
-        },
-        "textbox_KT77mX": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
-          }
-        },
-        "button_8ny7xf": {
-          "type": "button",
-          "settings": {
-            "button_label_1": "See what’s on",
-            "button_link_1": "shopify://pages/events",
-            "button_label_2": "View Location",
-            "button_link_2": "shopify://pages/locations"
-          }
-        }
-      },
-      "block_order": [
-        "background_graphic_Fwn6tp",
-        "background_graphic_3W3Mbw",
-        "title_thy496",
-        "subtitle_UWCe7X",
-        "textbox_KT77mX",
-        "button_8ny7xf"
-      ],
-      "disabled": true,
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 1000,
-        "accent_color": "",
-        "padding_top": 100,
         "padding_bottom": 100
       }
     },
@@ -429,7 +429,6 @@
     },
     "find_us_f6mzeW": {
       "type": "find-us",
-      "disabled": true,
       "name": "Find Us",
       "settings": {
         "background_color": "#4e3e3e",
@@ -447,10 +446,10 @@
   "order": [
     "image_banner_LqbUq6",
     "marqee_slider_aGitdy",
+    "rich_text_PLYgyE",
     "rich_text_AGicWe",
     "landing_page_banner_gxEDMP",
     "landing_page_banner_ABDbpK",
-    "rich_text_PLYgyE",
     "featured_products_KDzWEW",
     "upcoming_events_N7P4Tx",
     "rich_text_wzWV6e",

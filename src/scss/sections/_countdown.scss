@@ -1,0 +1,100 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.countdown-section {
+  color: var(--countdown-text-color, $color-text);
+
+  .countdown__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2.4rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90rem;
+  }
+
+  .countdown__title {
+    @include heading_h3;
+    color: var(--countdown-text-color, $color-text);
+    margin: 0;
+  }
+
+  .countdown__subtitle {
+    @include fs_24;
+    color: var(--countdown-text-color, $color-text-light);
+    max-width: 60rem;
+
+    p {
+      margin: 0;
+      color: inherit;
+    }
+  }
+
+  .countdown__timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.2rem 2rem;
+    width: 100%;
+  }
+
+  .countdown__unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    min-width: 7rem;
+  }
+
+  .countdown__value {
+    @include heading_h2;
+    line-height: 1;
+    color: var(--countdown-accent-color, $color-deep-water);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .countdown__label {
+    @include fs_20;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--countdown-text-color, $color-text-light);
+  }
+
+  .countdown__separator {
+    @include heading_h3;
+    line-height: 1;
+    color: var(--countdown-accent-color, $color-golden-sun);
+    margin-top: -1.6rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
+  }
+
+  .countdown__expired-message {
+    @include fs_24;
+    margin: 0;
+    color: var(--countdown-accent-color, $color-sunset);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    .countdown__timer {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2rem 1.6rem;
+    }
+
+    .countdown__unit {
+      min-width: 0;
+    }
+
+    .countdown__value {
+      font-size: 4.4rem;
+    }
+  }
+}

@@ -41,49 +41,34 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_cUF8tf": {
-      "type": "rich-text",
-      "blocks": {
-        "subtitle_PREyHc": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "Long Point Brewing Co. was dreamt up by <span class=\"text-bg\">Shane & Sally</span> Wormall - locals who love the Peel coast almost as much as they love a good pint."
-          }
-        }
-      },
-      "block_order": [
-        "subtitle_PREyHc"
-      ],
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 1000,
-        "accent_color": "",
-        "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
     "image_with_text_7FgpXy": {
       "type": "image-with-text",
       "blocks": {
+        "title_P3ztGN": {
+          "type": "title",
+          "settings": {
+            "title": "OUR STORY"
+          }
+        },
         "textbox_HHh4mE": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p>",
+            "textbox": "<p>Long Point Brewing Co. was dreamt up by <strong>Shane & Sally</strong> Wormall - locals who love the Peel coast almost as much as they love a good pint.</p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p><p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink, wink!).</p>",
             "accent_color": "#f9ad8e"
           }
         }
       },
       "block_order": [
+        "title_P3ztGN",
         "textbox_HHh4mE"
       ],
       "name": "Image with Text",
       "settings": {
-        "image": "shopify://shop_images/SHANE_SALLY.jpg",
+        "image": "shopify://shop_images/SHANE_SALLY_430x_copy.jpg",
         "image_overlay": "shopify://shop_images/Subtract_1.svg",
         "section_bg_color": "#ffffff",
         "image_bottom_right": "shopify://shop_images/Vector_74.svg",
-        "padding_top": 100,
+        "padding_top": 72,
         "padding_bottom": 100
       }
     },
@@ -93,7 +78,7 @@
         "textbox_MNmD8r": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink, wink!).</p>"
+            "textbox": ""
           }
         },
         "quote_pCwxmc": {
@@ -170,7 +155,6 @@
   "order": [
     "image_banner_JW6ywj",
     "main",
-    "rich_text_cUF8tf",
     "image_with_text_7FgpXy",
     "quote_WHXy47",
     "call_to_action_h7hywW"
