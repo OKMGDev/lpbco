@@ -76,7 +76,7 @@
           "type": "accordion",
           "settings": {
             "title": "Do you have drinks other than beer?",
-            "textbox": "<p>Yep. Local wines, house-distilled gin, cocktails, non-alc beers, seltzers, kombucha, soft drinks, coffee, babycinos… you name it.</p>"
+            "textbox": "<p>Yep. Local wines, cocktails, non-alc beers, seltzers, soft drinks, coffee, babycinos… you name it.</p>"
           }
         },
         "accordion_MXdkRn": {
