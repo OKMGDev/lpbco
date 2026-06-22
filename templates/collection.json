@@ -11,12 +11,40 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
         "color_scheme": "scheme-1",
         "padding_top": 100,
         "padding_bottom": 36
+      }
+    },
+    "image_banner_HBha69": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_PAbzBX": {
+          "type": "heading",
+          "settings": {
+            "heading": "COMING SOON"
+          }
+        }
+      },
+      "block_order": [
+        "heading_PAbzBX"
+      ],
+      "custom_css": [
+        ".banner__buttons--multiple {display: flex; justify-content: center; gap: 16px;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/68a64ad274359784d6b2d02a5cae201183ab57f8.jpg",
+        "overlay_opacity": 30,
+        "banner_type": "inner-pages",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
       }
     },
     "product-grid": {
@@ -43,6 +71,7 @@
   },
   "order": [
     "banner",
+    "image_banner_HBha69",
     "product-grid"
   ]
 }
