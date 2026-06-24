@@ -73,6 +73,7 @@
         },
         "contact_item_NaDUtr": {
           "type": "contact_item",
+          "disabled": true,
           "settings": {
             "icon": "shopify://shop_images/Frame_35.svg",
             "title": "Phone",
