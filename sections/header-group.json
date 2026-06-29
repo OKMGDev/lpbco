@@ -22,7 +22,6 @@
     },
     "age-verification": {
       "type": "age-verification",
-      "disabled": true,
       "settings": {
         "logo": "shopify://shop_images/lpbc-logo.svg",
         "text": "<p>Are you old enough to have lived through at least one devastating Bunnings snag price hike?</p>",
