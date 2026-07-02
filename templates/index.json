@@ -33,8 +33,8 @@
         "buttons_K7MYzN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Enquire Now",
-            "button_link_1": "https://docs.google.com/forms/d/1HoLMzO8peYl80hdN9rkqhQJ9pzMYZw4bHzJ5BPBV70o/viewform?edit_requested=true",
+            "button_label_1": "Book a table",
+            "button_link_1": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
             "button_style_secondary_1": false,
             "button_label_2": "Function pack",
             "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/FINAL_FUNCTION_PACK_072ba009-8d16-4d41-8c10-a1fc345ea04e.pdf?v=1779856087",
