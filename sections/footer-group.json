@@ -11,6 +11,53 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "rich_text_kAXLqT": {
+      "type": "rich-text",
+      "blocks": {
+        "title_q4Yh8C": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_7L68Kc": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": ""
+          }
+        },
+        "textbox_yGzn8G": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        },
+        "button_FckDpL": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_q4Yh8C",
+        "subtitle_7L68Kc",
+        "textbox_yGzn8G",
+        "button_FckDpL"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "VIEW MENU",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -25,6 +72,7 @@
     }
   },
   "order": [
+    "rich_text_kAXLqT",
     "footer"
   ]
 }
