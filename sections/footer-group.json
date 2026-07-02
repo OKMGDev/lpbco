@@ -14,11 +14,13 @@
     "rich_text_kAXLqT": {
       "type": "rich-text",
       "blocks": {
-        "title_q4Yh8C": {
-          "type": "title",
+        "button_PMGhtx": {
+          "type": "button",
           "settings": {
-            "title": "",
-            "title_size": "bigger"
+            "button_label_1": "PUB MENU",
+            "button_link_1": "",
+            "button_label_2": "TAPROOM MENU",
+            "button_link_2": ""
           }
         },
         "subtitle_7L68Kc": {
@@ -44,7 +46,7 @@
         }
       },
       "block_order": [
-        "title_q4Yh8C",
+        "button_PMGhtx",
         "subtitle_7L68Kc",
         "textbox_yGzn8G",
         "button_FckDpL"
