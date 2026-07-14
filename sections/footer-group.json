@@ -11,22 +11,31 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "rich_text_kAXLqT": {
+    "rich_text_yVmbWj": {
       "type": "rich-text",
       "blocks": {
-        "subtitle_7L68Kc": {
+        "button_PzM7PY": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Pub Menu",
+            "button_link_1": "https://bit.ly/4piQQyR",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        },
+        "subtitle_hb6WhU": {
           "type": "subtitle",
           "settings": {
             "subtitle": ""
           }
         },
-        "textbox_yGzn8G": {
+        "textbox_PVRKHd": {
           "type": "textbox",
           "settings": {
             "textbox": ""
           }
         },
-        "button_FckDpL": {
+        "button_TcPEyx": {
           "type": "button",
           "settings": {
             "button_label_1": "",
@@ -37,9 +46,10 @@
         }
       },
       "block_order": [
-        "subtitle_7L68Kc",
-        "textbox_yGzn8G",
-        "button_FckDpL"
+        "button_PzM7PY",
+        "subtitle_hb6WhU",
+        "textbox_PVRKHd",
+        "button_TcPEyx"
       ],
       "name": "Rich Text",
       "settings": {
@@ -64,7 +74,7 @@
     }
   },
   "order": [
-    "rich_text_kAXLqT",
+    "rich_text_yVmbWj",
     "footer"
   ]
 }
