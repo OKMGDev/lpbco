@@ -11,55 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "rich_text_yVmbWj": {
-      "type": "rich-text",
-      "blocks": {
-        "button_PzM7PY": {
-          "type": "button",
-          "settings": {
-            "button_label_1": "Pub Menu",
-            "button_link_1": "https://bit.ly/4piQQyR",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        },
-        "subtitle_hb6WhU": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": ""
-          }
-        },
-        "textbox_PVRKHd": {
-          "type": "textbox",
-          "settings": {
-            "textbox": ""
-          }
-        },
-        "button_TcPEyx": {
-          "type": "button",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "button_PzM7PY",
-        "subtitle_hb6WhU",
-        "textbox_PVRKHd",
-        "button_TcPEyx"
-      ],
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 600,
-        "accent_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -74,7 +25,6 @@
     }
   },
   "order": [
-    "rich_text_yVmbWj",
     "footer"
   ]
 }
