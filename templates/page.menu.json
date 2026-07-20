@@ -72,20 +72,14 @@
         "subtitle_3aemiL": {
           "type": "subtitle",
           "settings": {
-            "subtitle": ""
-          }
-        },
-        "textbox_fkq7XF": {
-          "type": "textbox",
-          "settings": {
-            "textbox": ""
+            "subtitle": "Please see our menu below"
           }
         },
         "button_KxBXBH": {
           "type": "button",
           "settings": {
             "button_label_1": "Pub Menu",
-            "button_link_1": "https://bit.ly/4piQQyR",
+            "button_link_1": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/FINAL_PUB_MENU_4_4dcf8736-1b1c-4211-b8eb-df769881cc60.pdf?v=1782998469&utm_source=LPBC&utm_medium=Online&utm_campaign=Pub_Menu",
             "button_label_2": "",
             "button_link_2": ""
           }
@@ -93,7 +87,6 @@
       },
       "block_order": [
         "subtitle_3aemiL",
-        "textbox_fkq7XF",
         "button_KxBXBH"
       ],
       "name": "Rich Text",
@@ -101,8 +94,8 @@
         "custom_class": "",
         "content_max_width": 600,
         "accent_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     }
   },
