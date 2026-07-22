@@ -128,20 +128,6 @@
     },
     "rich_text_bpcBBj": {
       "type": "rich-text",
-      "blocks": {
-        "button_Qrm7E9": {
-          "type": "button",
-          "settings": {
-            "button_label_1": "View KIOSK menu",
-            "button_link_1": "",
-            "button_label_2": "",
-            "button_link_2": ""
-          }
-        }
-      },
-      "block_order": [
-        "button_Qrm7E9"
-      ],
       "name": "Rich Text",
       "settings": {
         "custom_class": "",
