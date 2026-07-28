@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_JW6ywj": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_HNXXxt": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Us"
+          }
+        }
+      },
+      "block_order": [
+        "heading_HNXXxt"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/ABOUT_US_1_Large_4d56b1f5-60a2-4894-995b-2310476b2e34.jpg",
+        "overlay_opacity": 30,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "image_with_text_7FgpXy": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_P3ztGN": {
+          "type": "title",
+          "settings": {
+            "title": "OUR STORY"
+          }
+        },
+        "textbox_HHh4mE": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Long Point Brewing Co. was dreamt up by <strong>Shane & Sally</strong> Wormall - locals who love the Peel coast almost as much as they love a good pint.</p><p>A boatie, a beer tragic and a pair of serial idea-makers, they wanted to build something that captured everything great about WA: ocean sunsets, fresh produce, community spirit and plenty of laughs (all poured neatly into an ice cold beer).</p><p>What started as a simple idea  - “let’s make a brewery that feels like home” - turned into a venue that’s bigger, better and more fun than they could’ve imagined. And along the way, a bunch of mates, experts and kindred spirits jumped on board to help make it happen (you know who you are - wink, wink!).</p>",
+            "accent_color": "#f9ad8e"
+          }
+        }
+      },
+      "block_order": [
+        "title_P3ztGN",
+        "textbox_HHh4mE"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/SHANE_SALLY_430x_copy.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_1.svg",
+        "section_bg_color": "#ffffff",
+        "image_bottom_right": "shopify://shop_images/Vector_74.svg",
+        "padding_top": 72,
+        "padding_bottom": 100
+      }
+    },
+    "quote_WHXy47": {
+      "type": "quote",
+      "blocks": {
+        "textbox_MNmD8r": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        },
+        "quote_pCwxmc": {
+          "type": "quote",
+          "settings": {
+            "quote": "<p>Let’s make a brewery that feels like home. </p>"
+          }
+        },
+        "textbox_7Wywkt": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        }
+      },
+      "block_order": [
+        "textbox_MNmD8r",
+        "quote_pCwxmc",
+        "textbox_7Wywkt"
+      ],
+      "name": "Quote",
+      "settings": {
+        "background_color": "#53bcae",
+        "image_left": "shopify://shop_images/Vector_72.svg",
+        "image_right": "shopify://shop_images/Vector_73.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "call_to_action_h7hywW": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_zT6d4P": {
+          "type": "title",
+          "settings": {
+            "title": "Our mission"
+          }
+        },
+        "textbox_GGFpfT": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Make beer that’s tasty, moments that matter, and memories you maybe-sort-of remember the next day.</p>"
+          }
+        },
+        "button_pNAEYR": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join the team",
+            "button_link": "shopify://pages/work-with-us",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_zT6d4P",
+        "textbox_GGFpfT",
+        "button_pNAEYR"
+      ],
+      "disabled": true,
+      "name": "Call to Action",
+      "settings": {
+        "image": "shopify://shop_images/2c726a0879e8b09d53f9986609e543232a7c1cda.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_2.svg",
+        "background_color": "#ffffff",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#f9ad8e",
+        "text_color": "#ffffff",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_JW6ywj",
+    "main",
+    "image_with_text_7FgpXy",
+    "quote_WHXy47",
+    "call_to_action_h7hywW"
+  ]
+}

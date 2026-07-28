@@ -1,0 +1,179 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+    position: relative;
+    overflow: hidden;
+  }
+{%- endstyle -%}
+
+<div class="quote-section section-{{ section.id }}-padding" id="Quote-{{ section.id }}">
+  {%- if section.settings.image_left != blank -%}
+    <div class="quote__image-left">
+      {{
+        section.settings.image_left
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_left.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+
+  <div class="page-width">
+    <div class="quote__content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'quote' -%}
+            <blockquote class="quote__quote" {{ block.shopify_attributes }}>
+              <svg
+                class="quote__quote-icon-left"
+                width="69"
+                height="59"
+                viewBox="0 0 69 59"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M0.973536 48.2753C-0.626715 41.2541 -0.254155 34.1568 2.09121 26.9833C4.56601 19.7777 9.30059 14.2106 16.295 10.282L17.3039 14.359C11.9895 18.9707 9.43662 25.0281 9.64518 32.531L11.0042 32.1947C14.4988 31.3299 17.7959 31.8874 20.8957 33.8674C24.1249 35.8154 26.1559 38.4719 26.9887 41.8371C27.8856 45.4611 27.36 48.8877 25.4121 52.1169C23.5936 55.314 20.937 57.345 17.4424 58.2099C13.8184 59.1067 10.3918 58.5812 7.16264 56.6333C3.93344 54.6853 1.87041 51.8993 0.973536 48.2753ZM42.5201 37.9933C40.9199 30.9722 41.2925 23.8748 43.6378 16.7013C46.1126 9.49576 50.8472 3.92866 57.8416 0L58.8506 4.077C53.5362 8.68875 50.9832 14.7461 51.1918 22.2491L52.5508 21.9127C56.0454 21.0479 59.3425 21.6055 62.4423 23.5854C65.6715 25.5334 67.7025 28.1899 68.5353 31.5551C69.4322 35.1791 68.9066 38.6057 66.9587 41.8349C65.1402 45.0321 62.4836 47.0631 58.9891 47.9279C55.365 48.8248 51.9384 48.2992 48.7093 46.3513C45.4801 44.4033 43.417 41.6173 42.5201 37.9933Z" fill="#F9AD8E"/>
+              </svg>
+
+              {{ block.settings.quote }}
+              <svg
+                class="quote__quote-icon-right"
+                width="75"
+                height="56"
+                viewBox="0 0 75 56"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M73.8298 31.2172C71.453 38.0149 67.3013 43.8076 61.3749 48.5953C55.5751 53.4246 48.6689 55.6441 40.6562 55.2537L41.9688 51.2641C48.9216 50.1828 54.3039 46.4092 58.1156 39.9433L56.7857 39.5057C53.366 38.3807 50.8063 36.1349 49.1066 32.7684C47.5336 29.4436 47.2888 26.1346 48.3722 22.8416C49.5389 19.2953 51.7422 16.6514 54.9821 14.9101C58.3485 13.2104 61.7416 12.9231 65.1613 14.0481C68.7076 15.2149 71.3306 17.4815 73.0303 20.848C74.73 24.2145 74.9965 27.6709 73.8298 31.2172ZM33.1736 17.8412C30.7968 24.6389 26.6452 30.4316 20.7187 35.2193C14.9189 40.0486 8.01269 42.2681 0 41.8777L1.3126 37.8881C8.26544 36.8069 13.6477 33.0333 17.4594 26.5673L16.1295 26.1298C12.7098 25.0047 10.1502 22.7589 8.45046 19.3924C6.87742 16.0676 6.6326 12.7587 7.71601 9.46563C8.88276 5.9193 11.0861 3.27545 14.3259 1.53409C17.6924 -0.165611 21.0855 -0.452918 24.5051 0.672164C28.0515 1.83892 30.6745 4.10553 32.3742 7.47202C34.0739 10.8385 34.3404 14.2949 33.1736 17.8412Z" fill="#F9AD8E"/>
+              </svg>
+            </blockquote>
+          {%- when 'textbox' -%}
+            <div class="quote__textbox rte" {{ block.shopify_attributes }}>
+              {{ block.settings.textbox }}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- if section.settings.image_right != blank -%}
+    <div class="quote__image-right">
+      {{
+        section.settings.image_right
+        | image_url: width: 600
+        | image_tag: loading: 'lazy', alt: section.settings.image_right.alt
+        | default: 'Image'
+      }}
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Quote",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Left image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Right image"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quote",
+      "name": "Quote",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Quote"
+        }
+      ]
+    },
+    {
+      "type": "textbox",
+      "name": "Textbox",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "textbox",
+          "label": "Textbox"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Quote",
+      "blocks": [
+        {
+          "type": "quote"
+        },
+        {
+          "type": "textbox"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

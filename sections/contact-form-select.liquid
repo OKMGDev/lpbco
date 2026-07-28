@@ -1,0 +1,192 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact__content-wrapper {
+    display: block;
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact-form-select__container {
+    background-color: {{ section.settings.container_background_color }};
+    color: {{ section.settings.text_color }};
+    padding: {{ section.settings.container_padding }}px;
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact-form-select__content {
+    width: 100%;
+    max-width: {{ section.settings.form_max_width }}px;
+    margin: 0 auto;
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact__tabs-section {
+    width: 100%;
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact__tab-heading,
+  #ContactFormSelect-{{ section.id }} .contact__tab-textbox,
+  #ContactFormSelect-{{ section.id }} .contact__tab-textbox p {
+    color: {{ section.settings.text_color }};
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact__tab-panel {
+    display: block !important;
+  }
+
+  #ContactFormSelect-{{ section.id }} .contact__tabs-nav {
+    display: none;
+  }
+
+  @media screen and (max-width: 749px) {
+    #ContactFormSelect-{{ section.id }} .contact-form-select__container {
+      padding: {{ section.settings.container_padding | times: 0.5 | round: 0 }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div
+  class="contact-section contact-section--form-select section-{{ section.id }}-padding"
+  id="ContactFormSelect-{{ section.id }}"
+>
+  <div class="page-width">
+    <div class="contact-form-select__container">
+      <div class="contact-form-select__content">
+        <div class="contact__content-wrapper">
+          <div class="contact__tabs-section">
+            <div class="contact__tabs-wrapper">
+              <div class="contact__tabs-content">
+                {%- case section.settings.form_type -%}
+                  {%- when 'contact' -%}
+                    {% render 'contact-tab-contact', section_id: section.id %}
+                  {%- when 'newsletter' -%}
+                    {% render 'contact-tab-newsletter', section_id: section.id %}
+                  {%- when 'functions' -%}
+                    {% render 'contact-tab-functions', section_id: section.id %}
+                  {%- when 'feedback' -%}
+                    {% render 'contact-tab-feedback', section_id: section.id %}
+                  {%- when 'wholesale' -%}
+                    {% render 'contact-tab-wholesale', section_id: section.id %}
+                {%- endcase -%}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact form select",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "form_type",
+      "label": "Form",
+      "options": [
+        {
+          "value": "contact",
+          "label": "Contact"
+        },
+        {
+          "value": "newsletter",
+          "label": "Newsletter"
+        },
+        {
+          "value": "functions",
+          "label": "Functions"
+        },
+        {
+          "value": "feedback",
+          "label": "Feedback"
+        },
+        {
+          "value": "wholesale",
+          "label": "Wholesale"
+        }
+      ],
+      "default": "contact",
+      "info": "Shows a single form from the Contact page tabs."
+    },
+    {
+      "type": "header",
+      "content": "Container"
+    },
+    {
+      "type": "color",
+      "id": "container_background_color",
+      "label": "Background color",
+      "default": "#f0e7d8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#373737"
+    },
+    {
+      "type": "range",
+      "id": "form_max_width",
+      "min": 600,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Form max width",
+      "default": 900
+    },
+    {
+      "type": "range",
+      "id": "container_padding",
+      "min": 20,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Container padding",
+      "default": 60
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Contact form select",
+      "settings": {
+        "form_type": "contact"
+      }
+    }
+  ]
+}
+{% endschema %}

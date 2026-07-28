@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_littlepoint_kiosk": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_littlepoint_kiosk": {
+          "type": "heading",
+          "settings": {
+            "heading": "Little point Kiosk"
+          }
+        }
+      },
+      "block_order": [
+        "heading_littlepoint_kiosk"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
+        "overlay_opacity": 20,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_xXkwa3": {
+      "type": "rich-text",
+      "blocks": {
+        "background_graphic_gyRPXr": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_87.svg",
+            "enable_position_top": true,
+            "position_top": 20,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 300,
+            "image_size_mobile": 0
+          }
+        },
+        "stamp_8FatBR": {
+          "type": "stamp",
+          "settings": {
+            "textbox": "<p>ON THE <br/>FORESHORE</p>",
+            "color": "#f68e51",
+            "position_left": 78,
+            "position_top": 0
+          }
+        },
+        "title_U6g7hH": {
+          "type": "title",
+          "settings": {
+            "title": "Big flavour, \n<br><span class=\"text-bg orange\">little name.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_CYGVee": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "WHILE THE BREWERY WAKES UP, LITTLE POINT IS ALREADY BUZZING. OPEN FROM THE EARLY HOURS, OUR KIOSK IS ALL ABOUT KEEPING THE FORESHORE FUELLED."
+          }
+        },
+        "textbox_4LjWhB": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re slinging all the favourites — from flat whites and long blacks to iced lattes, teas, and yes… babycinos for the little legends. Grab a pastry, a toastie, or something quick to take on your morning walk along the beach. </p><p>Whether you’re a dog-walker, a surfer wishing there were waves, or just someone who thinks coffee counts as breakfast (we see you), Little Point’s got you covered.</p>"
+          }
+        },
+        "button_hjh6Fg": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "background_graphic_gyRPXr",
+        "stamp_8FatBR",
+        "title_U6g7hH",
+        "subtitle_CYGVee",
+        "textbox_4LjWhB",
+        "button_hjh6Fg"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 800,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "simple_image_yahzec": {
+      "type": "simple-image",
+      "name": "Simple Image",
+      "settings": {
+        "image": "shopify://shop_images/Group_47198.png",
+        "image_width": "custom",
+        "image_custom_width": 1100,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "rich_text_bpcBBj": {
+      "type": "rich-text",
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_littlepoint_kiosk",
+    "main",
+    "rich_text_xXkwa3",
+    "simple_image_yahzec",
+    "rich_text_bpcBBj"
+  ]
+}

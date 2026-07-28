@@ -1,0 +1,177 @@
+{% comment %}theme-check-disable UndefinedObject{% endcomment %}
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}
+{{ 'component-list-social.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign has_social_icons = true
+  if settings.social_facebook_link == blank and settings.social_instagram_link == blank and settings.social_youtube_link == blank and settings.social_tiktok_link == blank and settings.social_twitter_link == blank and settings.social_pinterest_link == blank and settings.social_snapchat_link == blank and settings.social_tumblr_link == blank and settings.social_vimeo_link == blank
+    assign has_social_icons = false
+  endif
+-%}
+
+<footer class="footer">
+  <div class="footer__content-top page-width">
+    <div class="footer__main-content">
+      <div class="footer__main-content-left">
+        {%- if section.settings.footer_textbox != blank -%}
+          <div class="footer__textbox rte">
+            {{ section.settings.footer_textbox }}
+          </div>
+        {%- endif -%}
+        {%- comment -%} Social Icons (Global) {%- endcomment -%}
+        {%- if has_social_icons -%}
+          <div class="footer__social">
+            {%- render 'social-icons', class: 'footer__list-social' -%}
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} Alcohol Warning {%- endcomment -%}
+        {%- if section.settings.alcohol_warning != blank -%}
+          <div class="footer__alcohol-warning">
+            {{ section.settings.alcohol_warning }}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Footer Logo {%- endcomment -%}
+      {%- if section.settings.footer_logo != blank -%}
+        <div class="footer__logo">
+          {%- assign logo_alt = section.settings.footer_logo.alt | default: shop.name | escape -%}
+          {%- assign logo_height = section.settings.footer_logo_width
+            | divided_by: section.settings.footer_logo.aspect_ratio
+          -%}
+          {% capture sizes %}(min-width: 750px) {{ section.settings.footer_logo_width }}px, 50vw{% endcapture %}
+          {% capture widths %}{{ section.settings.footer_logo_width }}, {{ section.settings.footer_logo_width | times: 1.5 | round }}, {{ section.settings.footer_logo_width | times: 2 }}{% endcapture %}
+          {{
+            section.settings.footer_logo
+            | image_url: width: 600
+            | image_tag:
+              class: 'footer__logo-image',
+              widths: widths,
+              height: logo_height,
+              width: section.settings.footer_logo_width,
+              alt: logo_alt,
+              sizes: sizes,
+              loading: 'lazy'
+          }}
+        </div>
+      {%- endif -%}
+
+      <div class="footer__main-content-right">
+        {%- comment -%} Quick Links Menu {%- endcomment -%}
+
+        {% comment %} <h2 class="heading_h3">
+          Cheers From <br>
+          <span class="text-bg">the Bay</span>
+        </h2> {% endcomment %}
+
+        {%- if section.settings.quick_links_menu != blank -%}
+          <div class="footer__quick-links">
+            <h2 class="fs_24">{{ section.settings.quick_links_heading | default: 'Quick Links' }}</h2>
+            <ul class="footer__menu list-unstyled">
+              {%- for link in section.settings.quick_links_menu.links -%}
+                <li>
+                  <a
+                    href="{{ link.url }}"
+                    class="link link--text list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}"
+                  >
+                    {{ link.title | escape }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__content-bottom page-width">
+    <div class="footer__content-bottom-wrapper">
+      <div class="footer__copyright">
+        {%- comment -%} Copyright Text {%- endcomment -%}
+        {%- if section.settings.copyright_text != blank -%}
+          <small class="copyright__content">
+            {{ section.settings.copyright_text }}
+          </small>
+        {%- else -%}
+          <small class="copyright__content">
+            &copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url }}
+          </small>
+        {%- endif -%}
+      </div>
+      {%- comment -%} Terms Menu (Hardcoded) {%- endcomment -%}
+      {%- assign terms_menu = linklists.terms -%}
+      {%- if terms_menu != blank -%}
+        <ul class="footer__terms-menu list-unstyled">
+          {%- for link in terms_menu.links -%}
+            <li>
+              <small class="copyright__content">
+                <a href="{{ link.url }}">{{ link.title | escape }}</a>
+              </small>
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "blocks": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Footer Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "footer_logo",
+      "label": "Footer logo"
+    },
+    {
+      "type": "range",
+      "id": "footer_logo_width",
+      "min": 50,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Logo width",
+      "default": 150
+    },
+    {
+      "type": "richtext",
+      "id": "footer_textbox",
+      "label": "Footer textbox",
+      "default": "<p>Add your footer text here.</p>"
+    },
+    {
+      "type": "link_list",
+      "id": "quick_links_menu",
+      "label": "Quick links menu",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "quick_links_heading",
+      "label": "Quick links heading",
+      "default": "Quick Links"
+    },
+    {
+      "type": "richtext",
+      "id": "alcohol_warning",
+      "label": "Alcohol warning",
+      "default": "<p>Please drink responsibly.</p>"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "Copyright text",
+      "info": "Leave empty to use default: © [Year], [Shop Name]"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_menu": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_menu": {
+          "type": "heading",
+          "settings": {
+            "heading": "Menu"
+          }
+        }
+      },
+      "block_order": [
+        "heading_menu"
+      ],
+      "disabled": true,
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/Rectangle_26_2.jpg",
+        "overlay_opacity": 20,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "image_banner_tGNXAd": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_Ywp3Cd": {
+          "type": "heading",
+          "settings": {
+            "heading": "MENU"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ywp3Cd"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/IMG_0084.jpg",
+        "overlay_opacity": 20,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_AqFdTy": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_3aemiL": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "Please see our menu below"
+          }
+        },
+        "button_KxBXBH": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "Pub Menu",
+            "button_link_1": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/FINAL_PUB_MENU_FOR_WEBSITE.pdf?v=1784853489",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_3aemiL",
+        "button_KxBXBH"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 80,
+        "padding_bottom": 80
+      }
+    }
+  },
+  "order": [
+    "image_banner_menu",
+    "image_banner_tGNXAd",
+    "main",
+    "rich_text_AqFdTy"
+  ]
+}

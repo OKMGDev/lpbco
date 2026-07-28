@@ -1,0 +1,460 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_LqbUq6": {
+      "type": "image-banner",
+      "blocks": {
+        "slide_image_j3DnAK": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_5932_1.png"
+          }
+        },
+        "slide_image_ipmMEG": {
+          "type": "slide_image",
+          "settings": {
+            "image": "shopify://shop_images/Rectangle_26_2.jpg"
+          }
+        },
+        "heading_B4JPPX": {
+          "type": "heading",
+          "settings": {
+            "heading": "Born IN <span class=\"text-bg\">KENNEDY BAY.</span><br>MADE for <span class=\"text-bg blue\">THE COAST.</span>"
+          }
+        },
+        "buttons_K7MYzN": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Book a table",
+            "button_link_1": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
+            "button_style_secondary_1": false,
+            "button_label_2": "Function pack",
+            "button_link_2": "https://cdn.shopify.com/s/files/1/0779/8125/3851/files/ACTUAL_FINAL_FUNCTION_PACK.pdf?v=1783921598",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "slide_image_j3DnAK",
+        "slide_image_ipmMEG",
+        "heading_B4JPPX",
+        "buttons_K7MYzN"
+      ],
+      "custom_css": [
+        ".banner__buttons--multiple {display: flex; justify-content: center; gap: 16px;}"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/68a64ad274359784d6b2d02a5cae201183ab57f8.jpg",
+        "overlay_opacity": 30,
+        "banner_type": "homepage",
+        "auto_rotate": true,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "marqee_slider_aGitdy": {
+      "type": "marqee-slider",
+      "blocks": {
+        "slide_VeFtXd": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_25.svg",
+            "text": "Great Beer"
+          }
+        },
+        "slide_tnHCxi": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_23.svg",
+            "text": "Fresh Food"
+          }
+        },
+        "slide_xjJjiE": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_24.svg",
+            "text": "Live events"
+          }
+        },
+        "slide_QNhtD7": {
+          "type": "slide",
+          "settings": {
+            "icon": "shopify://shop_images/Group_62.svg",
+            "text": "Good Times"
+          }
+        }
+      },
+      "block_order": [
+        "slide_VeFtXd",
+        "slide_tnHCxi",
+        "slide_xjJjiE",
+        "slide_QNhtD7"
+      ],
+      "name": "Marquee Slider",
+      "settings": {}
+    },
+    "rich_text_PLYgyE": {
+      "type": "rich-text",
+      "blocks": {
+        "background_graphic_Fwn6tp": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_68.svg",
+            "enable_position_top": true,
+            "position_top": 0,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
+        "background_graphic_3W3Mbw": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_69.svg",
+            "enable_position_top": false,
+            "position_top": 0,
+            "enable_position_bottom": true,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 200,
+            "image_size_mobile": 150
+          }
+        },
+        "title_thy496": {
+          "type": "title",
+          "settings": {
+            "title": "YOUR NEW<br>\n<span class=\"text-bg blue\">LOCAL</span>",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_UWCe7X": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
+          }
+        },
+        "textbox_KT77mX": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re not trying to reinvent the wheel (or the schooner). We just reckon beer tastes better by the ocean. Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+          }
+        },
+        "button_8ny7xf": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "See what’s on",
+            "button_link_1": "shopify://pages/events",
+            "button_label_2": "View Location",
+            "button_link_2": "shopify://pages/locations"
+          }
+        }
+      },
+      "block_order": [
+        "background_graphic_Fwn6tp",
+        "background_graphic_3W3Mbw",
+        "title_thy496",
+        "subtitle_UWCe7X",
+        "textbox_KT77mX",
+        "button_8ny7xf"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_AGicWe": {
+      "type": "rich-text",
+      "blocks": {
+        "background_graphic_maAeCT": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_82.svg",
+            "enable_position_top": true,
+            "position_top": 3,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 210,
+            "image_size_mobile": 80
+          }
+        },
+        "background_graphic_YdELmV": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_83.svg",
+            "enable_position_top": false,
+            "position_top": 5,
+            "enable_position_bottom": true,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 180,
+            "image_size_mobile": 70
+          }
+        },
+        "title_eGq8Bg": {
+          "type": "title",
+          "settings": {
+            "title": "Opening<br>\n<span class=\"text-bg blue\">Early 2026</span>",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_GAFBRf": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "We’re Long Point Brewing Co. — your new local on the Kennedy Bay foreshore. Cold beer, warm sunsets, salty air. That’s it. No fuss."
+          }
+        },
+        "textbox_p3mjiP": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We’re not trying to reinvent the wheel and we just reckon beer tastes better by the ocean.             Come for a pint, stay for the view and maybe even eat something while you’re here.</p>"
+          }
+        },
+        "button_i49Ghk": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label_1": "See what’s on",
+            "button_link_1": "shopify://pages/events",
+            "button_label_2": "View Location",
+            "button_link_2": "shopify://pages/locations"
+          }
+        }
+      },
+      "block_order": [
+        "background_graphic_maAeCT",
+        "background_graphic_YdELmV",
+        "title_eGq8Bg",
+        "subtitle_GAFBRf",
+        "textbox_p3mjiP",
+        "button_i49Ghk"
+      ],
+      "disabled": true,
+      "name": "LP - Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "landing_page_banner_gxEDMP": {
+      "type": "landing-page-banner",
+      "blocks": {
+        "title_nRNnQn": {
+          "type": "title",
+          "settings": {
+            "title": "Plan your<br>\n<span class=\"text-bg\">function</span>"
+          }
+        },
+        "button_pBqEdA": {
+          "type": "button",
+          "settings": {
+            "button_label": "Enquire now",
+            "button_link": "shopify://pages/functions",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "title_nRNnQn",
+        "button_pBqEdA"
+      ],
+      "custom_css": [
+        "a {padding: 1.5em 3.5em;}"
+      ],
+      "name": "Landing Page Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/my-project-page-1.jpg",
+        "overlay_opacity": 20,
+        "image_bottom_left": "shopify://shop_images/Vector_32.svg",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "landing_page_banner_ABDbpK": {
+      "type": "landing-page-banner",
+      "blocks": {
+        "title_UJhFeR": {
+          "type": "title",
+          "settings": {
+            "title": "Signup for <br>\n<span class=\"text-bg\">UPDATES</span>"
+          }
+        },
+        "button_99eR7g": {
+          "type": "button",
+          "settings": {
+            "button_label": "Join our mailing list",
+            "button_link": "/pages/contact?tab=newsletter#tab-newsletter",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "title_UJhFeR",
+        "button_99eR7g"
+      ],
+      "custom_css": [
+        "a {padding: 1.5em 3.5em;}"
+      ],
+      "name": "Landing Page Banner",
+      "settings": {
+        "background_image": "shopify://shop_images/my-project-page-1_4.jpg",
+        "overlay_opacity": 20,
+        "image_bottom_right": "shopify://shop_images/Vector_43.svg",
+        "padding_top": 52,
+        "padding_bottom": 100
+      }
+    },
+    "featured_products_KDzWEW": {
+      "type": "featured-products",
+      "disabled": true,
+      "name": "Featured Products",
+      "settings": {
+        "collection": "beer",
+        "products_to_show": 3,
+        "title": "Brewed for <br>\n<span class=\"text-bg\">the Coast</span>",
+        "background_color": "#f0e7d8",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "upcoming_events_N7P4Tx": {
+      "type": "upcoming-events",
+      "disabled": true,
+      "name": "Upcoming Events",
+      "settings": {
+        "title": "Upcoming at <span class=\"text-bg\">Long Point</span>",
+        "metaobject_type": "events",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "rich_text_wzWV6e": {
+      "type": "rich-text",
+      "blocks": {
+        "subtitle_dwRBcY": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
+          }
+        }
+      },
+      "block_order": [
+        "subtitle_dwRBcY"
+      ],
+      "name": "Insta Label",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 930,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
+    "176284026737b77010": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_wKGVVe": {
+          "type": "shopify://apps/instafeed/blocks/app-block/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "title_size_v2": 0,
+            "alignment": "center",
+            "instafeed_margin_top": 0,
+            "instafeed_margin_bottom": 0,
+            "instafeed_margin_sides": 0,
+            "show_instagram_link": false,
+            "link_alignment": "left",
+            "link_color": "#000000",
+            "background_color": "",
+            "feed_id": "",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_wKGVVe"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "main_blog_gARkQE": {
+      "type": "main-blog",
+      "disabled": true,
+      "name": "Main Blog",
+      "settings": {
+        "background_color": "#53bcae",
+        "image_top_left": "shopify://shop_images/Vector_70.svg",
+        "image_bottom_right": "shopify://shop_images/Vector_71.svg",
+        "title": "INSIGHTS FROM OUR BREWHOUSE",
+        "textbox": "",
+        "blog": "insights-1",
+        "button_text": "View all",
+        "button_link": "shopify://blogs/insights-1",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "find_us_f6mzeW": {
+      "type": "find-us",
+      "name": "Find Us",
+      "settings": {
+        "background_color": "#4e3e3e",
+        "background_image": "shopify://shop_images/Rectangle_36.jpg",
+        "overlay_image": "shopify://shop_images/Subtract.svg",
+        "title": "Cheers from <span class=\"text-bg \">the Bay</span>",
+        "subtitle": "FIND US:  KENNEDY BAY, WA",
+        "button_label": "Contact us",
+        "button_link": "shopify://pages/contact",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_LqbUq6",
+    "marqee_slider_aGitdy",
+    "rich_text_PLYgyE",
+    "rich_text_AGicWe",
+    "landing_page_banner_gxEDMP",
+    "landing_page_banner_ABDbpK",
+    "featured_products_KDzWEW",
+    "upcoming_events_N7P4Tx",
+    "rich_text_wzWV6e",
+    "176284026737b77010",
+    "main_blog_gARkQE",
+    "find_us_f6mzeW"
+  ]
+}

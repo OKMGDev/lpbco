@@ -1,0 +1,92 @@
+{%- comment -%}
+  Renders an event card
+
+  Accepts:
+  - event: {Object} Event metaobject
+  - section_id: {String} Section ID for unique identifiers
+  - event_index: {Number} Index of the event in the loop
+
+  Usage:
+  {% render 'event-card', event: event, section_id: section.id, event_index: forloop.index0 %}
+{%- endcomment -%}
+
+<div
+  class="upcoming-events__card"
+  {%- if event.color != blank -%}
+    style="background-color: {{ event.color }};"
+  {%- else -%}
+    style="background-color: #B6DFE9;"
+  {%- endif -%}
+>
+  {%- if event.image != blank -%}
+    <div class="upcoming-events__image">
+      <img
+        src="{{ event.image | image_url: width: 800 }}"
+        alt="{{ event.title | escape }}"
+        loading="lazy"
+        width="{{ event.image.width }}"
+        height="{{ event.image.height }}"
+      >
+      <img
+        src="{{ 'events-image-overlay.svg' | asset_url }}"
+        alt="Events Image Overlay"
+        class="upcoming-events__image-overlay"
+        width="600"
+        height="600"
+      >
+    </div>
+  {%- endif -%}
+
+  <div class="upcoming-events__content">
+    {% render 'event-card-icons' %}
+    <div class="upcoming-events__content-inner">
+      <img
+        class="upcoming-events__badge"
+        src="{{'LPBCo-Badge-B 1.png' | asset_url }}"
+        alt="LPBCo Badge"
+        width="116"
+        height="175"
+      >
+      {%- if event.title != blank -%}
+        <h3 class="upcoming-events__event-title">
+          {{ event.title }}
+        </h3>
+      {%- endif -%}
+
+      {%- if event.start_date != blank or event.end_date != blank -%}
+        <div class="upcoming-events__dates">
+          {%- if event.start_date != blank -%}
+            {%- assign formatted_start_date = event.start_date | date: '%b %d' -%}
+            <span class="upcoming-events__start-date">{{ formatted_start_date }}</span>
+          {%- endif -%}
+          {%- if event.start_date != blank and event.end_date != blank -%}
+            <span class="upcoming-events__date-separator"> - </span>
+          {%- endif -%}
+          {%- if event.end_date != blank -%}
+            {%- assign formatted_end_date = event.end_date | date: '%b %d' -%}
+            <span class="upcoming-events__end-date">{{ formatted_end_date }}</span>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if event.details != blank -%}
+        <div class="upcoming-events__details" data-event-index="{{ event_index }}">
+          {%- comment -%} Content will be rendered by JavaScript {%- endcomment -%}
+        </div>
+        <script type="application/json" id="event-details-{{ section_id }}-{{ event_index }}">
+          {{ event.details }}
+        </script>
+      {%- endif -%}
+
+      {%- if event.link != blank -%}
+        <a
+          href="{{ event.link }}"
+          class="button button--white"
+        >
+          {{ event.button_label | default: 'Book your seats' }}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,114 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="product-description-section section-{{ section.id }}-padding" id="ProductDescription-{{ section.id }}">
+  <div class="page-width">
+    <h2 class="product-description__heading">Product Description</h2>
+
+    <div class="product-description__content-wrapper">
+      {%- liquid
+        assign alcohol_percentage = product.metafields.custom.alcohol_percentage
+        assign flavour = product.metafields.custom.flavour
+        assign country = product.metafields.custom.country
+        assign brewery = product.metafields.custom.brewery
+        assign size = product.metafields.custom.size
+      -%}
+
+      {%- if alcohol_percentage != blank
+        or flavour != blank
+        or country != blank
+        or brewery != blank
+        or size != blank
+      -%}
+        <div class="product-description__meta">
+          {%- if alcohol_percentage != blank -%}
+            <div class="product-description__meta-item">
+              <span class="product-description__meta-label">Can ABV:</span>
+              <span class="product-description__meta-value">{{ alcohol_percentage }}</span>
+            </div>
+          {%- endif -%}
+          {%- if flavour != blank -%}
+            <div class="product-description__meta-item">
+              <span class="product-description__meta-label">Flavour:</span>
+              <span class="product-description__meta-value">{{ flavour }}</span>
+            </div>
+          {%- endif -%}
+          {%- if country != blank -%}
+            <div class="product-description__meta-item">
+              <span class="product-description__meta-label">Country:</span>
+              <span class="product-description__meta-value">{{ country }}</span>
+            </div>
+          {%- endif -%}
+          {%- if brewery != blank -%}
+            <div class="product-description__meta-item">
+              <span class="product-description__meta-label">Brewery:</span>
+              <span class="product-description__meta-value">{{ brewery }}</span>
+            </div>
+          {%- endif -%}
+          {%- if size != blank -%}
+            <div class="product-description__meta-item">
+              <span class="product-description__meta-label">Size:</span>
+              <span class="product-description__meta-value">{{ size }}</span>
+            </div>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if product.description != blank -%}
+        <div class="product-description__content rte">
+          {{ product.description }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Description",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Description"
+    }
+  ]
+}
+{% endschema %}

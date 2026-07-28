@@ -1,0 +1,238 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_venue": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_venue": {
+          "type": "heading",
+          "settings": {
+            "heading": "Venue"
+          }
+        }
+      },
+      "block_order": [
+        "heading_venue"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/Rectangle_26.jpg",
+        "overlay_opacity": 20,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_TLVCyP": {
+      "type": "rich-text",
+      "blocks": {
+        "title_3dBrzb": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "LPBC. Not just another shed <span class=\"text-bg blue\">full of tanks.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_KCt46y": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": " Sure, we brew a cracking beer. But we also pride ourselves on our kitchen — quality produce, skilled staff, and a menu that'll even impress the mother-in-law."
+          }
+        },
+        "textbox_Q4Giz7": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>We do weddings, birthdays, Sunday sessions, first dates (good luck), and that after-work round with the crew.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_3dBrzb",
+        "subtitle_KCt46y",
+        "textbox_Q4Giz7"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 100,
+        "padding_bottom": 0
+      }
+    },
+    "simple_image_PNTgRT": {
+      "type": "simple-image",
+      "name": "Simple Image",
+      "settings": {
+        "image": "shopify://shop_images/LPBC_VENUE.jpg",
+        "image_width": "full",
+        "image_custom_width": 250,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cards_grid_xPybXG": {
+      "type": "cards-grid",
+      "blocks": {
+        "card_3N6B9i": {
+          "type": "card",
+          "settings": {
+            "title": "Beach Bar:",
+            "textbox": "<p> Sun, shade, pints, and world-class people-watching.</p>",
+            "bg_icon": "shopify://shop_images/Vector_58.svg"
+          }
+        },
+        "card_U3ikQ3": {
+          "type": "card",
+          "settings": {
+            "title": "The Taproom:",
+            "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views.</p>",
+            "bg_icon": "shopify://shop_images/Vector_56.svg"
+          }
+        },
+        "card_XTNAE9": {
+          "type": "card",
+          "settings": {
+            "title": "Sunset Lounge (Level 1):",
+            "textbox": "<p>A function space made for big moments (or just staring at the Indian Ocean while pretending to listen to your mates).</p>",
+            "bg_icon": "shopify://shop_images/Vector_57.svg"
+          }
+        },
+        "card_JJ7pjY": {
+          "type": "card",
+          "settings": {
+            "title": "Little Point Kiosk:",
+            "textbox": "<p>Our breezy kiosk slinging coffees, pastries, and coastal favourites from the wee hours.</p>",
+            "bg_icon": "shopify://shop_images/Group_1_3.svg"
+          }
+        }
+      },
+      "block_order": [
+        "card_3N6B9i",
+        "card_U3ikQ3",
+        "card_XTNAE9",
+        "card_JJ7pjY"
+      ],
+      "name": "Cards Grid",
+      "settings": {
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_iQNiet": {
+      "type": "rich-text",
+      "blocks": {
+        "textbox_abtfdD": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>And the best bit? We're right on the Kennedy Bay foreshore, with a brand-new 150 metre jetty under construction, parks and playgrounds for the kids, and one of WA's best stretches of beach just a sandy-toed stroll away.</p><p>Only 36km from Fremantle and a quick 45-minute trip from Perth CBD, Long Point Brewing Co. is far enough to feel like a getaway, but close enough that you can still make it home in time to walk the dog (or not, we won’t tell).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "textbox_abtfdD"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_jb46JA": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_z7pKae": {
+          "type": "title",
+          "settings": {
+            "title": "Lock in <br><span class=\"text-bg green\">your spot</span>"
+          }
+        },
+        "list_item_f4EtWH": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_49.svg",
+            "title": "Private Functions & Weddings:",
+            "textbox": "<p>We do weddings, birthdays, Sunday sessions, first dates (good luck), and that after-work round with the crew.</p>"
+          }
+        },
+        "list_item_MG4VUM": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_50.svg",
+            "title": "Brewery Tours:",
+            "textbox": "<p>Go behind the tanks, sniff some hops, and learn why these brewers have suspiciously strong forearms.</p>"
+          }
+        },
+        "list_item_wBHQVX": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_51.svg",
+            "title": "Tables:",
+            "textbox": "<p>Book online in two clicks, or roll the dice as a walk-in.</p>"
+          }
+        },
+        "buttons_njrBFc": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Contact us",
+            "button_link_1": "https://www.longpointbrewingco.com.au/pages/contact",
+            "button_class_1": "button--white",
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/contact",
+            "button_class_2": "",
+            "button_label_3": "",
+            "button_link_3": "shopify://pages/contact",
+            "button_class_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_z7pKae",
+        "list_item_f4EtWH",
+        "list_item_MG4VUM",
+        "list_item_wBHQVX",
+        "buttons_njrBFc"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "image": "shopify://shop_images/LPBC_1.jpg",
+        "image_overlay": "shopify://shop_images/Subtract_7.svg",
+        "section_bg_color": "#fbad48",
+        "image_top_right": "shopify://shop_images/Vector_86.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_venue",
+    "main",
+    "rich_text_TLVCyP",
+    "simple_image_PNTgRT",
+    "cards_grid_xPybXG",
+    "rich_text_iQNiet",
+    "image_with_text_jb46JA"
+  ]
+}
