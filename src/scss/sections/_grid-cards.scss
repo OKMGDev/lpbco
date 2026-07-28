@@ -1,0 +1,51 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.cards-grid-section {
+  .cards-grid__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3.2rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.4rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 2.4rem;
+    }
+
+    .cards-grid__card {
+      padding: 4rem;
+      text-align: center;
+      background-color: #53BCAE;
+      color: white;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 20%;
+        width: 100%;
+        object-fit: contain;
+        object-position: left;
+      }
+
+      .cards-grid__card-title {
+        @include heading_h6;
+        margin-bottom: 1.6rem;
+        line-height: 1.12;
+        letter-spacing: -0.06rem;
+        color: inherit;
+      }
+
+      .cards-grid__card-text {
+        @include fs_18;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.find-us-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .page-width {
+    width: 100%;
+
+    .find-us__content {
+      text-align: center;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
+      justify-content: center;
+
+      h2 {
+        @include heading_h2;
+        color: white;
+
+        @media (max-width: $breakpoint-mobile) {
+          max-width: 280px;
+        }
+      }
+
+      .find-us__subtitle {
+        @include fs_32;
+        margin: 0px;
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        justify-content: center;
+        padding-bottom: 0.5em;
+        border-bottom: 1px solid #53BCAE;
+        align-self: center;
+      }
+
+      .find-us__button {
+        align-self: center;
+      }
+    }
+  }
+}

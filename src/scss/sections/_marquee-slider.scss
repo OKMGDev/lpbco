@@ -1,0 +1,70 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.marquee-slider {
+  background-color: #6FBAAE;
+  padding: 2rem 0px;
+  position: relative;
+  z-index: 12;
+  top: -50%;
+  transform: translateY(-50%) rotate(1.4deg);
+
+  @media (max-width: $breakpoint-tablet) {
+    padding: 1.5rem 0px;
+
+  }
+
+  .marquee-swiper {
+    overflow: hidden;
+    width: 100%;
+
+    .swiper-wrapper {
+      width: 100%;
+      transition-timing-function: linear !important;
+
+      .swiper-slide {
+        width: auto;
+
+        .marquee-slide {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          white-space: nowrap;
+
+          @media (max-width: $breakpoint-mobile) {
+            gap: 0.5rem;
+          }
+
+          .marquee-icon {
+            display: flex;
+            align-items: center;
+
+            img {
+              width: 4rem;
+              height: 4rem;
+              object-fit: contain;
+
+              @media (max-width: $breakpoint-mobile) {
+                width: 3rem;
+                height: 3rem;
+              }
+            }
+          }
+
+          .marquee-text {
+            color: white;
+            font-size: 2.6rem;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            @media (max-width: $breakpoint-mobile) {
+              font-size: 2rem;
+            }
+
+          }
+        }
+      }
+    }
+  }
+}

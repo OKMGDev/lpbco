@@ -1,0 +1,129 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.faqs-section {
+
+  .faqs__content {
+    max-width: 80rem;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+
+
+    .faqs__accordion {
+
+      padding: 3rem 0px;
+      border-top: 0px solid $color-night-sky;
+
+      @media (max-width: $breakpoint-mobile) {
+        padding: 2rem 0px;
+      }
+
+      .accordion__content {
+        @include fs_18;
+        line-height: 1.4em;
+        padding-left: 0px;
+      }
+
+      .faqs__summary {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          .faqs__title {
+            color: #B5E0E9;
+          }
+        }
+
+        .faqs__title {
+          transition: 0.3s ease;
+          @include fs_32;
+          text-transform: capitalize;
+        }
+      }
+
+
+
+      .faqs__icon {
+        flex-shrink: 0;
+        width: 2rem;
+        height: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .faqs__icon svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      details[open] .faqs__icon--open {
+        display: none !important;
+      }
+
+      details[open] .faqs__icon--close {
+        display: block !important;
+      }
+
+      details:not([open]) .faqs__icon--open {
+        display: block !important;
+      }
+
+      details:not([open]) .faqs__icon--close {
+        display: none !important;
+      }
+    }
+
+  }
+
+  .faqs__image-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+    width: 30rem;
+    height: 30rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left top;
+    }
+  }
+
+  .faqs__image-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    pointer-events: none;
+    width: 30rem;
+    height: 30rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: right bottom;
+    }
+  }
+
+
+
+}

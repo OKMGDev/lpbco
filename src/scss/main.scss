@@ -1,0 +1,42 @@
+// Main SCSS file - import all your styles here
+
+// Load setup once - this forwards variables to all files below
+@use 'setup' as *;
+
+// Use base styles (variables available via setup)
+@use 'base';
+
+// Use components (variables available via setup)
+@use 'components/header';
+@use 'components/footer';
+@use 'components/buttons';
+@use 'components/shop';
+@use 'components/collection-hero';
+@use 'components/product-grid';
+@use 'components/product';
+@use 'components/policy-pages';
+@use 'components/blog';
+// Use sections (variables available via setup)
+@use 'sections/collection-list';
+@use 'sections/banner';
+@use 'sections/marquee-slider';
+@use 'sections/rich-text';
+@use 'sections/find-us';
+@use 'sections/main-blog';
+@use 'sections/upcoming-events';
+@use 'sections/image-with-text';
+@use 'sections/quote';
+@use 'sections/call-to-action';
+@use 'sections/faq';
+@use 'sections/grid-cards';
+@use 'sections/all-events-section';
+@use 'sections/contact';
+@use 'sections/featured-products-section';
+@use 'sections/age-verification';
+@use 'sections/landing-banner';
+@use 'sections/countdown';
+
+
+
+// Use utilities (variables available via setup)
+@use 'utilities';

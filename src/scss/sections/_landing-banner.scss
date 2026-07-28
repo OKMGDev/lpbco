@@ -1,0 +1,118 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.landing-banner {
+  position: relative;
+  overflow: hidden;
+
+  .landing-banner__image-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: top left;
+    }
+  }
+
+  .landing-banner__image-top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: top right;
+    }
+  }
+
+  .landing-banner__image-bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom left;
+    }
+  }
+
+  .landing-banner__image-bottom-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 25rem;
+    height: 25rem;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: bottom right;
+    }
+  }
+
+  .page-width {
+    position: relative;
+    z-index: 2;
+  }
+
+  .landing-banner__inner {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    .landing-banner__content {
+      padding: 4rem;
+      position: relative;
+      z-index: 2;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 500px;
+      color: white;
+
+      @media (max-width: $breakpoint-mobile) {
+        min-height: 350px;
+      }
+
+      .landing-banner__title {
+        @include heading_h3;
+        text-transform: uppercase;
+        line-height: 1.1em;
+        color: inherit;
+      }
+
+      .landing-banner__button {
+        a.button {
+          transform: rotate(-3deg);
+          padding: 2rem 3rem;
+
+        }
+      }
+    }
+  }
+}

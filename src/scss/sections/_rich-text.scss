@@ -1,0 +1,154 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+
+.rich-text-section {
+  position: relative;
+  color: #373737;
+
+  &.product-page-banner {
+    .rich-text__content {
+      .rich-text__title {
+        @include heading_h2;
+        line-height: 1em;
+        color: #406174;
+
+      }
+
+      .rich-text__subtitle {
+        color: #406174;
+        text-transform: uppercase;
+        @include fs_24;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .rich-text__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .rich-text__stamp {
+    @include fs_24;
+
+    position: absolute;
+    z-index: 1;
+    border: 4px dashed var(--stamp-color);
+    padding: 0.5em 1em;
+    color: var(--stamp-color);
+    background-color: color-mix(in srgb, var(--stamp-color) 10%, transparent);
+    line-height: 1;
+    transform: rotate(20deg);
+
+
+    @media (max-width: $breakpoint-mobile) {
+      transform: rotate(10deg);
+      position: relative !important;
+      left: unset !important;
+      right: unset !important;
+      align-self: center;
+      padding: 0.3em 0.6em;
+      border-width: 2px;
+
+    }
+
+    p {
+      margin: 0px;
+    }
+  }
+
+  .rich-text__title {
+    @include heading_h4;
+    justify-self: center;
+    align-self: center;
+
+    &.rich-text__title--bigger {
+      @include heading_h1;
+      line-height: 1.1em !important;
+      padding-right: 0.1em;
+      transform: rotate(-2deg);
+      position: relative;
+      justify-self: center;
+      align-self: center;
+      text-align: left;
+      background-position: top right;
+      padding-top: 0.2em;
+      background-size: 1.3em auto;
+      background-repeat: no-repeat;
+      background-image: url('https://cdn.shopify.com/s/files/1/0779/8125/3851/files/Group_3_1.svg?v=1762759938');
+      margin-bottom: 0.2em;
+
+      @media (max-width: $breakpoint-tablet) {}
+    }
+  }
+
+  .rich-text__subtitle {
+    @include fs_32;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .rich-text__textbox {
+    @include fs_24;
+    color: $color-text-light;
+
+    b,
+    strong {
+      color: var(--accent-color);
+    }
+  }
+
+  .rich-text__buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.6rem;
+    }
+  }
+
+  .rich-text__background-graphic {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    display: block;
+    width: auto;
+    height: auto;
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 150px !important;
+      width: auto !important;
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    @media (max-width: $breakpoint-tablet) {
+      max-width: 200px;
+    }
+  }
+}

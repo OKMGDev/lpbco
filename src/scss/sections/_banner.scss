@@ -1,0 +1,39 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.banner {
+  // padding-top: 103px;
+  position: relative;
+
+  &.banner--inner-pages {
+    .banner__content {
+      min-height: calc(55vh - 103px);
+    }
+  }
+
+  .banner__content {
+    min-height: calc(100vh - 103px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .banner__box {
+      text-align: center;
+      color: white;
+
+      h1 {
+        color: inherit;
+
+        @media (max-width: $breakpoint-xs) {
+          max-width: 275px;
+        }
+      }
+
+      .banner__buttons {
+        margin-top: 3.2rem;
+
+      }
+    }
+  }
+}
