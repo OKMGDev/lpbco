@@ -209,6 +209,7 @@
         "textbox_hmhtkC",
         "button_GMY6C7"
       ],
+      "disabled": true,
       "name": "Call to Action",
       "settings": {
         "image": "shopify://shop_images/Rectangle_5932.png",
