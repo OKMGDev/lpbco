@@ -280,7 +280,7 @@
           "type": "button",
           "settings": {
             "button_label": "Enquire now",
-            "button_link": "shopify://pages/functions",
+            "button_link": "https://www.longpointbrewingco.com.au/pages/contact?tab=functions",
             "button_style_secondary": false
           }
         }
