@@ -78,6 +78,7 @@
         },
         "vendor": {
           "type": "text",
+          "disabled": true,
           "settings": {
             "text": "Fast Flat Rate Shipping. Dispatched Daily",
             "text_style": "subtitle"
