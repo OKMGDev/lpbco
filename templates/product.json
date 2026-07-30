@@ -30,6 +30,7 @@
         "title_i3prKW",
         "subtitle_LUUk3F"
       ],
+      "disabled": true,
       "custom_css": [
         ".rich-text__title--bigger {background: unset;}"
       ],
@@ -92,7 +93,6 @@
         "buy_buttons",
         "vendor"
       ],
-      "disabled": true,
       "settings": {
         "enable_sticky_info": false,
         "color_scheme": "scheme-1",
@@ -111,7 +111,6 @@
     },
     "product_description_Ykyr68": {
       "type": "product-description",
-      "disabled": true,
       "name": "Product Description",
       "settings": {
         "padding_top": 100,
