@@ -182,11 +182,8 @@
         {%- endif -%}
       {%- endif -%}
 
-      {% comment %} Soft Launch Disabled Feature {% endcomment %}
-      {% comment %} {% render 'header-search', input_id: 'Search-In-Modal' %} {% endcomment %}
+      {% render 'header-search', input_id: 'Search-In-Modal' %} 
 
-      {% comment %} Soft Launch Disabled Feature {% endcomment %}
-      {% comment %}
         {%- if shop.customer_accounts_enabled -%}
           <a
             href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
@@ -205,7 +202,6 @@
             </span>
           </a>
         {%- endif -%}
-      {% endcomment %}
 
       {%- for block in section.blocks -%}
         {%- case block.type -%}
@@ -214,8 +210,6 @@
         {%- endcase -%}
       {%- endfor -%}
 
-      {% comment %} Soft Launch Disabled Feature {% endcomment %}
-      {% comment %}
         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
           {% if cart == empty %}
             <span class="svg-wrapper">{{ 'icon-cart-empty.svg' | inline_asset_content }}</span>
@@ -232,7 +226,6 @@
             </div>
           {%- endif -%}
         </a>
-      {% endcomment %}
     </div>
   </header>
 </{{ header_tag }}>
