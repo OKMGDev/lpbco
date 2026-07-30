@@ -112,6 +112,7 @@
     },
     "product_description_Ykyr68": {
       "type": "product-description",
+      "disabled": true,
       "name": "Product Description",
       "settings": {
         "padding_top": 100,
