@@ -66,7 +66,7 @@
           "settings": {
             "icon": "shopify://shop_images/Frame_34.svg",
             "title": "Email",
-            "textbox": "<p>sales@longpointbrewingco.com.au</p>",
+            "textbox": "<p>bookings@longpointbrewingco.com.au</p>",
             "link": "mailto:sales@longpointbrewingco.com.au",
             "link_label": ""
           }
