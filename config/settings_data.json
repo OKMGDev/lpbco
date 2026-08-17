@@ -143,6 +143,13 @@
       }
     },
     "content_for_index": [],
+    "blocks": {
+      "13668374723836492697": {
+        "type": "shopify://apps/leat-loyalty-rewards/blocks/leat-sdk/a4b3d2b7-542d-424e-b7f4-602578988f92",
+        "disabled": false,
+        "settings": {}
+      }
+    },
     "color_schemes": {
       "scheme-1": {
         "settings": {
