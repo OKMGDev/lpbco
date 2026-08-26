@@ -25,7 +25,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_type": "single",
-        "background_image": "shopify://shop_images/Untitled_2400_x_840_px_1205_x_545_px.jpg",
+        "background_image": "shopify://shop_images/Untitled_2400_x_840_px_1205_x_545_px.svg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages",
         "auto_rotate": false,
