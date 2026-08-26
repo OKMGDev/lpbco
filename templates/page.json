@@ -32,9 +32,13 @@
       ],
       "name": "t:sections.image-banner.presets.name",
       "settings": {
-        "background_image": "shopify://shop_images/45efd2ad0e5e9075d7c1d0c832c5cfdbdba695bf_1.png",
+        "background_type": "single",
+        "background_image": "shopify://shop_images/0K6A9503_1.jpg",
         "overlay_opacity": 30,
-        "banner_type": "inner-pages"
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
       }
     },
     "rich_text_mVMTyC": {
@@ -60,6 +64,7 @@
       ],
       "name": "Rich Text",
       "settings": {
+        "custom_class": "",
         "content_max_width": 1000,
         "accent_color": "#f9ad8e",
         "padding_top": 100,
