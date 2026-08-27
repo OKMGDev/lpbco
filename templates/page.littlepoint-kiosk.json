@@ -25,7 +25,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_type": "single",
-        "background_image": "shopify://shop_images/Rectangle_26_83196cc1-ec95-4cd1-b26c-4e564714ebdf.jpg",
+        "background_image": "shopify://shop_images/0K6A9409.jpg",
         "overlay_opacity": 20,
         "banner_type": "inner-pages",
         "auto_rotate": false,
@@ -119,7 +119,7 @@
       "type": "simple-image",
       "name": "Simple Image",
       "settings": {
-        "image": "shopify://shop_images/Group_47198.png",
+        "image": "shopify://shop_images/IMG_1020.jpg",
         "image_width": "custom",
         "image_custom_width": 1100,
         "padding_top": 0,
