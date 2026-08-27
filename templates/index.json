@@ -328,7 +328,7 @@
       ],
       "name": "Landing Page Banner",
       "settings": {
-        "background_image": "shopify://shop_images/my-project-page-1_4.jpg",
+        "background_image": "shopify://shop_images/WEBSITE_BANNER.png",
         "overlay_opacity": 20,
         "image_bottom_right": "shopify://shop_images/Vector_43.svg",
         "padding_top": 52,
