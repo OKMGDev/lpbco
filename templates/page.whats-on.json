@@ -90,7 +90,6 @@
     },
     "all_events_WXBRNL": {
       "type": "all-events",
-      "disabled": true,
       "name": "All Events",
       "settings": {
         "metaobject_type": "events",
