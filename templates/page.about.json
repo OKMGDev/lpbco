@@ -192,6 +192,47 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "rich_text_Kkp4GB": {
+      "type": "rich-text",
+      "blocks": {
+        "title_NnNcKK": {
+          "type": "title",
+          "disabled": true,
+          "settings": {
+            "title": "Beer tastes <span class=\"text-bg\">better</span> when it’s brewed with <span class=\"text-bg blue\">care.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "subtitle_JxrrHx": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": ""
+          }
+        },
+        "button_cVNPY7": {
+          "type": "button",
+          "settings": {
+            "button_label_1": "",
+            "button_link_1": "",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "title_NnNcKK",
+        "subtitle_JxrrHx",
+        "button_cVNPY7"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 24,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -200,6 +241,7 @@
     "image_with_text_7FgpXy",
     "quote_WHXy47",
     "call_to_action_h7hywW",
-    "call_to_action_NLYh8N"
+    "call_to_action_NLYh8N",
+    "rich_text_Kkp4GB"
   ]
 }
