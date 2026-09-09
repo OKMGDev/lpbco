@@ -40,13 +40,6 @@
   <div class="upcoming-events__content">
     {% render 'event-card-icons' %}
     <div class="upcoming-events__content-inner">
-      <img
-        class="upcoming-events__badge"
-        src="{{'LPBCo-Badge-B 1.png' | asset_url }}"
-        alt="LPBCo Badge"
-        width="116"
-        height="175"
-      >
       {%- if event.title != blank -%}
         <h3 class="upcoming-events__event-title">
           {{ event.title }}
@@ -89,4 +82,3 @@
     </div>
   </div>
 </div>
-

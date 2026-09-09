@@ -117,7 +117,6 @@
       z-index: 2;
       background-color: #F9AD8E;
       padding: 4rem;
-      padding-right: 20%;
       color: white;
       flex-grow: 1;
 
@@ -125,32 +124,12 @@
         padding: 2rem;
       }
 
-      .upcoming-events__badge {
-        position: absolute;
-        top: 4rem;
-        right: 4rem;
-        max-width: 20%;
-        width: 116px;
-        height: 175px;
-
-        object-fit: contain;
-        z-index: 1;
-
-        @media (max-width: $breakpoint-mobile) {
-          top: 1rem;
-          max-width: 30%;
-          right: 1rem;
-          width: 50px;
-          height: 75px;
-        }
-      }
 
       .upcoming-events__event-title {
         font-size: 5.2rem;
         line-height: 1.1em;
         margin-bottom: 2rem;
         color: white;
-        max-width: 80%;
 
         @media (max-width: $breakpoint-tablet) {
           font-size: 4.2rem;
