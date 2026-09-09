@@ -1,6 +1,3 @@
-{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}
-{{ 'newsletter-section.css' | asset_url | stylesheet_tag }}
-
 {%- style -%}
   .section-{{ section.id }}-padding {
     padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -13,137 +10,121 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  #shopify-section-{{ section.id }} {
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+    {%- if section.settings.text_color != blank -%}
+      --text-color: {{ section.settings.text_color }};
+      color: var(--text-color);
+    {%- endif -%}
+    position: relative;
+    overflow: hidden;
+  }
+
+  #EmailSignup-{{ section.id }} .email-signup__card {
+    {%- if section.settings.card_background_color != blank -%}
+      background-color: {{ section.settings.card_background_color }};
+    {%- endif -%}
+  }
+
+  #EmailSignup-{{ section.id }} .email-signup__content-inner {
+    {%- if section.settings.inner_background_color != blank -%}
+      background-color: {{ section.settings.inner_background_color }};
+    {%- endif -%}
+  }
+
+  #EmailSignup-{{ section.id }} .email-signup__content svg {
+    {%- if section.settings.background_icons_color != blank -%}
+      color: {{ section.settings.background_icons_color }};
+    {%- endif -%}
+  }
 {%- endstyle -%}
 
-<div class="newsletter center {% if section.settings.full_width == false %}newsletter--narrow page-width{% endif %}">
-  <div class="newsletter__wrapper color-{{ section.settings.color_scheme }} gradient content-container isolate{% if section.settings.full_width %} content-container--full-width{% endif %} section-{{ section.id }}-padding">
-    {%- for block in section.blocks -%}
-      {%- case block.type -%}
-        {%- when '@app' -%}
-          {% render block %}
-        {%- when 'heading' -%}
-          <h2
-            class="inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {{ block.settings.heading }}
-          </h2>
-        {%- when 'paragraph' -%}
-          <div
-            class="newsletter__subheading rte{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-            {{ block.shopify_attributes }}
-            {% if settings.animations_reveal_on_scroll %}
-              data-cascade
-              style="--animation-order: {{ forloop.index }};"
-            {% endif %}
-          >
-            {{ block.settings.text }}
-          </div>
-        {%- when 'email_form' -%}
-          <div {{ block.shopify_attributes }}>
-            {% form 'customer', class: 'newsletter-form' %}
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <div
-                class="newsletter-form__field-wrapper{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
-                {% if settings.animations_reveal_on_scroll %}
-                  data-cascade
-                  style="--animation-order: {{ forloop.index }};"
-                {% endif %}
-              >
-                <div class="field">
-                  <input
-                    id="NewsletterForm--{{ section.id }}"
-                    type="email"
-                    name="contact[email]"
-                    class="field__input"
-                    value="{{ form.email }}"
-                    aria-required="true"
-                    autocorrect="off"
-                    autocapitalize="off"
-                    autocomplete="email"
-                    {% if form.errors %}
-                      autofocus
-                      aria-invalid="true"
-                      aria-describedby="Newsletter-error--{{ section.id }}"
-                    {% elsif form.posted_successfully? %}
-                      aria-describedby="Newsletter-success--{{ section.id }}"
-                    {% endif %}
-                    placeholder="{{ 'newsletter.label' | t }}"
-                    required
-                  >
-                  <label class="field__label" for="NewsletterForm--{{ section.id }}">
-                    {{ 'newsletter.label' | t }}
-                  </label>
-                  <button
-                    type="submit"
-                    class="newsletter-form__button field__button"
-                    name="commit"
-                    id="Subscribe"
-                    aria-label="{{ 'newsletter.button_label' | t }}"
-                  >
-                    <span class="svg-wrapper">
-                      {{- 'icon-arrow.svg' | inline_asset_content -}}
-                    </span>
-                  </button>
-                </div>
-                {%- if form.errors -%}
-                  <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
-                    <span class="svg-wrapper">
-                      {{- 'icon-error.svg' | inline_asset_content -}}
-                    </span>
-                    {{- form.errors.translated_fields.email | capitalize }}
-                    {{ form.errors.messages.email -}}
-                  </small>
+<section
+  id="EmailSignup-{{ section.id }}"
+  class="email-signup section-{{ section.id }}-padding"
+>
+  <div class="page-width">
+    <div class="email-signup__card">
+      <div class="email-signup__content">
+        {% render 'event-card-icons' %}
+        <div class="email-signup__content-inner">
+          {%- for block in section.blocks -%}
+            {%- case block.type -%}
+              {%- when 'heading' -%}
+                {%- if block.settings.heading != blank -%}
+                  <h2 class="email-signup__heading" {{ block.shopify_attributes }}>
+                    {{ block.settings.heading }}
+                  </h2>
                 {%- endif -%}
-              </div>
-              {%- if form.posted_successfully? -%}
-                <h3
-                  class="newsletter-form__message newsletter-form__message--success form__message"
-                  id="Newsletter-success--{{ section.id }}"
-                  tabindex="-1"
-                  autofocus
-                >
-                  <span class="svg-wrapper">
-                    {{- 'icon-success.svg' | inline_asset_content -}}
-                  </span>
-                  {{- 'newsletter.success' | t }}
-                </h3>
-              {%- endif -%}
-            {% endform %}
-          </div>
-      {%- endcase -%}
-    {%- endfor -%}
+              {%- when 'paragraph' -%}
+                {%- if block.settings.text != blank -%}
+                  <div class="email-signup__text rte" {{ block.shopify_attributes }}>
+                    {{ block.settings.text }}
+                  </div>
+                {%- endif -%}
+              {%- when 'email_form' -%}
+                <div class="email-signup__form" {{ block.shopify_attributes }}>
+                  <div id="CONTACTA_6aa0fa9641883d94d08a314c"></div>
+                  <script type="text/javascript" async>
+                    var script = document.createElement('script');
+                    script.type = 'text/javascript';
+                    script.src = 'https://forms.contacta.io/6aa0fa9641883d94d08a314c.js';
+                    document.getElementsByTagName('head')[0].appendChild(script);
+                  </script>
+                </div>
+            {%- endcase -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
   </div>
-</div>
+</section>
 
 {% schema %}
 {
   "name": "t:sections.newsletter.name",
   "tag": "section",
-  "class": "section",
+  "class": "section email-signup-section",
   "disabled_on": {
     "groups": ["header"]
   },
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.newsletter.settings.paragraph.content"
+      "type": "header",
+      "content": "Colors"
     },
     {
-      "type": "color_scheme",
-      "id": "color_scheme",
-      "label": "t:sections.all.colors.label",
-      "default": "scheme-1"
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
     },
     {
-      "type": "checkbox",
-      "id": "full_width",
-      "default": true,
-      "label": "t:sections.newsletter.settings.full_width.label"
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background color",
+      "default": "#b6dfe9"
+    },
+    {
+      "type": "color",
+      "id": "background_icons_color",
+      "label": "Background icons color",
+      "default": "#f8f5ed"
+    },
+    {
+      "type": "color",
+      "id": "inner_background_color",
+      "label": "Inner background color",
+      "default": "#53bcae"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#ffffff"
     },
     {
       "type": "header",
@@ -157,7 +138,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_top",
-      "default": 40
+      "default": 64
     },
     {
       "type": "range",
@@ -167,7 +148,7 @@
       "step": 4,
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
-      "default": 52
+      "default": 64
     }
   ],
   "blocks": [
@@ -177,38 +158,10 @@
       "limit": 1,
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "html",
           "id": "heading",
-          "default": "t:sections.newsletter.blocks.heading.settings.heading.default",
+          "default": "THIRSTY FOR MORE?",
           "label": "t:sections.newsletter.blocks.heading.settings.heading.label"
-        },
-        {
-          "type": "select",
-          "id": "heading_size",
-          "options": [
-            {
-              "value": "h2",
-              "label": "t:sections.all.heading_size.options__1.label"
-            },
-            {
-              "value": "h1",
-              "label": "t:sections.all.heading_size.options__2.label"
-            },
-            {
-              "value": "h0",
-              "label": "t:sections.all.heading_size.options__3.label"
-            },
-            {
-              "value": "hxl",
-              "label": "t:sections.all.heading_size.options__4.label"
-            },
-            {
-              "value": "hxxl",
-              "label": "t:sections.all.heading_size.options__5.label"
-            }
-          ],
-          "default": "h1",
-          "label": "t:sections.all.heading_size.label"
         }
       ]
     },
@@ -220,7 +173,7 @@
         {
           "type": "richtext",
           "id": "text",
-          "default": "t:sections.newsletter.blocks.paragraph.settings.paragraph.default",
+          "default": "<p>Stay connected with Long Point Brewing Co. and be the first to hear about new beers, upcoming events, and everything happening at the brewery.</p>",
           "label": "t:sections.newsletter.blocks.paragraph.settings.paragraph.label"
         }
       ]
@@ -229,9 +182,6 @@
       "type": "email_form",
       "name": "t:sections.newsletter.blocks.email_form.name",
       "limit": 1
-    },
-    {
-      "type": "@app"
     }
   ],
   "presets": [

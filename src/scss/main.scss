@@ -35,8 +35,7 @@
 @use 'sections/age-verification';
 @use 'sections/landing-banner';
 @use 'sections/countdown';
-
-
+@use 'sections/email-signup';
 
 // Use utilities (variables available via setup)
 @use 'utilities';

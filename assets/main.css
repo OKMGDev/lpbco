@@ -3971,6 +3971,420 @@ media-gallery slider-component.thumbnail-slider li button img {
   }
 }
 
+.email-signup .email-signup__card {
+  width: 100%;
+  display: flex;
+}
+.email-signup .email-signup__content {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-grow: 1;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .email-signup .email-signup__content {
+    padding: 3rem;
+  }
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content {
+    padding: 1.5rem;
+  }
+}
+.email-signup .email-signup__content .icon-top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-top-left {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.email-signup .email-signup__content .icon-middle-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  z-index: 1;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-middle-left {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.email-signup .email-signup__content .icon-bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-bottom-left {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.email-signup .email-signup__content .icon-bottom-center,
+.email-signup .email-signup__content .icon-bottom-right,
+.email-signup .email-signup__content .icon-moddle-right,
+.email-signup .email-signup__content .icon-top-center {
+  position: absolute;
+  z-index: 1;
+  object-fit: cover;
+}
+.email-signup .email-signup__content .icon-bottom-center {
+  bottom: 0;
+  left: 50%;
+  width: 12rem;
+  height: 12rem;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-bottom-center {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.email-signup .email-signup__content .icon-bottom-right {
+  bottom: 0;
+  right: 0;
+  width: 10rem;
+  height: 15rem;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-bottom-right {
+    width: 4rem;
+    height: 5rem;
+  }
+}
+.email-signup .email-signup__content .icon-moddle-right {
+  top: 30%;
+  right: 0;
+  width: 15rem;
+  height: 15rem;
+  transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-moddle-right {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+.email-signup .email-signup__content .icon-top-center {
+  top: 0;
+  left: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content .icon-top-center {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+.email-signup .email-signup__content-inner {
+  position: relative;
+  z-index: 2;
+  padding: 4rem;
+  color: var(--text-color, #fff);
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.2rem;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__content-inner {
+    padding: 2rem 1.5rem;
+    gap: 1rem;
+  }
+}
+.email-signup .email-signup__heading {
+  font-size: 5.2rem;
+  line-height: 1.1em;
+  margin: 0;
+  color: var(--text-color, #fff);
+  max-width: 90%;
+}
+@media (max-width: 1024px) {
+  .email-signup .email-signup__heading {
+    font-size: 4.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__heading {
+    font-size: 3rem;
+  }
+}
+.email-signup .email-signup__text {
+  font-size: 2rem;
+  line-height: 1.35em;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__text {
+    font-size: 1.6rem;
+  }
+}
+.email-signup .email-signup__text {
+  margin: 0;
+  max-width: 56rem;
+  color: var(--text-color, #fff);
+}
+.email-signup .email-signup__text p {
+  margin: 0;
+  color: var(--text-color, #fff);
+}
+.email-signup .email-signup__form {
+  width: 100%;
+  max-width: 72rem;
+  margin-top: 0.8rem;
+  text-align: left;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .heading {
+  display: none;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  justify-content: flex-start;
+  margin-bottom: 1.6rem;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row {
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col > div {
+  margin-top: 0 !important;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col > label,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .input-field > label {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col > label,
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .input-field > label {
+    font-size: 1.2rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col > label,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .input-field > label {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-color, #fff);
+  text-align: left;
+  opacity: 0.95;
+  margin-bottom: 0.4rem;
+  font-family: "Highway Gothic", sans-serif;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden]),
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select {
+  width: 100% !important;
+  border: none !important;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.45) !important;
+  background: transparent !important;
+  color: var(--text-color, #fff) !important;
+  min-height: 3.6rem !important;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden]),
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea,
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select {
+    font-size: 1.2rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden]),
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0.4rem 0 !important;
+  appearance: none;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden])::placeholder,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea::placeholder,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden]):focus, .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col input:not([type=checkbox]):not([type=radio]):not([type=hidden]):focus-visible,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea:focus,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col textarea:focus-visible,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select:focus,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col select:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom-color: rgba(255, 255, 255, 0.9) !important;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem 1.6rem;
+  margin-top: 0.8rem;
+  width: 100%;
+}
+@media (max-width: 1024px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox {
+    flex-wrap: wrap !important;
+    gap: 1rem 1.4rem;
+  }
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox {
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.6rem;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: var(--text-color, #fff);
+  cursor: pointer;
+  font-family: "Highway Gothic", sans-serif;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option {
+    white-space: normal;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+@media (max-width: 768px) and (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option {
+    font-size: 1.2rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option input[type=checkbox] {
+  width: 1.6rem !important;
+  height: 1.6rem !important;
+  min-width: 1.6rem !important;
+  min-height: 1.6rem !important;
+  margin: 0 !important;
+  flex-shrink: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  cursor: pointer;
+  position: relative;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option input[type=checkbox]:checked {
+  background-color: #252831 !important;
+  border-color: #252831 !important;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .checkbox .label-option input[type=checkbox]:checked::after {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  top: 0.05rem;
+  width: 0.4rem;
+  height: 0.8rem;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col:has(.checkbox) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col:has(.checkbox) > label,
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col:has(.checkbox) > div > label:not(.label-option) {
+  text-align: center;
+  width: 100%;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn {
+  margin-top: 0.4rem;
+  text-align: center !important;
+  width: 100%;
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn .btn {
+  padding: 1rem 2.4rem !important;
+  min-width: 14rem !important;
+  min-height: 4.4rem !important;
+  width: auto !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  background-color: white !important;
+  color: #252831 !important;
+  font-family: "Highway Gothic", sans-serif !important;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn .btn {
+    font-size: 1.2rem;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn .btn {
+  text-transform: uppercase !important;
+  line-height: 1em !important;
+  letter-spacing: 0.02em !important;
+  transition: 0.3s ease !important;
+  font-weight: 400 !important;
+}
+@media (max-width: 768px) {
+  .email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn .btn {
+    padding: 0.9rem 2rem !important;
+    min-width: 12rem !important;
+    min-height: 4rem !important;
+  }
+}
+.email-signup .email-signup__form .contacta-webform-form .contacta-webform-table .contacta-row .contacta-col .submitBtn .btn:hover {
+  background-color: #252831 !important;
+  color: white !important;
+}
+
 .text-center {
   text-align: center;
 }

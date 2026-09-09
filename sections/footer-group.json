@@ -11,6 +11,41 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "email_signup": {
+      "type": "newsletter",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "THIRSTY FOR MORE?"
+          }
+        },
+        "paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Stay connected with Long Point Brewing Co. and be the first to hear about new beers, upcoming events, and everything happening at the brewery.</p>"
+          }
+        },
+        "email_form": {
+          "type": "email_form",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading",
+        "paragraph",
+        "email_form"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#53bcae",
+        "text_color": "#ffffff",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
     "footer": {
       "type": "footer",
       "settings": {
@@ -25,6 +60,7 @@
     }
   },
   "order": [
+    "email_signup",
     "footer"
   ]
 }
