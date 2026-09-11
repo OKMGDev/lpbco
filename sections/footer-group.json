@@ -36,7 +36,6 @@
         "paragraph",
         "email_form"
       ],
-      "disabled": true,
       "settings": {
         "background_color": "#ffffff",
         "card_background_color": "#b6dfe9",
