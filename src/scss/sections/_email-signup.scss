@@ -2,150 +2,19 @@
 @use '../base' as *;
 
 .email-signup {
-  .email-signup__card {
-    width: 100%;
-    display: flex;
-  }
-
   .email-signup__content {
-    padding: 4rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
     position: relative;
-    flex-grow: 1;
     width: 100%;
-
-    @media (max-width: $breakpoint-tablet) {
-      padding: 3rem;
-    }
-
-    @media (max-width: $breakpoint-mobile) {
-      padding: 1.5rem;
-    }
-
-    .icon-top-left {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 10rem;
-      height: 10rem;
-      object-fit: cover;
-      z-index: 1;
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-
-    .icon-middle-left {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 10rem;
-      height: 10rem;
-      object-fit: cover;
-      z-index: 1;
-      transform: translateY(-50%);
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-
-    .icon-bottom-left {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 9rem;
-      height: 9rem;
-      object-fit: cover;
-      z-index: 1;
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-
-    .icon-bottom-center,
-    .icon-bottom-right,
-    .icon-moddle-right,
-    .icon-top-center {
-      position: absolute;
-      z-index: 1;
-      object-fit: cover;
-    }
-
-    .icon-bottom-center {
-      bottom: 0;
-      left: 50%;
-      width: 12rem;
-      height: 12rem;
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 5rem;
-        height: 5rem;
-      }
-    }
-
-    .icon-bottom-right {
-      bottom: 0;
-      right: 0;
-      width: 10rem;
-      height: 15rem;
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 4rem;
-        height: 5rem;
-      }
-    }
-
-    .icon-moddle-right {
-      top: 30%;
-      right: 0;
-      width: 15rem;
-      height: 15rem;
-      transform: translateY(-50%);
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 5rem;
-        height: 5rem;
-      }
-    }
-
-    .icon-top-center {
-      top: 0;
-      left: 50%;
-      width: 10rem;
-      height: 10rem;
-
-      @media (max-width: $breakpoint-mobile) {
-        width: 4rem;
-        height: 4rem;
-      }
-    }
-  }
-
-  .email-signup__content-inner {
-    position: relative;
-    z-index: 2;
-    padding: 4rem;
-    color: var(--text-color, #fff);
-    flex-grow: 1;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     gap: 1.2rem;
+    color: $color-text;
 
     @media (max-width: $breakpoint-mobile) {
-      padding: 2rem 1.5rem;
       gap: 1rem;
     }
   }
@@ -154,8 +23,10 @@
     font-size: 5.2rem;
     line-height: 1.1em;
     margin: 0;
-    color: var(--text-color, #fff);
-    max-width: 90%;
+    color: $color-text;
+    max-width: 100%;
+    text-align: left;
+    width: 100%;
 
     @media (max-width: $breakpoint-tablet) {
       font-size: 4.2rem;
@@ -169,18 +40,26 @@
   .email-signup__text {
     @include fs_20;
     margin: 0;
-    max-width: 56rem;
-    color: var(--text-color, #fff);
+    max-width: 75%;
+    width: 75%;
+    color: $color-text;
+    text-align: left;
+
+    @media (max-width: $breakpoint-mobile) {
+      max-width: 100%;
+      width: 100%;
+    }
 
     p {
       margin: 0;
-      color: var(--text-color, #fff);
+      color: $color-text;
+      text-align: left;
     }
   }
 
   .email-signup__form {
     width: 100%;
-    max-width: 72rem;
+    max-width: none;
     margin-top: 0.8rem;
     text-align: left;
 
@@ -219,7 +98,7 @@
               @include fs_14;
               text-transform: uppercase;
               letter-spacing: 0.02em;
-              color: var(--text-color, #fff);
+              color: $color-text;
               text-align: left;
               opacity: 0.95;
               margin-bottom: 0.4rem;
@@ -231,9 +110,9 @@
             select {
               width: 100% !important;
               border: none !important;
-              border-bottom: 2px solid rgba(255, 255, 255, 0.45) !important;
+              border-bottom: 2px solid rgba(55, 55, 55, 0.25) !important;
               background: transparent !important;
-              color: var(--text-color, #fff) !important;
+              color: $color-text !important;
               min-height: 3.6rem !important;
               @include fs_14;
               border-radius: 0 !important;
@@ -242,14 +121,14 @@
               appearance: none;
 
               &::placeholder {
-                color: rgba(255, 255, 255, 0.65);
+                color: rgba(55, 55, 55, 0.5);
               }
 
               &:focus,
               &:focus-visible {
                 outline: none !important;
                 box-shadow: none !important;
-                border-bottom-color: rgba(255, 255, 255, 0.9) !important;
+                border-bottom-color: rgba(55, 55, 55, 0.7) !important;
               }
             }
 
@@ -258,7 +137,7 @@
               flex-direction: row !important;
               flex-wrap: nowrap !important;
               align-items: center;
-              justify-content: center;
+              justify-content: flex-start;
               gap: 1rem 1.6rem;
               margin-top: 0.8rem;
               width: 100%;
@@ -285,10 +164,11 @@
                 font-size: 1.3rem;
                 line-height: 1.2;
                 letter-spacing: 0.02em;
-                color: var(--text-color, #fff);
+                color: $color-text;
                 cursor: pointer;
                 font-family: $font-family-base;
                 white-space: nowrap;
+                text-align: left;
 
                 @media (max-width: $breakpoint-mobile) {
                   white-space: normal;
@@ -304,15 +184,15 @@
                   flex-shrink: 0;
                   appearance: none;
                   -webkit-appearance: none;
-                  border: 2px solid rgba(255, 255, 255, 0.75) !important;
+                  border: 2px solid rgba(55, 55, 55, 0.45) !important;
                   border-radius: 0 !important;
                   background: transparent !important;
                   cursor: pointer;
                   position: relative;
 
                   &:checked {
-                    background-color: $color-night-sky !important;
-                    border-color: $color-night-sky !important;
+                    background-color: $color-sky-shallow !important;
+                    border-color: $color-sky-shallow !important;
 
                     &::after {
                       content: '';
@@ -333,18 +213,18 @@
             &:has(.checkbox) {
               display: flex;
               flex-direction: column;
-              align-items: center;
+              align-items: flex-start;
 
               > label,
               > div > label:not(.label-option) {
-                text-align: center;
+                text-align: left;
                 width: 100%;
               }
             }
 
             .submitBtn {
               margin-top: 0.4rem;
-              text-align: center !important;
+              text-align: left !important;
               width: 100%;
 
               .btn {
@@ -354,8 +234,8 @@
                 width: auto !important;
                 border-radius: 0 !important;
                 border: 0 !important;
-                background-color: white !important;
-                color: $color-night-sky !important;
+                background-color: $color-sky-shallow !important;
+                color: white !important;
                 font-family: $font-family-base !important;
                 @include fs_14;
                 text-transform: uppercase !important;

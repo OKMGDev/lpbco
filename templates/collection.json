@@ -11,7 +11,6 @@
   "sections": {
     "banner": {
       "type": "main-collection-banner",
-      "disabled": true,
       "settings": {
         "show_collection_description": false,
         "show_collection_image": false,
@@ -33,6 +32,7 @@
       "block_order": [
         "heading_PAbzBX"
       ],
+      "disabled": true,
       "custom_css": [
         ".banner__buttons--multiple {display: flex; justify-content: center; gap: 16px;}"
       ],
@@ -49,11 +49,10 @@
     },
     "product-grid": {
       "type": "main-collection-product-grid",
-      "disabled": true,
       "settings": {
         "products_per_page": 16,
-        "columns_desktop": 4,
-        "columns_mobile": "2",
+        "columns_desktop": 2,
+        "columns_mobile": "1",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",

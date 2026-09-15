@@ -15,30 +15,8 @@
     {%- if section.settings.background_color != blank -%}
       background-color: {{ section.settings.background_color }};
     {%- endif -%}
-    {%- if section.settings.text_color != blank -%}
-      --text-color: {{ section.settings.text_color }};
-      color: var(--text-color);
-    {%- endif -%}
     position: relative;
     overflow: hidden;
-  }
-
-  #EmailSignup-{{ section.id }} .email-signup__card {
-    {%- if section.settings.card_background_color != blank -%}
-      background-color: {{ section.settings.card_background_color }};
-    {%- endif -%}
-  }
-
-  #EmailSignup-{{ section.id }} .email-signup__content-inner {
-    {%- if section.settings.inner_background_color != blank -%}
-      background-color: {{ section.settings.inner_background_color }};
-    {%- endif -%}
-  }
-
-  #EmailSignup-{{ section.id }} .email-signup__content svg {
-    {%- if section.settings.background_icons_color != blank -%}
-      color: {{ section.settings.background_icons_color }};
-    {%- endif -%}
   }
 {%- endstyle -%}
 
@@ -47,38 +25,33 @@
   class="email-signup section-{{ section.id }}-padding"
 >
   <div class="page-width">
-    <div class="email-signup__card">
-      <div class="email-signup__content">
-        {% render 'event-card-icons' %}
-        <div class="email-signup__content-inner">
-          {%- for block in section.blocks -%}
-            {%- case block.type -%}
-              {%- when 'heading' -%}
-                {%- if block.settings.heading != blank -%}
-                  <h2 class="email-signup__heading" {{ block.shopify_attributes }}>
-                    {{ block.settings.heading }}
-                  </h2>
-                {%- endif -%}
-              {%- when 'paragraph' -%}
-                {%- if block.settings.text != blank -%}
-                  <div class="email-signup__text rte" {{ block.shopify_attributes }}>
-                    {{ block.settings.text }}
-                  </div>
-                {%- endif -%}
-              {%- when 'email_form' -%}
-                <div class="email-signup__form" {{ block.shopify_attributes }}>
-                  <div id="CONTACTA_6aa0fa9641883d94d08a314c"></div>
-                  <script type="text/javascript" async>
-                    var script = document.createElement('script');
-                    script.type = 'text/javascript';
-                    script.src = 'https://forms.contacta.io/6aa0fa9641883d94d08a314c.js';
-                    document.getElementsByTagName('head')[0].appendChild(script);
-                  </script>
-                </div>
-            {%- endcase -%}
-          {%- endfor -%}
-        </div>
-      </div>
+    <div class="email-signup__content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            {%- if block.settings.heading != blank -%}
+              <h2 class="email-signup__heading" {{ block.shopify_attributes }}>
+                {{ block.settings.heading }}
+              </h2>
+            {%- endif -%}
+          {%- when 'paragraph' -%}
+            {%- if block.settings.text != blank -%}
+              <div class="email-signup__text rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+            {%- endif -%}
+          {%- when 'email_form' -%}
+            <div class="email-signup__form" {{ block.shopify_attributes }}>
+              <div id="CONTACTA_6aa0fa9641883d94d08a314c"></div>
+              <script type="text/javascript" async>
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'https://forms.contacta.io/6aa0fa9641883d94d08a314c.js';
+                document.getElementsByTagName('head')[0].appendChild(script);
+              </script>
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
     </div>
   </div>
 </section>
@@ -93,37 +66,9 @@
   },
   "settings": [
     {
-      "type": "header",
-      "content": "Colors"
-    },
-    {
       "type": "color",
       "id": "background_color",
       "label": "Background color",
-      "default": "#ffffff"
-    },
-    {
-      "type": "color",
-      "id": "card_background_color",
-      "label": "Card background color",
-      "default": "#b6dfe9"
-    },
-    {
-      "type": "color",
-      "id": "background_icons_color",
-      "label": "Background icons color",
-      "default": "#f8f5ed"
-    },
-    {
-      "type": "color",
-      "id": "inner_background_color",
-      "label": "Inner background color",
-      "default": "#53bcae"
-    },
-    {
-      "type": "color",
-      "id": "text_color",
-      "label": "Text color",
       "default": "#ffffff"
     },
     {
