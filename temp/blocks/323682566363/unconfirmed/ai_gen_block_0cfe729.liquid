@@ -1,6 +1,210 @@
+{% doc %}
+  @prompt
+    Create a custom product price block that displays the product's current price (and compare-at price if on sale) in a smaller font size than the default price block. The merchant wants to replace the standard price display on the product page with a more compact, smaller version of the price text., move this up
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+{% assign ai_price_variant = product.selected_or_first_available_variant %}
+
+{% style %}
+  .ai-compact-price-{{ ai_gen_id }} {
+    display: block;
+    position: relative;
+    top: {{ block.settings.vertical_offset }}px;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    color: {{ block.settings.price_color }};
+    font-size: {{ block.settings.price_size }}px;
+    line-height: 1.3;
+    letter-spacing: {{ block.settings.letter_spacing }}px;
+  }
+
+  .ai-compact-price-{{ ai_gen_id }}__content {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .ai-compact-price-{{ ai_gen_id }}__current {
+    color: {{ block.settings.price_color }};
+    font-weight: {{ block.settings.price_weight }};
+  }
+
+  .ai-compact-price-{{ ai_gen_id }}__compare {
+    color: {{ block.settings.compare_color }};
+    font-size: 0.85em;
+    text-decoration: line-through;
+  }
+
+  .ai-compact-price-{{ ai_gen_id }}__label {
+    color: {{ block.settings.sale_label_color }};
+    font-size: 0.75em;
+    font-weight: 600;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-compact-price-{{ ai_gen_id }} {
+      top: {{ block.settings.mobile_vertical_offset }}px;
+      width: 100%;
+      font-size: {{ block.settings.price_size | times: 0.9 }}px;
+    }
+  }
+{% endstyle %}
+
+<compact-product-price-{{ ai_gen_id }}
+  class="ai-compact-price-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  {% if product != blank and ai_price_variant != blank %}
+    <div class="ai-compact-price-{{ ai_gen_id }}__content" role="status" aria-live="polite">
+      <span class="ai-compact-price-{{ ai_gen_id }}__current">
+        {{ ai_price_variant.price | money }}
+      </span>
+      {% if ai_price_variant.compare_at_price > ai_price_variant.price %}
+        <span class="ai-compact-price-{{ ai_gen_id }}__compare">
+          {{ ai_price_variant.compare_at_price | money }}
+        </span>
+        {% if block.settings.show_sale_label %}
+          <span class="ai-compact-price-{{ ai_gen_id }}__label">{{ block.settings.sale_label }}</span>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+</compact-product-price-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    if (!customElements.get('compact-product-price-{{ ai_gen_id }}')) {
+      class CompactProductPrice{{ ai_gen_id }} extends HTMLElement {
+        connectedCallback() {
+          this.setAttribute('data-price-display', 'compact');
+        }
+      }
+
+      customElements.define('compact-product-price-{{ ai_gen_id }}', CompactProductPrice{{ ai_gen_id }});
+    }
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Compact product price",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Price"
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "label": "Text size",
+      "min": 10,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "select",
+      "id": "price_weight",
+      "label": "Weight",
+      "options": [
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        }
+      ],
+      "default": "500"
+    },
+    {
+      "type": "range",
+      "id": "letter_spacing",
+      "label": "Letter spacing",
+      "min": -1,
+      "max": 2,
+      "step": 0.5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "vertical_offset",
+      "label": "Desktop vertical position",
+      "min": -30,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": -8
+    },
+    {
+      "type": "range",
+      "id": "mobile_vertical_offset",
+      "label": "Mobile vertical position",
+      "min": -30,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "default": -8
+    },
+    {
+      "type": "header",
+      "content": "Sale price"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_sale_label",
+      "label": "Show sale label",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "sale_label",
+      "label": "Sale label",
+      "default": "Sale"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "compare_color",
+      "label": "Compare-at price",
+      "default": "#5a5a5a"
+    },
+    {
+      "type": "color",
+      "id": "sale_label_color",
+      "label": "Sale label color",
+      "default": "#121212"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Compact product price"
+    }
+  ],
+  "tag": null,
+  "class": "compact-product-price-block"
+}
 {% endschema %}
