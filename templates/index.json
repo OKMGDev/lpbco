@@ -379,25 +379,46 @@
         "padding_bottom": 100
       }
     },
-    "rich_text_wzWV6e": {
-      "type": "rich-text",
+    "social_icons_tWAAqx": {
+      "type": "social-icons",
       "blocks": {
-        "subtitle_dwRBcY": {
-          "type": "subtitle",
+        "social_icon_ce6MqV": {
+          "type": "social_icon",
           "settings": {
-            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
+            "platform": "instagram",
+            "link": "",
+            "label": ""
+          }
+        },
+        "social_icon_7gdnAV": {
+          "type": "social_icon",
+          "settings": {
+            "platform": "facebook",
+            "link": "",
+            "label": ""
+          }
+        },
+        "social_icon_i3fHFF": {
+          "type": "social_icon",
+          "settings": {
+            "platform": "tiktok",
+            "link": "",
+            "label": ""
           }
         }
       },
       "block_order": [
-        "subtitle_dwRBcY"
+        "social_icon_ce6MqV",
+        "social_icon_7gdnAV",
+        "social_icon_i3fHFF"
       ],
-      "name": "Insta Label",
+      "name": "Social icons",
       "settings": {
         "custom_class": "",
-        "content_max_width": 930,
-        "accent_color": "",
-        "padding_top": 0,
+        "title": "FOLLOW US",
+        "background_color": "",
+        "icon_color": "#373737",
+        "padding_top": 36,
         "padding_bottom": 36
       }
     },
@@ -472,7 +493,7 @@
     "landing_page_banner_ABDbpK",
     "featured_products_KDzWEW",
     "upcoming_events_N7P4Tx",
-    "rich_text_wzWV6e",
+    "social_icons_tWAAqx",
     "176284026737b77010",
     "main_blog_gARkQE",
     "find_us_f6mzeW"
