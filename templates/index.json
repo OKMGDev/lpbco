@@ -32,6 +32,7 @@
         },
         "buttons_K7MYzN": {
           "type": "buttons",
+          "disabled": true,
           "settings": {
             "button_label_1": "Book a table",
             "button_link_1": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
@@ -140,6 +141,7 @@
         },
         "title_thy496": {
           "type": "title",
+          "disabled": true,
           "settings": {
             "title": "YOUR NEW<br>\n<span class=\"text-bg blue\">LOCAL</span>",
             "title_size": "bigger"
@@ -323,6 +325,7 @@
         "title_UJhFeR",
         "button_99eR7g"
       ],
+      "disabled": true,
       "custom_css": [
         "a {padding: 1.5em 3.5em;}"
       ],
