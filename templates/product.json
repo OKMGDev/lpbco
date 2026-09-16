@@ -50,6 +50,20 @@
           "type": "title",
           "settings": {}
         },
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "Our American Pale is brewed for those who want all the flavour without going overboard. Expect tropical fruit, pine, and plenty of hop character from US and New Zealand hops, balanced with just enough malt to keep you coming back.At 3.5% ABV, it's the perfect beer to enjoy all day long. ",
+            "text_style": "body"
+          }
+        },
+        "text_XN3JqM": {
+          "type": "text",
+          "settings": {
+            "text": "ABV - 3.5%  I  HOPS - ***  I  MALT - *** I  ALLERGENS -",
+            "text_style": "subtitle"
+          }
+        },
         "product_meta_tDCY8i": {
           "type": "product_meta",
           "settings": {}
@@ -75,24 +89,17 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
-        },
-        "vendor": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Fast Flat Rate Shipping. Dispatched Daily",
-            "text_style": "subtitle"
-          }
         }
       },
       "block_order": [
         "title",
+        "vendor",
+        "text_XN3JqM",
         "product_meta_tDCY8i",
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons",
-        "vendor"
+        "buy_buttons"
       ],
       "settings": {
         "enable_sticky_info": false,
