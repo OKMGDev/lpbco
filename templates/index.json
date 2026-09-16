@@ -164,7 +164,7 @@
           "settings": {
             "button_label": "Book a Table",
             "button_link": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
-            "button_style": "button--orange"
+            "button_style": "button--coastal"
           }
         },
         "button_gxc6Nc": {
@@ -172,7 +172,7 @@
           "settings": {
             "button_label": "See what’s on",
             "button_link": "shopify://pages/events",
-            "button_style": "button--orange"
+            "button_style": "button--sunset"
           }
         },
         "button_view_location": {
@@ -180,7 +180,7 @@
           "settings": {
             "button_label": "Shop",
             "button_link": "shopify://collections/all",
-            "button_style": "button--orange"
+            "button_style": "button--pink"
           }
         },
         "button_NfJLca": {
@@ -188,7 +188,7 @@
           "settings": {
             "button_label": "Function",
             "button_link": "shopify://pages/functions",
-            "button_style": "button--orange"
+            "button_style": "button--deep-water"
           }
         },
         "button_m9Btdj": {
@@ -196,7 +196,7 @@
           "settings": {
             "button_label": "Menu",
             "button_link": "shopify://pages/menu",
-            "button_style": "button--orange"
+            "button_style": "default"
           }
         },
         "button_AJmGVi": {
@@ -204,7 +204,7 @@
           "settings": {
             "button_label": "Location",
             "button_link": "shopify://pages/locations",
-            "button_style": "button--orange"
+            "button_style": "button--floraland"
           }
         },
         "button_DNz4Ba": {
@@ -212,7 +212,7 @@
           "settings": {
             "button_label": "Contact Us",
             "button_link": "shopify://pages/contact",
-            "button_style": "button--orange"
+            "button_style": "button--sand"
           }
         }
       },
