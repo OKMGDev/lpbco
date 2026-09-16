@@ -206,6 +206,14 @@
             "button_link": "shopify://pages/locations",
             "button_style": "button--orange"
           }
+        },
+        "button_DNz4Ba": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact Us",
+            "button_link": "shopify://pages/contact",
+            "button_style": "button--orange"
+          }
         }
       },
       "block_order": [
@@ -219,7 +227,8 @@
         "button_view_location",
         "button_NfJLca",
         "button_m9Btdj",
-        "button_AJmGVi"
+        "button_AJmGVi",
+        "button_DNz4Ba"
       ],
       "name": "Rich Text",
       "settings": {
