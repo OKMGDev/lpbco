@@ -162,16 +162,24 @@
         "button_8ny7xf": {
           "type": "button",
           "settings": {
+            "button_label": "Book a Table",
+            "button_link": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
+            "button_style": "button--orange"
+          }
+        },
+        "button_gxc6Nc": {
+          "type": "button",
+          "settings": {
             "button_label": "See what’s on",
             "button_link": "shopify://pages/events",
-            "button_style": "default"
+            "button_style": "button--orange"
           }
         },
         "button_view_location": {
           "type": "button",
           "settings": {
-            "button_label": "View Location",
-            "button_link": "shopify://pages/locations",
+            "button_label": "Shop",
+            "button_link": "shopify://collections/all",
             "button_style": "button--orange"
           }
         }
@@ -183,6 +191,7 @@
         "subtitle_UWCe7X",
         "textbox_KT77mX",
         "button_8ny7xf",
+        "button_gxc6Nc",
         "button_view_location"
       ],
       "name": "Rich Text",
@@ -418,7 +427,7 @@
         "title": "FOLLOW US",
         "background_color": "",
         "icon_color": "#373737",
-        "padding_top": 36,
+        "padding_top": 0,
         "padding_bottom": 36
       }
     },
