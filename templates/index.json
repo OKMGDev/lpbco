@@ -431,7 +431,7 @@
           "type": "social_icon",
           "settings": {
             "platform": "instagram",
-            "link": "",
+            "link": "https://instagram.com/longpointbrewingco",
             "label": ""
           }
         },
@@ -439,8 +439,8 @@
           "type": "social_icon",
           "settings": {
             "platform": "facebook",
-            "link": "",
-            "label": ""
+            "link": "https://facebook.com/longpointbrewingco",
+            "label": "Facebook"
           }
         },
         "social_icon_i3fHFF": {
