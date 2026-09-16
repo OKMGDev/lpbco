@@ -182,6 +182,30 @@
             "button_link": "shopify://collections/all",
             "button_style": "button--orange"
           }
+        },
+        "button_NfJLca": {
+          "type": "button",
+          "settings": {
+            "button_label": "Function",
+            "button_link": "shopify://pages/functions",
+            "button_style": "button--orange"
+          }
+        },
+        "button_m9Btdj": {
+          "type": "button",
+          "settings": {
+            "button_label": "Menu",
+            "button_link": "shopify://pages/menu",
+            "button_style": "button--orange"
+          }
+        },
+        "button_AJmGVi": {
+          "type": "button",
+          "settings": {
+            "button_label": "Location",
+            "button_link": "shopify://pages/locations",
+            "button_style": "button--orange"
+          }
         }
       },
       "block_order": [
@@ -192,7 +216,10 @@
         "textbox_KT77mX",
         "button_8ny7xf",
         "button_gxc6Nc",
-        "button_view_location"
+        "button_view_location",
+        "button_NfJLca",
+        "button_m9Btdj",
+        "button_AJmGVi"
       ],
       "name": "Rich Text",
       "settings": {
