@@ -108,49 +108,6 @@
         "padding_bottom": 100
       }
     },
-    "call_to_action_h7hywW": {
-      "type": "call-to-action",
-      "blocks": {
-        "title_zT6d4P": {
-          "type": "title",
-          "settings": {
-            "title": "Our mission"
-          }
-        },
-        "textbox_GGFpfT": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>Make beer that’s tasty, moments that matter, and memories you maybe-sort-of remember the next day.</p>"
-          }
-        },
-        "button_pNAEYR": {
-          "type": "button",
-          "settings": {
-            "button_label": "Join the team",
-            "button_link": "shopify://pages/work-with-us",
-            "button_class": "button--white"
-          }
-        }
-      },
-      "block_order": [
-        "title_zT6d4P",
-        "textbox_GGFpfT",
-        "button_pNAEYR"
-      ],
-      "disabled": true,
-      "name": "Call to Action",
-      "settings": {
-        "image": "shopify://shop_images/2c726a0879e8b09d53f9986609e543232a7c1cda.jpg",
-        "image_overlay": "shopify://shop_images/Subtract_2.svg",
-        "background_color": "#ffffff",
-        "card_background_color": "#b6dfe9",
-        "background_icons_color": "#f8f5ed",
-        "inner_background_color": "#f9ad8e",
-        "text_color": "#ffffff",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
     "call_to_action_NLYh8N": {
       "type": "call-to-action",
       "blocks": {
@@ -193,45 +150,143 @@
         "padding_bottom": 100
       }
     },
-    "rich_text_Kkp4GB": {
+    "rich_text_mBgEG7": {
       "type": "rich-text",
       "blocks": {
-        "title_NnNcKK": {
+        "background_graphic_Y4HTDp": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Group_47205_1.svg",
+            "enable_position_top": true,
+            "position_top": 12,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 310,
+            "image_size_mobile": 140
+          }
+        },
+        "background_graphic_cWMEPE": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_81.svg",
+            "enable_position_top": false,
+            "position_top": 12,
+            "enable_position_bottom": true,
+            "position_bottom": 18,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 240,
+            "image_size_mobile": 120
+          }
+        },
+        "title_B9kbqy": {
           "type": "title",
-          "disabled": true,
           "settings": {
             "title": "Beer tastes <span class=\"text-bg\">better</span> when it’s brewed with <span class=\"text-bg blue\">care.</span>",
             "title_size": "smaller"
           }
         },
-        "subtitle_JxrrHx": {
-          "type": "subtitle",
+        "textbox_AkWaW4": {
+          "type": "textbox",
           "settings": {
-            "subtitle": ""
-          }
-        },
-        "button_cVNPY7": {
-          "type": "button",
-          "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_label_2": "",
-            "button_link_2": ""
+            "textbox": "<p>At Long Point Brewing Co., we take looking after our patch of coastline seriously. We’re lucky enough to call the <strong>Kennedy Bay foreshore</strong> home — an environment shaped by the ancient <strong>Beecher Dune Formation,</strong> a system of coastal limestone ridges and dunes that have been sculpted over thousands of years by wind, waves, and shifting sands. Nestled here is one of WA’s rare <strong>Threatened Ecological Communities</strong>, home to unique plants and wildlife that deserve to be celebrated and protected.</p><p>So, while we’re in the business of brewing beer and serving good food, we’re also in the business of being good neighbours to our environment.<br/></p>"
           }
         }
       },
       "block_order": [
-        "title_NnNcKK",
-        "subtitle_JxrrHx",
-        "button_cVNPY7"
+        "background_graphic_Y4HTDp",
+        "background_graphic_cWMEPE",
+        "title_B9kbqy",
+        "textbox_AkWaW4"
       ],
       "name": "Rich Text",
       "settings": {
         "custom_class": "",
-        "content_max_width": 600,
-        "accent_color": "",
-        "padding_top": 24,
-        "padding_bottom": 36
+        "content_max_width": 1000,
+        "accent_color": "#f9ad8e",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "image_with_text_YgTccC": {
+      "type": "image-with-text",
+      "blocks": {
+        "title_q3BteB": {
+          "type": "title",
+          "settings": {
+            "title": "Here’s how we put that into <span class=\"text-bg green\">practice:</span>"
+          }
+        },
+        "list_item_3qLUWJ": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_36.svg",
+            "title": "Local first:",
+            "textbox": "<p>Wherever possible, we procure from local suppliers — WA grain, WA hops, WA produce. Supporting local growers and makers means fresher food, better beer, and stronger community ties.</p>"
+          }
+        },
+        "list_item_tXmcmx": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_37.svg",
+            "title": "Brew with purpose:",
+            "textbox": "<p>Spent grain from our brewhouse heads straight to local farms to feed cattle, not landfill.</p>"
+          }
+        },
+        "list_item_xTnYFD": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_38.svg",
+            "title": "Celebrate produce:",
+            "textbox": "<p>Our menu is built to showcase the region’s best — flame-grilled proteins, fresh greens, and seasonal WA ingredients.</p>"
+          }
+        },
+        "list_item_qUtrhN": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_39.svg",
+            "title": "Energy & water smarts:",
+            "textbox": "<p>We’re working towards solar power and water treatment systems that recycle and reduce waste.</p>"
+          }
+        },
+        "list_item_QFrVWY": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_40.svg",
+            "title": "Minimal plastics:",
+            "textbox": "<p>We’re phasing out single-use plastics wherever we can, favouring reusable, recyclable, and compostable alternatives.</p>"
+          }
+        },
+        "list_item_LVayUw": {
+          "type": "list_item",
+          "settings": {
+            "icon": "shopify://shop_images/Vector_41.svg",
+            "title": "Protect what’s special:",
+            "textbox": "<p>We recognise we’re operating within a sensitive coastal environment. From the way we manage waste to how we design our landscaping, we’re committed to minimising our footprint on this rare ecological community.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_q3BteB",
+        "list_item_3qLUWJ",
+        "list_item_tXmcmx",
+        "list_item_xTnYFD",
+        "list_item_qUtrhN",
+        "list_item_QFrVWY",
+        "list_item_LVayUw"
+      ],
+      "name": "Image with Text",
+      "settings": {
+        "section_bg_color": "#f0e7d8",
+        "image_top_right": "shopify://shop_images/Vector_78.svg",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
@@ -240,8 +295,8 @@
     "main",
     "image_with_text_7FgpXy",
     "quote_WHXy47",
-    "call_to_action_h7hywW",
-    "call_to_action_NLYh8N",
-    "rich_text_Kkp4GB"
+    "rich_text_mBgEG7",
+    "image_with_text_YgTccC",
+    "call_to_action_NLYh8N"
   ]
 }
