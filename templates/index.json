@@ -162,10 +162,17 @@
         "button_8ny7xf": {
           "type": "button",
           "settings": {
-            "button_label_1": "See what’s on",
-            "button_link_1": "shopify://pages/events",
-            "button_label_2": "View Location",
-            "button_link_2": "shopify://pages/locations"
+            "button_label": "See what’s on",
+            "button_link": "shopify://pages/events",
+            "button_style": "default"
+          }
+        },
+        "button_view_location": {
+          "type": "button",
+          "settings": {
+            "button_label": "View Location",
+            "button_link": "shopify://pages/locations",
+            "button_style": "button--orange"
           }
         }
       },
@@ -175,7 +182,8 @@
         "title_thy496",
         "subtitle_UWCe7X",
         "textbox_KT77mX",
-        "button_8ny7xf"
+        "button_8ny7xf",
+        "button_view_location"
       ],
       "name": "Rich Text",
       "settings": {
@@ -244,10 +252,18 @@
           "type": "button",
           "disabled": true,
           "settings": {
-            "button_label_1": "See what’s on",
-            "button_link_1": "shopify://pages/events",
-            "button_label_2": "View Location",
-            "button_link_2": "shopify://pages/locations"
+            "button_label": "See what’s on",
+            "button_link": "shopify://pages/events",
+            "button_style": "default"
+          }
+        },
+        "button_i49Ghk_2": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "View Location",
+            "button_link": "shopify://pages/locations",
+            "button_style": "button--orange"
           }
         }
       },
@@ -257,7 +273,8 @@
         "title_eGq8Bg",
         "subtitle_GAFBRf",
         "textbox_p3mjiP",
-        "button_i49Ghk"
+        "button_i49Ghk",
+        "button_i49Ghk_2"
       ],
       "disabled": true,
       "name": "LP - Rich Text",
@@ -441,8 +458,8 @@
         "subtitle": "FIND US:  KENNEDY BAY, WA",
         "button_label": "Contact us",
         "button_link": "shopify://pages/contact",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     }
   },

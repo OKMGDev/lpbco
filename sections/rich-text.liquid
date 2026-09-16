@@ -71,66 +71,67 @@
 
   <div class="page-width">
     <div class="rich-text__content" style="max-width: {{ section.settings.content_max_width }}px;">
+      {%- assign buttons_wrapper_open = false -%}
       {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'title' -%}
-            <h2
-              class="rich-text__title rich-text__title--{{ block.settings.title_size }}"
+        {%- if block.type == 'button' -%}
+          {%- unless buttons_wrapper_open -%}
+            <div class="rich-text__buttons">
+            {%- assign buttons_wrapper_open = true -%}
+          {%- endunless -%}
+          {%- if block.settings.button_label != blank -%}
+            <a
+              {% if block.settings.button_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+                href="{{ block.settings.button_link }}"
+              {% endif %}
+              class="button{% if block.settings.button_style != blank and block.settings.button_style != 'default' %} {{ block.settings.button_style }}{% endif %}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.title }}
-            </h2>
-          {%- when 'subtitle' -%}
-            <p class="rich-text__subtitle" {{ block.shopify_attributes }}>
-              {{ block.settings.subtitle }}
-            </p>
-          {%- when 'textbox' -%}
-            <div class="rich-text__textbox rte" {{ block.shopify_attributes }}>
-              {{ block.settings.textbox }}
+              {{- block.settings.button_label | escape -}}
+            </a>
+          {%- endif -%}
+        {%- else -%}
+          {%- if buttons_wrapper_open -%}
             </div>
-          {%- when 'button' -%}
-            <div class="rich-text__buttons" {{ block.shopify_attributes }}>
-              {%- if block.settings.button_label_1 != blank -%}
-                <a
-                  {% if block.settings.button_link_1 == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link_1 }}"
-                  {% endif %}
-                  class="button button--1"
-                >
-                  {{- block.settings.button_label_1 | escape -}}
-                </a>
-              {%- endif -%}
-              {%- if block.settings.button_label_2 != blank -%}
-                <a
-                  {% if block.settings.button_link_2 == blank %}
-                    role="link" aria-disabled="true"
-                  {% else %}
-                    href="{{ block.settings.button_link_2 }}"
-                  {% endif %}
-                  class="button button--orange"
-                >
-                  {{- block.settings.button_label_2 | escape -}}
-                </a>
-              {%- endif -%}
-            </div>
-          {%- when 'stamp' -%}
-            {%- if block.settings.textbox != blank -%}
-              <div
-                class="rich-text__stamp"
+            {%- assign buttons_wrapper_open = false -%}
+          {%- endif -%}
+          {%- case block.type -%}
+            {%- when 'title' -%}
+              <h2
+                class="rich-text__title rich-text__title--{{ block.settings.title_size }}"
                 {{ block.shopify_attributes }}
-                style="
-                  --stamp-color: {{ block.settings.color }};
-                  left: {{ block.settings.position_left }}%;
-                  top: {{ block.settings.position_top }}%;
-                "
               >
+                {{ block.settings.title }}
+              </h2>
+            {%- when 'subtitle' -%}
+              <p class="rich-text__subtitle" {{ block.shopify_attributes }}>
+                {{ block.settings.subtitle }}
+              </p>
+            {%- when 'textbox' -%}
+              <div class="rich-text__textbox rte" {{ block.shopify_attributes }}>
                 {{ block.settings.textbox }}
               </div>
-            {%- endif -%}
-        {%- endcase -%}
+            {%- when 'stamp' -%}
+              {%- if block.settings.textbox != blank -%}
+                <div
+                  class="rich-text__stamp"
+                  {{ block.shopify_attributes }}
+                  style="
+                    --stamp-color: {{ block.settings.color }};
+                    left: {{ block.settings.position_left }}%;
+                    top: {{ block.settings.position_top }}%;
+                  "
+                >
+                  {{ block.settings.textbox }}
+                </div>
+              {%- endif -%}
+          {%- endcase -%}
+        {%- endif -%}
       {%- endfor -%}
+      {%- if buttons_wrapper_open -%}
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </div>
@@ -243,35 +244,69 @@
     },
     {
       "type": "button",
-      "name": "Buttons",
+      "name": "Button",
       "settings": [
         {
-          "type": "header",
-          "content": "Button 1"
-        },
-        {
           "type": "text",
-          "id": "button_label_1",
-          "label": "Button 1 label"
+          "id": "button_label",
+          "label": "Button label"
         },
         {
           "type": "url",
-          "id": "button_link_1",
-          "label": "Button 1 link"
+          "id": "button_link",
+          "label": "Button link"
         },
         {
-          "type": "header",
-          "content": "Button 2"
-        },
-        {
-          "type": "text",
-          "id": "button_label_2",
-          "label": "Button 2 label"
-        },
-        {
-          "type": "url",
-          "id": "button_link_2",
-          "label": "Button 2 link"
+          "type": "select",
+          "id": "button_style",
+          "label": "Button color",
+          "options": [
+            {
+              "value": "default",
+              "label": "Sky"
+            },
+            {
+              "value": "button--orange",
+              "label": "Golden sun"
+            },
+            {
+              "value": "button--sunset",
+              "label": "Sunset"
+            },
+            {
+              "value": "button--pink",
+              "label": "Pink"
+            },
+            {
+              "value": "button--deep-water",
+              "label": "Deep water"
+            },
+            {
+              "value": "button--coastal",
+              "label": "Coastal"
+            },
+            {
+              "value": "button--night-sky",
+              "label": "Night sky"
+            },
+            {
+              "value": "button--seafoam",
+              "label": "Seafoam"
+            },
+            {
+              "value": "button--floraland",
+              "label": "Floraland"
+            },
+            {
+              "value": "button--sand",
+              "label": "Sand"
+            },
+            {
+              "value": "button--white",
+              "label": "White"
+            }
+          ],
+          "default": "default"
         }
       ]
     },

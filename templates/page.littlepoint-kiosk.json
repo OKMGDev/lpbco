@@ -91,10 +91,9 @@
         "button_hjh6Fg": {
           "type": "button",
           "settings": {
-            "button_label_1": "",
-            "button_link_1": "",
-            "button_label_2": "",
-            "button_link_2": ""
+            "button_label": "",
+            "button_link": "",
+            "button_style": "default"
           }
         }
       },
