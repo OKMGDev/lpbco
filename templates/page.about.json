@@ -104,50 +104,8 @@
         "background_color": "#53bcae",
         "image_left": "shopify://shop_images/Vector_72.svg",
         "image_right": "shopify://shop_images/Vector_73.svg",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "call_to_action_NLYh8N": {
-      "type": "call-to-action",
-      "blocks": {
-        "title_7KQRfE": {
-          "type": "title",
-          "settings": {
-            "title": "Bottom line?"
-          }
-        },
-        "textbox_dTqX8b": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>We want future generations to enjoy the same sunsets, beaches, and coastal life that inspire our beers today.</p>"
-          }
-        },
-        "button_Re7WBL": {
-          "type": "button",
-          "settings": {
-            "button_label": "Join Our team",
-            "button_link": "shopify://pages/work-with-us",
-            "button_class": "button--white"
-          }
-        }
-      },
-      "block_order": [
-        "title_7KQRfE",
-        "textbox_dTqX8b",
-        "button_Re7WBL"
-      ],
-      "name": "Call to Action",
-      "settings": {
-        "image": "shopify://shop_images/IMG_3865.jpg",
-        "image_overlay": "shopify://shop_images/Subtract_3.svg",
-        "background_color": "",
-        "card_background_color": "#b6dfe9",
-        "background_icons_color": "#f8f5ed",
-        "inner_background_color": "#53bcae",
-        "text_color": "#ffffff",
-        "padding_top": 100,
-        "padding_bottom": 100
+        "padding_top": 28,
+        "padding_bottom": 24
       }
     },
     "rich_text_mBgEG7": {
@@ -288,6 +246,127 @@
         "padding_top": 100,
         "padding_bottom": 100
       }
+    },
+    "rich_text_zeU6Jx": {
+      "type": "rich-text",
+      "blocks": {
+        "background_graphic_BKE93x": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Group_47205_1.svg",
+            "enable_position_top": true,
+            "position_top": 12,
+            "enable_position_bottom": false,
+            "position_bottom": 0,
+            "enable_position_left": false,
+            "position_left": 0,
+            "enable_position_right": true,
+            "position_right": 0,
+            "image_size": 310,
+            "image_size_mobile": 140
+          }
+        },
+        "background_graphic_zLfdNV": {
+          "type": "background_graphic",
+          "settings": {
+            "image": "shopify://shop_images/Vector_81.svg",
+            "enable_position_top": false,
+            "position_top": 12,
+            "enable_position_bottom": true,
+            "position_bottom": 18,
+            "enable_position_left": true,
+            "position_left": 0,
+            "enable_position_right": false,
+            "position_right": 0,
+            "image_size": 240,
+            "image_size_mobile": 120
+          }
+        },
+        "title_mWRy9F": {
+          "type": "title",
+          "settings": {
+            "title": "Work <span class=\"text-bg\">with</span> <span class=\"text-bg blue\">us!</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_PJnfNG": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>At Long Point Brewing Co., we’re always on the lookout for legends to join our crew - from front-of-house smiles to back-of-house wizards, brewers, chefs and event pros. If you’re passionate, local and not afraid to get your hands a little foamy, we’d love to hear from you.</p><p>Drop us a line at <a href=\"mailto:hello@longpointbrewingco.com.au\" title=\"mailto:hello@longpointbrewingco.com.au \"><strong>hello@longpointbrewingco.com.au </strong></a>with your CV and a quick note about yourself.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "background_graphic_BKE93x",
+        "background_graphic_zLfdNV",
+        "title_mWRy9F",
+        "textbox_PJnfNG"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "#f9ad8e",
+        "padding_top": 60,
+        "padding_bottom": 56
+      }
+    },
+    "multicolumn_GFkRtn": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_VD3HTV": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/Jackson.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ty4x7D": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/0K6A9492_2.jpg",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_DyT3ja": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/WEBSITE_BANNER_6.png",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_VD3HTV",
+        "column_ty4x7D",
+        "column_DyT3ja"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 4,
+        "padding_bottom": 4
+      }
     }
   },
   "order": [
@@ -297,6 +376,7 @@
     "quote_WHXy47",
     "rich_text_mBgEG7",
     "image_with_text_YgTccC",
-    "call_to_action_NLYh8N"
+    "rich_text_zeU6Jx",
+    "multicolumn_GFkRtn"
   ]
 }
