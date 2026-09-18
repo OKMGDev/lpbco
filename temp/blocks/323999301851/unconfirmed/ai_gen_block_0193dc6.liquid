@@ -1,6 +1,261 @@
+{% doc %}
+  @prompt
+    three images next to each other
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-three-image-row-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: {{ block.settings.gap }}px;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__item {
+    min-width: 0;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__media {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: {{ block.settings.image_ratio }};
+    background: {{ block.settings.placeholder_color }};
+    border-radius: {{ block.settings.corner_radius }}px;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__media img,
+  .ai-three-image-row-{{ ai_gen_id }}__media svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__media svg {
+    color: {{ block.settings.placeholder_icon_color }};
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__link:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  .ai-three-image-row-{{ ai_gen_id }}__caption {
+    margin: 12px 0 0;
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.caption_size }}px;
+    line-height: 1.4;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-three-image-row-{{ ai_gen_id }}__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-three-image-row-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-three-image-row-{{ ai_gen_id }}__grid">
+    {% for i in (1..3) %}
+      {% liquid
+        assign image_key = 'image_' | append: i
+        assign alt_key = 'alt_text_' | append: i
+        assign link_key = 'link_' | append: i
+        assign caption_key = 'caption_' | append: i
+        assign image = block.settings[image_key]
+        assign alt_text = block.settings[alt_key]
+        assign link = block.settings[link_key]
+        assign caption = block.settings[caption_key]
+      %}
+      <div class="ai-three-image-row-{{ ai_gen_id }}__item">
+        {% if link != blank %}<a class="ai-three-image-row-{{ ai_gen_id }}__link" href="{{ link }}">{% endif %}
+          <div class="ai-three-image-row-{{ ai_gen_id }}__media">
+            {% if image != blank %}
+              <img src="{{ image | image_url: width: 1200 }}" alt="{{ alt_text | default: image.alt | escape }}" loading="lazy" width="{{ image.width }}" height="{{ image.height }}">
+            {% else %}
+              {{ 'image' | placeholder_svg_tag }}
+            {% endif %}
+          </div>
+          {% if caption != blank %}<p class="ai-three-image-row-{{ ai_gen_id }}__caption">{{ caption }}</p>{% endif %}
+        {% if link != blank %}</a>{% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Three image row",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_1",
+      "label": "Image 1"
+    },
+    {
+      "type": "text",
+      "id": "alt_text_1",
+      "label": "Alt text 1"
+    },
+    {
+      "type": "url",
+      "id": "link_1",
+      "label": "Link 1"
+    },
+    {
+      "type": "text",
+      "id": "caption_1",
+      "label": "Caption 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_2",
+      "label": "Image 2"
+    },
+    {
+      "type": "text",
+      "id": "alt_text_2",
+      "label": "Alt text 2"
+    },
+    {
+      "type": "url",
+      "id": "link_2",
+      "label": "Link 2"
+    },
+    {
+      "type": "text",
+      "id": "caption_2",
+      "label": "Caption 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_3",
+      "label": "Image 3"
+    },
+    {
+      "type": "text",
+      "id": "alt_text_3",
+      "label": "Alt text 3"
+    },
+    {
+      "type": "url",
+      "id": "link_3",
+      "label": "Link 3"
+    },
+    {
+      "type": "text",
+      "id": "caption_3",
+      "label": "Caption 3"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "gap",
+      "label": "Gap",
+      "min": 0,
+      "max": 40,
+      "step": 4,
+      "unit": "px",
+      "default": 8
+    },
+    {
+      "type": "select",
+      "id": "image_ratio",
+      "label": "Image ratio",
+      "options": [
+        { "value": "1 / 1", "label": "Square" },
+        { "value": "4 / 3", "label": "Landscape" },
+        { "value": "3 / 4", "label": "Portrait" }
+      ],
+      "default": "1 / 1"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "caption_size",
+      "label": "Caption size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#373737"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_color",
+      "label": "Placeholder background",
+      "default": "#f3f3f3"
+    },
+    {
+      "type": "color",
+      "id": "placeholder_icon_color",
+      "label": "Placeholder icon",
+      "default": "#737373"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Three image row"
+    }
+  ],
+  "tag": null,
+  "class": "three-image-row-block"
+}
 {% endschema %}
