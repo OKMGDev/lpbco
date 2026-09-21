@@ -65,19 +65,12 @@
           "settings": {
             "subtitle": "SUNDAY SESSIONS, TRIVIA NIGHTS, LIVE MUSIC, BEER LAUNCHES, THE ODD FESTIVAL — WE LIKE TO KEEP THINGS LIVELY."
           }
-        },
-        "textbox_eDjDVH": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>Check the calendar, grab your mates, and call it “plans”.</p>"
-          }
         }
       },
       "block_order": [
         "stamp_74c7ma",
         "title_WHdQJf",
-        "subtitle_cQch8N",
-        "textbox_eDjDVH"
+        "subtitle_cQch8N"
       ],
       "name": "Rich Text",
       "settings": {
@@ -94,31 +87,8 @@
       "name": "All Events",
       "settings": {
         "metaobject_type": "events",
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 100
-      }
-    },
-    "rich_text_G6PA7m": {
-      "type": "rich-text",
-      "blocks": {
-        "subtitle_NUNNUX": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": "FOLLOW US ON INSTA @LONGPOINTBREWINGCO"
-          }
-        }
-      },
-      "block_order": [
-        "subtitle_NUNNUX"
-      ],
-      "disabled": true,
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 1000,
-        "accent_color": "",
-        "padding_top": 0,
-        "padding_bottom": 32
       }
     },
     "17630168472d3a959c": {
@@ -168,6 +138,90 @@
       "settings": {
         "include_margins": true
       }
+    },
+    "1789992258cec5e15e": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_18f216a_BfDWCM": {
+          "type": "ai_gen_block_18f216a",
+          "settings": {
+            "image": "shopify://shop_images/Grand_Final_1080_x_1080_mm.png",
+            "heading": "26 SEP I AFL GRAND FINAL",
+            "description": "<p>Playing live and loud. $9 Lager Pints siren to siren. Pizza Specials all day. DJ’s bumping tunes after the game. Facepainting fun</p>",
+            "button_label": "Book now",
+            "button_link": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
+            "desktop_width_percent": 100,
+            "image_height": 240,
+            "mobile_image_height": 180,
+            "content_padding": 30,
+            "background_color": "#F3F3F3",
+            "heading_color": "#121212",
+            "text_color": "#373737",
+            "button_color": "#121212",
+            "button_text_color": "#FFFFFF",
+            "focus_color": "#334FB4",
+            "image_placeholder_color": "#E6E6E6",
+            "border_color": "#D1D1D1",
+            "heading_size": 36,
+            "description_size": 19,
+            "corner_radius": 0,
+            "border_width": 0,
+            "button_radius": 0,
+            "button_border_width": 1
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_18f216a_BfDWCM"
+      ],
+      "settings": {}
+    },
+    "rich_text_yjwDUK": {
+      "type": "rich-text",
+      "blocks": {
+        "title_DtxRQi": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_3ipnE7": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": ""
+          }
+        },
+        "textbox_6KikGN": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        },
+        "button_mz4z7j": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "default"
+          }
+        }
+      },
+      "block_order": [
+        "title_DtxRQi",
+        "subtitle_3ipnE7",
+        "textbox_6KikGN",
+        "button_mz4z7j"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
     }
   },
   "order": [
@@ -175,7 +229,8 @@
     "main",
     "rich_text_FeF3Em",
     "all_events_WXBRNL",
-    "rich_text_G6PA7m",
-    "17630168472d3a959c"
+    "17630168472d3a959c",
+    "1789992258cec5e15e",
+    "rich_text_yjwDUK"
   ]
 }
