@@ -150,7 +150,7 @@
             "description": "<p>Playing live and loud. $9 Lager Pints siren to siren. Pizza Specials all day. DJ’s bumping tunes after the game. Facepainting fun</p>",
             "button_label": "Book now",
             "button_link": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
-            "desktop_width_percent": 100,
+            "desktop_width_percent": 80,
             "image_height": 240,
             "mobile_image_height": 180,
             "content_padding": 30,
