@@ -96,32 +96,32 @@
         "card_3N6B9i": {
           "type": "card",
           "settings": {
-            "title": "Beach Bar:",
-            "textbox": "<p> Sun, shade, pints, and world-class people-watching.</p>",
+            "title": "Beach Bar",
+            "textbox": "<p>Sun, shade, pints and the closest seat to the playground. Ideal for watching the kids while you relax with a frothy beer in hand.</p>",
             "bg_icon": "shopify://shop_images/Vector_58.svg"
           }
         },
         "card_U3ikQ3": {
           "type": "card",
           "settings": {
-            "title": "The Taproom:",
-            "textbox": "<p>Flame grill, open kitchen, brewing tanks, ocean views.</p>",
+            "title": "The Taproom",
+            "textbox": "<p>Flame grill, open kitchen and brewing tanks - the heart of LPBC in one room.</p>",
             "bg_icon": "shopify://shop_images/Vector_56.svg"
           }
         },
         "card_XTNAE9": {
           "type": "card",
           "settings": {
-            "title": "Sunset Lounge (Level 1):",
-            "textbox": "<p>A function space made for big moments (or just staring at the Indian Ocean while pretending to listen to your mates).</p>",
+            "title": "Sunset Lounge",
+            "textbox": "<p>Ocean views, a balcony to sit out on and the wind in your hair while the sun goes down over the water.</p>",
             "bg_icon": "shopify://shop_images/Vector_57.svg"
           }
         },
         "card_JJ7pjY": {
           "type": "card",
           "settings": {
-            "title": "Little Point Kiosk:",
-            "textbox": "<p>Our breezy kiosk slinging coffees, pastries, and coastal favourites from the wee hours.</p>",
+            "title": "Little Point Kiosk",
+            "textbox": "<p>Built for the early risers, slinging coffees, pastries and coastal favourites from the wee hours.</p>",
             "bg_icon": "shopify://shop_images/Group_1_3.svg"
           }
         }
