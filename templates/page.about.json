@@ -65,7 +65,6 @@
       "name": "Image with Text",
       "settings": {
         "image": "shopify://shop_images/SHANE_SALLY_430x_copy.jpg",
-        "image_overlay": "shopify://shop_images/Subtract_1.svg",
         "section_bg_color": "#ffffff",
         "image_bottom_right": "shopify://shop_images/Vector_74.svg",
         "padding_top": 72,
