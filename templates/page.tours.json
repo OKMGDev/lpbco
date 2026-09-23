@@ -139,7 +139,6 @@
       "name": "Image with Text",
       "settings": {
         "image": "shopify://shop_images/IMG_9053.heic",
-        "image_overlay": "shopify://shop_images/Subtract_6.svg",
         "section_bg_color": "",
         "padding_top": 20,
         "padding_bottom": 20
@@ -177,7 +176,6 @@
       "name": "Call to Action",
       "settings": {
         "image": "shopify://shop_images/IMG_4310.jpg",
-        "image_overlay": "shopify://shop_images/Subtract_7.svg",
         "background_color": "",
         "card_background_color": "#fbad48",
         "background_icons_color": "#f68e4e",
