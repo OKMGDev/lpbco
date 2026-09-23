@@ -31,8 +31,8 @@
     {%- endif -%}
 
     {%- if events != blank and events.size > 0 -%}
-      <div class="upcoming-events__slider-wrapper">
-        {%- for event in events limit: 1 -%}
+      <div class="upcoming-events__list">
+        {%- for event in events -%}
           {% render 'event-card', event: event, section_id: section.id, event_index: forloop.index0 %}
         {%- endfor -%}
       </div>
@@ -104,23 +104,6 @@
       } catch (e) {
         console.error('Error parsing richtext:', e);
       }
-    });
-
-    // Initialize Swiper
-    const upcomingEventsSwiper = new Swiper('#UpcomingEventsSwiper-{{ section.id }}', {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: false,
-      navigation: {
-        nextEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-next',
-        prevEl: '#UpcomingEvents-{{ section.id }} .upcoming-events__nav-prev',
-      },
-      breakpoints: {
-        750: {
-          slidesPerView: 1,
-          spaceBetween: 30,
-        },
-      },
     });
   });
 </script>

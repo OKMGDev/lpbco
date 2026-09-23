@@ -24,26 +24,13 @@
 
 <div class="all-events-section section-{{ section.id }}-padding" id="AllEvents-{{ section.id }}">
   <div class="page-width">
-    {%- if events != blank -%}
-      {%- assign loop_index = 0 -%}
-
-      {%- for event in events -%}
-        {%- if loop_index == 0 -%}
-          <h2 class="all-events__heading">Upcoming events</h2>
-          {% render 'event-card', event: event, section_id: section.id, event_index: 0 %}
-        {%- else -%}
-          {%- if loop_index == 1 -%}
-            <h2 class="all-events__heading">All events</h2>
-            <div class="all-events__grid">
-          {%- endif -%}
-          {% render 'events-grid-card', event: event %}
-        {%- endif -%}
-        {%- assign loop_index = loop_index | plus: 1 -%}
-      {%- endfor -%}
-
-      {%- if loop_index > 1 -%}
-        </div>
-      {%- endif -%}
+    {%- if events != blank and events.size > 0 -%}
+      <h2 class="all-events__heading">Upcoming events</h2>
+      <div class="all-events__list">
+        {%- for event in events -%}
+          {% render 'event-card', event: event, section_id: section.id, event_index: forloop.index0 %}
+        {%- endfor -%}
+      </div>
     {%- endif -%}
   </div>
 </div>
