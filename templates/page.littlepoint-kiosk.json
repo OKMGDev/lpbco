@@ -117,31 +117,37 @@
     "17883358475998c5c4": {
       "type": "_blocks",
       "blocks": {
-        "ai_gen_block_8c49f03_gzCEwX": {
-          "type": "ai_gen_block_8c49f03",
+        "ai_gen_block_0193dc6_4MxFdg": {
+          "type": "ai_gen_block_0193dc6",
+          "name": "Three image row",
           "settings": {
-            "image_1": "shopify://shop_images/B0EC32AB-2FD7-4E5A-B276-BDFD5B26CF34.heic",
+            "image_1": "shopify://shop_images/Muffins_Edited.jpg",
+            "alt_text_1": "",
             "link_1": "",
             "caption_1": "",
             "image_2": "shopify://shop_images/39708521-5164-46e4-be78-8a47671c5f22.png",
+            "alt_text_2": "",
             "link_2": "",
             "caption_2": "",
             "image_3": "shopify://shop_images/400b8b8e-9f08-4d6a-9769-2edc58a53e6e.jpg",
+            "alt_text_3": "",
             "link_3": "",
             "caption_3": "",
-            "desktop_width_percent": 55,
+            "desktop_width_percent": 100,
             "gap": 8,
-            "corner_radius": 0,
+            "image_ratio": "1 / 1",
+            "text_alignment": "left",
             "caption_size": 16,
-            "text_color": "#121212",
+            "corner_radius": 0,
+            "text_color": "#373737",
             "placeholder_color": "#f3f3f3",
-            "placeholder_text_color": "#555555"
+            "placeholder_icon_color": "#737373"
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_8c49f03_gzCEwX"
+        "ai_gen_block_0193dc6_4MxFdg"
       ],
       "settings": {}
     },
