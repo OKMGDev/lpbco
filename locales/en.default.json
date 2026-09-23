@@ -540,6 +540,16 @@
     "checkout": {
       "order_summary": {
         "pickup_label": "Click & Collect"
+      },
+      "delivery_options": {
+        "pick_up": "Click & Collect",
+        "pickup": "Click & Collect",
+        "pickup_store": "Click & Collect",
+        "pickup_point": "Click & Collect",
+        "pick_up_from_store": "Click & Collect"
+      },
+      "shipping": {
+        "delivery_title": "Click & Collect"
       }
     }
   }
