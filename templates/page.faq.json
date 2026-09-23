@@ -25,7 +25,7 @@
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "background_type": "single",
-        "background_image": "shopify://shop_images/IMG_4084.jpg",
+        "background_image": "shopify://shop_images/SHOTBYTHOM2026_DJI_0488_COLORED.jpg",
         "overlay_opacity": 30,
         "banner_type": "inner-pages",
         "auto_rotate": false,
@@ -55,7 +55,7 @@
           "type": "accordion",
           "settings": {
             "title": "Can I bring the kids?",
-            "textbox": "<p>Of course — we’re a family-friendly venue. The little legends can tuck into kids’ meals, babycinos at <em>Little Point</em>, and run off some energy on the foreshore playground.</p>"
+            "textbox": "<p>Of course — we’re a family-friendly venue. The little legends can tuck into kids’ meals, babycinos at <em>Little Point</em> and run off some energy on the foreshore playground.</p>"
           }
         },
         "accordion_tzMkGg": {
@@ -83,7 +83,7 @@
           "type": "accordion",
           "settings": {
             "title": "Can I book a function or wedding?",
-            "textbox": "<p>Absolutely. We’ve got spaces from intimate tastings (30 people) to full Level 1 hire (200 people cocktail-style). Fully catered, ocean views included. 👉 </p>"
+            "textbox": "<p>Absolutely. We’ve got spaces from intimate tastings (30 people) to full Level 1 hire (200 people cocktail-style). Fully catered, ocean views included.<a href=\"/pages/functions\" title=\"Functions\"> Find out more</a></p>"
           }
         },
         "accordion_dY7FMJ": {
