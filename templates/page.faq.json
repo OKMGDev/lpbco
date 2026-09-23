@@ -125,7 +125,7 @@
           "type": "accordion",
           "settings": {
             "title": "Can I buy gift vouchers?",
-            "textbox": "<p>Yes! Head to our online shop for digital gift vouchers.</p>"
+            "textbox": "<p>Yes! Head to our online shop for digital gift vouchers <a href=\"/collections/gift-cards\" title=\"Gift Cards\">here</a></p>"
           }
         }
       },
