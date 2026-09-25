@@ -10,6 +10,15 @@
   {% render 'event-card', event: event, section_id: section.id, event_index: forloop.index0 %}
 {%- endcomment -%}
 
+{%- liquid
+  assign event_description = blank
+  if event.description != blank
+    assign event_description = event.description
+  elsif event.details != blank
+    assign event_description = event.details
+  endif
+-%}
+
 <div
   class="upcoming-events__card"
   {%- if event.color != blank -%}
@@ -53,13 +62,10 @@
       </div>
     {%- endif -%}
 
-    {%- if event.details != blank -%}
-      <div class="upcoming-events__details" data-event-index="{{ event_index }}">
-        {%- comment -%} Content will be rendered by JavaScript {%- endcomment -%}
+    {%- if event_description != blank -%}
+      <div class="upcoming-events__details rte">
+        {{ event_description | metafield_tag }}
       </div>
-      <script type="application/json" id="event-details-{{ section_id }}-{{ event_index }}">
-        {{ event.details }}
-      </script>
     {%- endif -%}
 
     {%- if event.link != blank -%}
