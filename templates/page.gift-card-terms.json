@@ -1,0 +1,111 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_gift_card_terms": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_gift_card_terms": {
+          "type": "heading",
+          "settings": {
+            "heading": "Gift card<br>\nterms & conditions"
+          }
+        }
+      },
+      "block_order": [
+        "heading_gift_card_terms"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "background_image": "shopify://shop_images/0K6A9503_1.jpg",
+        "overlay_opacity": 30,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_gift_card_terms": {
+      "type": "rich-text",
+      "blocks": {
+        "title_terms": {
+          "type": "title",
+          "settings": {
+            "title": "Gift card <span class=\"text-bg\">terms</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_terms": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<ul><li>Gift card is valid for 3 years from the date of purchase</li><li>Gift card is not refundable and are not exchangeable for cash</li><li>Gift cards can only be redeemed for eligible goods and services at Long Point Brewing Co &amp; Little Point Kiosk</li><li>Gift cards may be used for multiple transactions until the available balance has been exhausted, unless otherwise stated.</li><li>Treat your gift card like cash. Long Point Brewing Co is not responsible for lost, stolen or damaged gift cards, except where required by law. Where possible, we may be able to cancel and reissue a registered gift card upon satisfactory proof of purchase and ownership.</li><li>Any remaining balance will become unavailable after the expiry date, subject to applicable Australian Consumer Law requirements.</li><li>Gift cards cannot be used for purchasing other gift cards.</li><li>Where this gift card is used to purchase alcohol, all applicable laws and responsible service requirements apply. The purchaser and recipient must meet any applicable age requirements.</li><li>Long Point Brewing Co may update these Terms &amp; Conditions from time to time, provided that any changes comply with applicable Australian Consumer Law requirements.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "title_terms",
+        "textbox_terms"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "rich-text--left",
+        "content_max_width": 900,
+        "accent_color": "#f9ad8e",
+        "padding_top": 80,
+        "padding_bottom": 40
+      }
+    },
+    "rich_text_gift_card_contact": {
+      "type": "rich-text",
+      "blocks": {
+        "title_contact": {
+          "type": "title",
+          "settings": {
+            "title": "Contact",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_contact": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>For enquiries regarding this gift card, please contact:</p><p><strong>Long Point Brewing Co</strong><br><a href=\"mailto:marketing@longpointbrewingco.com.au\">marketing@longpointbrewingco.com.au</a><br><a href=\"https://www.longpointbrewingco.com.au\">www.longpointbrewingco.com.au</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_contact",
+        "textbox_contact"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "rich-text--left",
+        "content_max_width": 900,
+        "accent_color": "#f9ad8e",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_gift_card_terms",
+    "main",
+    "rich_text_gift_card_terms",
+    "rich_text_gift_card_contact"
+  ]
+}
