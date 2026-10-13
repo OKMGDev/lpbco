@@ -66,11 +66,90 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "rich_text_THzqLt": {
+      "type": "rich-text",
+      "blocks": {
+        "title_aMiwh4": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_7RLYAf": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": ""
+          }
+        },
+        "textbox_7PUjhk": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        },
+        "button_DPkC74": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "default"
+          }
+        }
+      },
+      "block_order": [
+        "title_aMiwh4",
+        "subtitle_7RLYAf",
+        "textbox_7PUjhk",
+        "button_DPkC74"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 0,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1791857524e77dafe7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7c660d5_hQiM9b": {
+          "type": "ai_gen_block_7c660d5",
+          "settings": {
+            "heading": "Wall of Fame",
+            "desktop_width_percent": 100,
+            "heading_size": 36,
+            "mobile_heading_size": 26,
+            "image_gap": 8,
+            "section_padding": 24,
+            "background_color": "#FFFFFF",
+            "text_color": "#121212",
+            "button_color": "#121212",
+            "button_text_color": "#FFFFFF",
+            "image_1": "shopify://shop_images/LPR_Text_Free.png",
+            "image_2": "shopify://shop_images/GR_gold.jpg",
+            "image_3": "shopify://shop_images/LAGER_SOCIAL_full_colour.jpg",
+            "image_4": "shopify://shop_images/HAZY_SOCIAL_full_colour.jpg",
+            "image_6": "shopify://shop_images/American_Pale_Text_Free.png",
+            "image_8": "shopify://shop_images/LML_colour.jpg"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7c660d5_hQiM9b"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "banner",
     "image_banner_HBha69",
-    "product-grid"
+    "product-grid",
+    "rich_text_THzqLt",
+    "1791857524e77dafe7"
   ]
 }
