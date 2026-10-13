@@ -113,6 +113,38 @@
         "padding_bottom": 0
       }
     },
+    "1791857524e77dafe7": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_7c660d5_hQiM9b": {
+          "type": "ai_gen_block_7c660d5",
+          "settings": {
+            "heading": "Wall of Fame",
+            "desktop_width_percent": 100,
+            "heading_size": 36,
+            "mobile_heading_size": 26,
+            "image_gap": 8,
+            "section_padding": 24,
+            "background_color": "#ffffff",
+            "text_color": "#121212",
+            "button_color": "#121212",
+            "button_text_color": "#ffffff",
+            "image_1": "shopify://shop_images/LPR_Text_Free.png",
+            "image_2": "shopify://shop_images/GR_gold.jpg",
+            "image_3": "shopify://shop_images/LAGER_SOCIAL_full_colour.jpg",
+            "image_4": "shopify://shop_images/HAZY_SOCIAL_full_colour.jpg",
+            "image_5": "shopify://shop_images/OTR_colour_1.jpg",
+            "image_6": "shopify://shop_images/American_Pale_Text_Free.png",
+            "image_8": "shopify://shop_images/LML_colour.jpg"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_7c660d5_hQiM9b"
+      ],
+      "settings": {}
+    },
     "rich_text_Dtbkmg": {
       "type": "rich-text",
       "blocks": {
@@ -158,37 +190,6 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
-    },
-    "1791857524e77dafe7": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_7c660d5_hQiM9b": {
-          "type": "ai_gen_block_7c660d5",
-          "settings": {
-            "heading": "Wall of Fame",
-            "desktop_width_percent": 100,
-            "heading_size": 36,
-            "mobile_heading_size": 26,
-            "image_gap": 8,
-            "section_padding": 24,
-            "background_color": "#FFFFFF",
-            "text_color": "#121212",
-            "button_color": "#121212",
-            "button_text_color": "#FFFFFF",
-            "image_1": "shopify://shop_images/LPR_Text_Free.png",
-            "image_2": "shopify://shop_images/GR_gold.jpg",
-            "image_3": "shopify://shop_images/LAGER_SOCIAL_full_colour.jpg",
-            "image_4": "shopify://shop_images/HAZY_SOCIAL_full_colour.jpg",
-            "image_6": "shopify://shop_images/American_Pale_Text_Free.png",
-            "image_8": "shopify://shop_images/LML_colour.jpg"
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_7c660d5_hQiM9b"
-      ],
-      "settings": {}
     }
   },
   "order": [
