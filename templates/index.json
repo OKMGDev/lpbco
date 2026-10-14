@@ -179,7 +179,7 @@
           "type": "button",
           "settings": {
             "button_label": "Shop",
-            "button_link": "shopify://collections/all",
+            "button_link": "shopify://collections/beer",
             "button_style": "button--pink"
           }
         },
