@@ -527,6 +527,55 @@
         "padding_top": 48,
         "padding_bottom": 48
       }
+    },
+    "17919629423474a6ef": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_2d43a42_W7XcHe": {
+          "type": "ai_gen_block_2d43a42",
+          "settings": {
+            "desktop_width_percent": 100,
+            "products_to_show": 8,
+            "columns_desktop": "4",
+            "columns_mobile": "2",
+            "card_text_alignment": "left",
+            "group_1_heading": "Beer",
+            "group_1_collection": "beer",
+            "group_2_heading": "Merch",
+            "group_2_collection": "merch",
+            "group_3_heading": "Gift Cards",
+            "group_3_collection": "gift-cards"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_2d43a42_W7XcHe"
+      ],
+      "settings": {}
+    },
+    "17919630665cdc0fe5": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_e642551_fhcKCc": {
+          "type": "ai_gen_block_e642551",
+          "settings": {
+            "page_heading": "All",
+            "desktop_width_percent": 100,
+            "group_1_heading": "Beer",
+            "group_1_collection": "beer",
+            "group_2_heading": "Merch",
+            "group_2_collection": "merch",
+            "group_3_heading": "Gift Cards",
+            "group_3_collection": "gift-cards"
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_e642551_fhcKCc"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -541,6 +590,8 @@
     "social_icons_tWAAqx",
     "176284026737b77010",
     "main_blog_gARkQE",
-    "find_us_f6mzeW"
+    "find_us_f6mzeW",
+    "17919629423474a6ef",
+    "17919630665cdc0fe5"
   ]
 }
