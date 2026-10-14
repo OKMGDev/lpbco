@@ -533,6 +533,7 @@
       "blocks": {
         "ai_gen_block_2d43a42_W7XcHe": {
           "type": "ai_gen_block_2d43a42",
+          "disabled": true,
           "settings": {
             "desktop_width_percent": 100,
             "products_to_show": 8,
@@ -575,6 +576,7 @@
       "block_order": [
         "ai_gen_block_e642551_fhcKCc"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
