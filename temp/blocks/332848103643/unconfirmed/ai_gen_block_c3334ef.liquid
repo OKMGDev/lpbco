@@ -1,0 +1,154 @@
+{% doc %}
+  @prompt
+    large book a table button
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-table-booking-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+  }
+
+  .ai-table-booking-{{ ai_gen_id }}__link {
+    display: inline-flex;
+    width: 100%;
+    min-height: {{ block.settings.button_height }}px;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 32px;
+    box-sizing: border-box;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.text_color }};
+    border: 2px solid {{ block.settings.button_color }};
+    border-radius: {{ block.settings.corner_radius }}px;
+    font: inherit;
+    font-size: {{ block.settings.text_size }}px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color 150ms ease, color 150ms ease;
+  }
+
+  .ai-table-booking-{{ ai_gen_id }}__link:hover {
+    background: {{ block.settings.hover_color }};
+    border-color: {{ block.settings.hover_color }};
+    color: {{ block.settings.hover_text_color }};
+  }
+
+  .ai-table-booking-{{ ai_gen_id }}__link:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-table-booking-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-table-booking-{{ ai_gen_id }}__link {
+      min-height: {{ block.settings.button_height | at_most: 90 }}px;
+      padding: 16px 22px;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-table-booking-{{ ai_gen_id }}" style="width: {{ block.settings.desktop_width_percent }}%;" {{ block.shopify_attributes }}>
+  <a class="ai-table-booking-{{ ai_gen_id }}__link" href="{{ block.settings.button_link }}">
+    {{ block.settings.button_label | escape }}
+  </a>
+</div>
+
+{% schema %}
+{
+  "name": "Book a table button",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "Book a table"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Booking link"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "button_height",
+      "label": "Button height",
+      "min": 60,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 16,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "default": 24
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "color",
+      "id": "hover_color",
+      "label": "Hover background",
+      "default": "#373737"
+    },
+    {
+      "type": "color",
+      "id": "hover_text_color",
+      "label": "Hover text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Book a table button"
+    }
+  ],
+  "tag": null,
+  "class": "book-a-table-button"
+}
+{% endschema %}
