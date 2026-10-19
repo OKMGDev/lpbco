@@ -578,6 +578,31 @@
       ],
       "disabled": true,
       "settings": {}
+    },
+    "1792371503777683b8": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_c3334ef_eU6JWK": {
+          "type": "ai_gen_block_c3334ef",
+          "settings": {
+            "button_label": "Book a table",
+            "button_link": "https://bookings.nowbookit.com/?accountid=ef9aaad9-2e3b-411d-8204-d6466ef36e31&venueid=14056&colors=hex,29b6f6,01579b&font=Inconsolata%22%3E%3C/iframe%3E",
+            "desktop_width_percent": 100,
+            "button_height": 80,
+            "text_size": 24,
+            "button_color": "#F68E51",
+            "text_color": "#FFFFFF",
+            "hover_color": "#52BCAE",
+            "hover_text_color": "#FFFFFF",
+            "corner_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_c3334ef_eU6JWK"
+      ],
+      "settings": {}
     }
   },
   "order": [
@@ -594,6 +619,7 @@
     "main_blog_gARkQE",
     "find_us_f6mzeW",
     "17919629423474a6ef",
-    "17919630665cdc0fe5"
+    "17919630665cdc0fe5",
+    "1792371503777683b8"
   ]
 }
