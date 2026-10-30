@@ -424,10 +424,10 @@
             "desktop_width_percent": 100,
             "button_height": 120,
             "text_size": 24,
-            "button_color": "#F68E51",
-            "text_color": "#FFFFFF",
-            "hover_color": "#52BCAE",
-            "hover_text_color": "#FFFFFF",
+            "button_color": "#f68e51",
+            "text_color": "#ffffff",
+            "hover_color": "#52bcae",
+            "hover_text_color": "#ffffff",
             "corner_radius": 0
           },
           "blocks": {}
@@ -649,6 +649,12 @@
       ],
       "disabled": true,
       "settings": {}
+    },
+    "1793331868d634d598": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -667,6 +673,7 @@
     "main_blog_gARkQE",
     "find_us_f6mzeW",
     "17919629423474a6ef",
-    "17919630665cdc0fe5"
+    "17919630665cdc0fe5",
+    "1793331868d634d598"
   ]
 }
