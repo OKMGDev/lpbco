@@ -1,0 +1,200 @@
+{% doc %}
+  @prompt
+    Bottomless brunch menu button to click on and see a different menu, make the button click down to a image
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-brunch-menu-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 26px;
+    border: 1px solid {{ block.settings.button_color }};
+    border-radius: {{ block.settings.corner_radius }}px;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }}:hover {
+    filter: brightness(0.88);
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }}:focus-visible {
+    outline: 3px solid {{ block.settings.button_color }};
+    outline-offset: 3px;
+  }
+
+  .ai-brunch-menu__image-wrap-{{ ai_gen_id }} {
+    margin: 24px auto 0;
+    max-width: 900px;
+  }
+
+  .ai-brunch-menu__image-wrap-{{ ai_gen_id }}[hidden] {
+    display: none;
+  }
+
+  .ai-brunch-menu__image-{{ ai_gen_id }} {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .ai-brunch-menu__placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: #f3f3f3;
+  }
+
+  .ai-brunch-menu__placeholder-{{ ai_gen_id }} svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .ai-brunch-menu__empty-{{ ai_gen_id }} {
+    margin: 8px 0 0;
+    color: #595959;
+    font-size: 14px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-brunch-menu-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<brunch-menu-{{ ai_gen_id }} class="ai-brunch-menu-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <button
+    class="ai-brunch-menu__button-{{ ai_gen_id }}"
+    type="button"
+    aria-expanded="false"
+    aria-controls="ai-brunch-menu-image-{{ ai_gen_id }}"
+  >
+    {{ block.settings.button_label | escape }}
+  </button>
+  <div id="ai-brunch-menu-image-{{ ai_gen_id }}" class="ai-brunch-menu__image-wrap-{{ ai_gen_id }}" hidden>
+    {% if block.settings.menu_image != blank %}
+      <img
+        class="ai-brunch-menu__image-{{ ai_gen_id }}"
+        src="{{ block.settings.menu_image | image_url: width: 1800 }}"
+        alt="{{ block.settings.menu_image.alt | default: block.settings.image_alt | escape }}"
+        width="{{ block.settings.menu_image.width }}"
+        height="{{ block.settings.menu_image.height }}"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="ai-brunch-menu__placeholder-{{ ai_gen_id }}">
+        {{ 'image' | placeholder_svg_tag }}
+      </div>
+      <p class="ai-brunch-menu__empty-{{ ai_gen_id }}">Add a menu image in the block settings.</p>
+    {% endif %}
+  </div>
+</brunch-menu-{{ ai_gen_id }}>
+
+<script>
+  (() => {
+    const elementName = 'brunch-menu-{{ ai_gen_id }}';
+    if (customElements.get(elementName)) return;
+
+    class BrunchMenu{{ ai_gen_id }} extends HTMLElement {
+      connectedCallback() {
+        this.button = this.querySelector('button');
+        this.imagePanel = this.querySelector('.ai-brunch-menu__image-wrap-{{ ai_gen_id }}');
+        if (!this.button || !this.imagePanel) return;
+        this.onClick = () => {
+          const expanded = this.button.getAttribute('aria-expanded') === 'true';
+          this.button.setAttribute('aria-expanded', String(!expanded));
+          this.imagePanel.hidden = expanded;
+          if (!expanded) {
+            this.imagePanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        };
+        this.button.addEventListener('click', this.onClick);
+      }
+
+      disconnectedCallback() {
+        if (this.button && this.onClick) this.button.removeEventListener('click', this.onClick);
+      }
+    }
+
+    customElements.define(elementName, BrunchMenu{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Bottomless brunch menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "View bottomless brunch menu"
+    },
+    {
+      "type": "image_picker",
+      "id": "menu_image",
+      "label": "Menu image"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "Image description",
+      "default": "Bottomless brunch menu"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bottomless brunch menu"
+    }
+  ],
+  "tag": null,
+  "class": "bottomless-brunch-menu"
+}
+{% endschema %}
