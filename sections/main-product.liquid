@@ -74,25 +74,6 @@
 
   {% assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' %}
   <div class="page-width">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <ol class="breadcrumbs__list">
-        <li class="breadcrumbs__item">
-          <a href="{{ routes.root_url }}" class="breadcrumbs__link">Home</a>
-        </li>
-        <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
-
-        {%- if product.collections.size > 0 -%}
-          {%- assign first_collection = product.collections.first -%}
-          <li class="breadcrumbs__item">
-            <a href="{{ first_collection.url }}" class="breadcrumbs__link">{{ first_collection.title }}</a>
-          </li>
-          <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
-        {%- endif -%}
-        <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
-          <span>{{ product.title }}</span>
-        </li>
-      </ol>
-    </nav>
     <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
       {%- liquid
         assign media_bg_color = product.metafields.custom.background_color
@@ -121,6 +102,26 @@
           class="product__info-container{% if section.settings.enable_sticky_info %} product__column-sticky{% endif %}"
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
+
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <ol class="breadcrumbs__list">
+              <li class="breadcrumbs__item">
+                <a href="{{ routes.root_url }}" class="breadcrumbs__link">Home</a>
+              </li>
+              <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
+
+              {%- if product.collections.size > 0 -%}
+                {%- assign first_collection = product.collections.first -%}
+                <li class="breadcrumbs__item">
+                  <a href="{{ first_collection.url }}" class="breadcrumbs__link">{{ first_collection.title }}</a>
+                </li>
+                <li class="breadcrumbs__item breadcrumbs__item--separator">></li>
+              {%- endif -%}
+              <li class="breadcrumbs__item breadcrumbs__item--current" aria-current="page">
+                <span>{{ product.title }}</span>
+              </li>
+            </ol>
+          </nav>
 
           {%- for block in section.blocks -%}
             {%- case block.type -%}
@@ -231,7 +232,12 @@
               {%- when 'description' -%}
                 {%- if product.description != blank -%}
                   <div class="product__description rte quick-add-hidden" {{ block.shopify_attributes }}>
-                    {{ product.description }}
+                    {{
+                      product.description
+                      | replace: '&nbsp;', ' '
+                      | replace: '&#160;', ' '
+                      | replace: ' ', ' '
+                    }}
                   </div>
                 {%- endif -%}
               {%- when 'product_meta' -%}
