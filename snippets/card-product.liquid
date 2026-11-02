@@ -79,7 +79,14 @@
 
           {%- if card_product.description != blank -%}
             <p class="product-card__description">
-              {{ card_product.description | strip_html | truncate: 90 }}
+              {{
+                card_product.description
+                | strip_html
+                | replace: '&nbsp;', ' '
+                | replace: '&#160;', ' '
+                | replace: ' ', ' '
+                | truncate: 90
+              }}
             </p>
           {%- endif -%}
 

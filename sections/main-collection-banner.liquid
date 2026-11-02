@@ -37,16 +37,16 @@
       </div> {% endcomment %}
     </div>
 
-    {% comment %} {%- assign collections_menu = linklists.collections -%}
-    {%- if collections_menu != blank -%}
-      <nav class="collection-hero__menu">
+    {%- assign collections_menu = linklists.collections -%}
+    {%- if collections_menu != blank and collections_menu.links.size > 0 -%}
+      <nav class="collection-hero__menu" aria-label="Collections">
         <ul class="collection-hero__menu-list" role="list">
           {%- for link in collections_menu.links -%}
             <li class="collection-hero__menu-item">
               <a
                 href="{{ link.url }}"
-                class="collection-hero__menu-link{% if link.current %} collection-hero__menu-link--active{% endif %}"
-                {% if link.current %}
+                class="collection-hero__menu-link{% if link.current or link.object.handle == collection.handle %} collection-hero__menu-link--active{% endif %}"
+                {% if link.current or link.object.handle == collection.handle %}
                   aria-current="page"
                 {% endif %}
               >
@@ -56,7 +56,25 @@
           {%- endfor -%}
         </ul>
       </nav>
-    {%- endif -%} {% endcomment %}
+    {%- else -%}
+      <nav class="collection-hero__menu" aria-label="Collections">
+        <ul class="collection-hero__menu-list" role="list">
+          {%- for collection_item in collections -%}
+            <li class="collection-hero__menu-item">
+              <a
+                href="{{ collection_item.url }}"
+                class="collection-hero__menu-link{% if collection_item.handle == collection.handle %} collection-hero__menu-link--active{% endif %}"
+                {% if collection_item.handle == collection.handle %}
+                  aria-current="page"
+                {% endif %}
+              >
+                {{ collection_item.title | escape }}
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
   </div>
 </div>
 

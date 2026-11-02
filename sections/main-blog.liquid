@@ -19,6 +19,21 @@
   }
 {%- endstyle -%}
 
+{%- liquid
+  if section.settings.blog != blank
+    assign blog_to_show = section.settings.blog
+  elsif blog != blank
+    assign blog_to_show = blog
+  else
+    assign blog_to_show = blank
+  endif
+
+  assign section_title = section.settings.title
+  if section_title == blank and request.page_type == 'blog' and blog_to_show != blank
+    assign section_title = blog_to_show.title
+  endif
+-%}
+
 <div id="MainBlog-{{ section.id }}" class="main-blog-section section-{{ section.id }}-padding">
   {%- if section.settings.image_top_left != blank -%}
     <div class="main-blog__image-top-left">
@@ -45,9 +60,9 @@
   {%- endif -%}
   <div class="page-width">
     <div class="main-blog__content">
-      {%- if section.settings.title != blank -%}
+      {%- if section_title != blank -%}
         <h2 class="main-blog__title">
-          {{ section.settings.title }}
+          {{ section_title }}
         </h2>
       {%- endif -%}
 
@@ -57,12 +72,12 @@
         </div>
       {%- endif -%}
 
-      {%- if section.settings.blog != blank and section.settings.blog.articles_count > 0 -%}
+      {%- if blog_to_show != blank and blog_to_show.articles_count > 0 -%}
         <div class="main-blog__grid">
-          {%- for article in section.settings.blog.articles -%}
+          {%- for article in blog_to_show.articles -%}
             <div class="main-blog__article">
               {% render 'article-card',
-                blog: section.settings.blog,
+                blog: blog_to_show,
                 article: article,
                 media_aspect_ratio: 1.1,
                 show_image: true,
@@ -75,7 +90,7 @@
         </div>
       {%- endif -%}
 
-      {%- if section.settings.button_text != blank -%}
+      {%- if section.settings.button_text != blank and request.page_type != 'blog' -%}
         <a
           {% if section.settings.button_link == blank %}
             role="link" aria-disabled="true"

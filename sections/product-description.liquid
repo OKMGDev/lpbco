@@ -67,7 +67,12 @@
 
       {%- if product.description != blank -%}
         <div class="product-description__content rte">
-          {{ product.description }}
+          {{
+            product.description
+            | replace: '&nbsp;', ' '
+            | replace: '&#160;', ' '
+            | replace: ' ', ' '
+          }}
         </div>
       {%- endif -%}
     </div>

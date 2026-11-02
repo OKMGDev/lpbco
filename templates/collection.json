@@ -113,37 +113,68 @@
         "padding_bottom": 0
       }
     },
-    "1791857524e77dafe7": {
-      "type": "_blocks",
+    "wall_of_fame": {
+      "type": "wall-of-fame",
       "blocks": {
-        "ai_gen_block_7c660d5_hQiM9b": {
-          "type": "ai_gen_block_7c660d5",
+        "image_1": {
+          "type": "image",
           "settings": {
-            "heading": "Wall of Fame",
-            "desktop_width_percent": 100,
-            "heading_size": 36,
-            "mobile_heading_size": 26,
-            "image_gap": 8,
-            "section_padding": 24,
-            "background_color": "#ffffff",
-            "text_color": "#121212",
-            "button_color": "#121212",
-            "button_text_color": "#ffffff",
-            "image_1": "shopify://shop_images/LPR_Text_Free.png",
-            "image_2": "shopify://shop_images/GR_gold.jpg",
-            "image_3": "shopify://shop_images/LAGER_SOCIAL_full_colour.jpg",
-            "image_4": "shopify://shop_images/HAZY_SOCIAL_full_colour.jpg",
-            "image_5": "shopify://shop_images/OTR_colour_1.jpg",
-            "image_6": "shopify://shop_images/American_Pale_Text_Free.png",
-            "image_8": "shopify://shop_images/LML_colour.jpg"
-          },
-          "blocks": {}
+            "image": "shopify://shop_images/LPR_Text_Free.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GR_gold.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAGER_SOCIAL_full_colour.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/HAZY_SOCIAL_full_colour.jpg"
+          }
+        },
+        "image_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/OTR_colour_1.jpg"
+          }
+        },
+        "image_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/American_Pale_Text_Free.png"
+          }
+        },
+        "image_7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LML_colour.jpg"
+          }
         }
       },
       "block_order": [
-        "ai_gen_block_7c660d5_hQiM9b"
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4",
+        "image_5",
+        "image_6",
+        "image_7"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "Wall of Fame",
+        "images_per_page": 4,
+        "background_color": "#FFFFFF",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     },
     "rich_text_Dtbkmg": {
       "type": "rich-text",
@@ -197,7 +228,7 @@
     "image_banner_HBha69",
     "product-grid",
     "rich_text_THzqLt",
-    "1791857524e77dafe7",
+    "wall_of_fame",
     "rich_text_Dtbkmg"
   ]
 }
