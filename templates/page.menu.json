@@ -77,6 +77,74 @@
         "padding_bottom": 80
       }
     },
+    "179359672376aaa2da": {
+      "type": "_blocks",
+      "blocks": {
+        "ai_gen_block_ac90a80_aHVmnp": {
+          "type": "ai_gen_block_ac90a80",
+          "settings": {
+            "button_label": "View bottomless brunch menu",
+            "menu_image": "shopify://shop_images/Bottomless_brunch_Long.jpg",
+            "image_alt": "Bottomless brunch menu",
+            "desktop_width_percent": 100,
+            "button_color": "#52BCAE",
+            "button_text_color": "#FFFFFF",
+            "corner_radius": 0
+          },
+          "blocks": {}
+        }
+      },
+      "block_order": [
+        "ai_gen_block_ac90a80_aHVmnp"
+      ],
+      "settings": {}
+    },
+    "rich_text_GDqGgR": {
+      "type": "rich-text",
+      "blocks": {
+        "title_AG7DaJ": {
+          "type": "title",
+          "settings": {
+            "title": "",
+            "title_size": "bigger"
+          }
+        },
+        "subtitle_y4gFgY": {
+          "type": "subtitle",
+          "settings": {
+            "subtitle": ""
+          }
+        },
+        "textbox_epEqzG": {
+          "type": "textbox",
+          "settings": {
+            "textbox": ""
+          }
+        },
+        "button_PyKEn6": {
+          "type": "button",
+          "settings": {
+            "button_label": "",
+            "button_link": "",
+            "button_style": "default"
+          }
+        }
+      },
+      "block_order": [
+        "title_AG7DaJ",
+        "subtitle_y4gFgY",
+        "textbox_epEqzG",
+        "button_PyKEn6"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 600,
+        "accent_color": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "simple_image_ap4ykz": {
       "type": "simple-image",
       "name": "Simple Image",
@@ -109,28 +177,6 @@
         "padding_top": 80,
         "padding_bottom": 80
       }
-    },
-    "179359672376aaa2da": {
-      "type": "_blocks",
-      "blocks": {
-        "ai_gen_block_ac90a80_aHVmnp": {
-          "type": "ai_gen_block_ac90a80",
-          "settings": {
-            "button_label": "View bottomless brunch menu",
-            "menu_image": "shopify://shop_images/Bottomless_brunch_Long.jpg",
-            "image_alt": "Bottomless brunch menu",
-            "desktop_width_percent": 100,
-            "button_color": "#52BCAE",
-            "button_text_color": "#FFFFFF",
-            "corner_radius": 0
-          },
-          "blocks": {}
-        }
-      },
-      "block_order": [
-        "ai_gen_block_ac90a80_aHVmnp"
-      ],
-      "settings": {}
     }
   },
   "order": [
@@ -139,6 +185,7 @@
     "main",
     "rich_text_AqFdTy",
     "179359672376aaa2da",
+    "rich_text_GDqGgR",
     "simple_image_ap4ykz",
     "simple_image_X7B3z3",
     "rich_text_TNpbFq"
