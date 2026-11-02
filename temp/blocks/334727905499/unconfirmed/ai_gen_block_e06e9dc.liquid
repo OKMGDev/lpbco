@@ -1,0 +1,191 @@
+{% doc %}
+  @prompt
+    Bottomless brunch menu button to click on and see a different menu
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-brunch-menu-{{ ai_gen_id }} {
+    display: block;
+    width: {{ block.settings.desktop_width_percent }}%;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }} {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 26px;
+    border: 1px solid {{ block.settings.button_color }};
+    border-radius: {{ block.settings.corner_radius }}px;
+    background: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    font: inherit;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }}:hover {
+    filter: brightness(0.88);
+  }
+
+  .ai-brunch-menu__button-{{ ai_gen_id }}:focus-visible {
+    outline: 3px solid {{ block.settings.text_color }};
+    outline-offset: 3px;
+  }
+
+  .ai-brunch-menu__content-{{ ai_gen_id }} {
+    margin: 24px auto 0;
+    max-width: 760px;
+    padding: 24px;
+    border: 1px solid {{ block.settings.text_color }};
+    text-align: left;
+  }
+
+  .ai-brunch-menu__content-{{ ai_gen_id }}[hidden] {
+    display: none;
+  }
+
+  .ai-brunch-menu__heading-{{ ai_gen_id }} {
+    margin: 0 0 14px;
+    color: {{ block.settings.text_color }};
+  }
+
+  .ai-brunch-menu__body-{{ ai_gen_id }} > :first-child {
+    margin-top: 0;
+  }
+
+  .ai-brunch-menu__body-{{ ai_gen_id }} > :last-child {
+    margin-bottom: 0;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-brunch-menu-{{ ai_gen_id }} {
+      width: 100%;
+    }
+
+    .ai-brunch-menu__content-{{ ai_gen_id }} {
+      padding: 18px;
+    }
+  }
+{% endstyle %}
+
+<brunch-menu-{{ ai_gen_id }} class="ai-brunch-menu-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <button
+    class="ai-brunch-menu__button-{{ ai_gen_id }}"
+    type="button"
+    aria-expanded="false"
+    aria-controls="ai-brunch-menu-content-{{ ai_gen_id }}"
+  >
+    {{ block.settings.button_label | escape }}
+  </button>
+  <div id="ai-brunch-menu-content-{{ ai_gen_id }}" class="ai-brunch-menu__content-{{ ai_gen_id }}" hidden>
+    {% if block.settings.menu_heading != blank %}
+      <h2 class="ai-brunch-menu__heading-{{ ai_gen_id }}">{{ block.settings.menu_heading | escape }}</h2>
+    {% endif %}
+    <div class="ai-brunch-menu__body-{{ ai_gen_id }}">{{ block.settings.menu_content }}</div>
+  </div>
+</brunch-menu-{{ ai_gen_id }}>
+
+<script>
+  (() => {
+    const elementName = 'brunch-menu-{{ ai_gen_id }}';
+    if (customElements.get(elementName)) return;
+
+    class BrunchMenu{{ ai_gen_id }} extends HTMLElement {
+      connectedCallback() {
+        this.button = this.querySelector('button');
+        this.content = this.querySelector('[id="ai-brunch-menu-content-{{ ai_gen_id }}"]');
+        if (!this.button || !this.content) return;
+        this.onClick = () => {
+          const expanded = this.button.getAttribute('aria-expanded') === 'true';
+          this.button.setAttribute('aria-expanded', String(!expanded));
+          this.content.hidden = expanded;
+        };
+        this.button.addEventListener('click', this.onClick);
+      }
+
+      disconnectedCallback() {
+        if (this.button && this.onClick) this.button.removeEventListener('click', this.onClick);
+      }
+    }
+
+    customElements.define(elementName, BrunchMenu{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Bottomless brunch menu",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label",
+      "default": "View bottomless brunch menu"
+    },
+    {
+      "type": "text",
+      "id": "menu_heading",
+      "label": "Menu heading",
+      "default": "Bottomless brunch menu"
+    },
+    {
+      "type": "richtext",
+      "id": "menu_content",
+      "label": "Menu content",
+      "default": "<p>Add your bottomless brunch food and drink menu here.</p>"
+    },
+    {
+      "type": "range",
+      "id": "desktop_width_percent",
+      "label": "Desktop width",
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "default": 100
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#121212"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#FFFFFF"
+    },
+    {
+      "type": "range",
+      "id": "corner_radius",
+      "label": "Corner radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bottomless brunch menu"
+    }
+  ],
+  "tag": null,
+  "class": "bottomless-brunch-menu"
+}
+{% endschema %}
