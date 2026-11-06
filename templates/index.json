@@ -307,7 +307,7 @@
           "disabled": true,
           "settings": {
             "button_label": "View Location",
-            "button_link": "shopify://pages/locations",
+            "button_link": "shopify://pages/location",
             "button_style": "button--orange"
           }
         }
