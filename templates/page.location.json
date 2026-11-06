@@ -26,7 +26,7 @@
       "settings": {
         "background_type": "single",
         "background_image": "shopify://shop_images/023.jpg",
-        "overlay_opacity": 30,
+        "overlay_opacity": 20,
         "banner_type": "inner-pages",
         "auto_rotate": false,
         "change_slides_speed": 5,
@@ -41,69 +41,25 @@
         "padding_bottom": 36
       }
     },
-    "rich_text_visit": {
+    "rich_text_intro": {
       "type": "rich-text",
       "blocks": {
-        "background_graphic_visit_right": {
-          "type": "background_graphic",
-          "settings": {
-            "image": "shopify://shop_images/Vector_85.svg",
-            "enable_position_top": true,
-            "position_top": 10,
-            "enable_position_bottom": false,
-            "position_bottom": 0,
-            "enable_position_left": false,
-            "position_left": 0,
-            "enable_position_right": true,
-            "position_right": 0,
-            "image_size": 240,
-            "image_size_mobile": 0
-          }
-        },
-        "background_graphic_visit_left": {
-          "type": "background_graphic",
-          "settings": {
-            "image": "shopify://shop_images/Vector_80.svg",
-            "enable_position_top": true,
-            "position_top": 30,
-            "enable_position_bottom": false,
-            "position_bottom": 0,
-            "enable_position_left": true,
-            "position_left": 0,
-            "enable_position_right": false,
-            "position_right": 0,
-            "image_size": 240,
-            "image_size_mobile": 0
-          }
-        },
-        "stamp_visit": {
-          "type": "stamp",
-          "settings": {
-            "textbox": "<p>Always on point!</p>",
-            "color": "#f68e51",
-            "position_left": 78,
-            "position_top": 0
-          }
-        },
-        "subtitle_visit": {
+        "subtitle_intro": {
           "type": "subtitle",
           "settings": {
             "subtitle": "Keen to visit Long Point Brewing Co? You’ll find us at 16 Sea Beach Way, Port Kennedy, WA 6172."
           }
         },
-        "textbox_visit": {
+        "textbox_intro": {
           "type": "textbox",
           "settings": {
-            "textbox": "<p><strong>Why not make a day of it?</strong> There’s plenty to explore around Port Kennedy, whether you’re chasing a few local brews, a scenic spot to unwind or a round of golf.</p>"
+            "textbox": "<p>Why not make a day of it? There’s plenty to explore around Port Kennedy, whether you’re chasing a few local brews, a scenic spot to unwind or a round of golf.</p>"
           }
         }
       },
       "block_order": [
-        "background_graphic_visit_right",
-        "background_graphic_visit_left",
-        "stamp_visit",
-        "subtitle_visit",
-        "textbox_visit"
+        "subtitle_intro",
+        "textbox_intro"
       ],
       "name": "Rich Text",
       "settings": {
@@ -111,130 +67,150 @@
         "content_max_width": 1000,
         "accent_color": "",
         "padding_top": 100,
-        "padding_bottom": 100
+        "padding_bottom": 0
       }
     },
-    "contact_visit": {
-      "type": "contact",
+    "simple_image_location": {
+      "type": "simple-image",
+      "name": "Simple Image",
+      "settings": {
+        "image": "shopify://shop_images/LPBC_VENUE.jpg",
+        "image_width": "full",
+        "image_custom_width": 250,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "cards_grid_location": {
+      "type": "cards-grid",
       "blocks": {
-        "map_visit": {
-          "type": "map",
+        "card_beer": {
+          "type": "card",
           "settings": {
-            "map_image": "shopify://shop_images/Rectangle_5966.png",
-            "map_link": "https://maps.app.goo.gl/2ixW2SmkmZXn92418"
+            "title": "Explore the local beer scene",
+            "textbox": "<p>Make a day of it and discover some of the great breweries in our neck of the woods. Fathom, White Lakes, King Road, Boundary Island, Wedgetail and Found Lab are all worth adding to your beer tour.</p>",
+            "bg_icon": "shopify://shop_images/Vector_58.svg"
           }
         },
-        "contact_item_address": {
-          "type": "contact_item",
+        "card_wine": {
+          "type": "card",
           "settings": {
-            "icon": "shopify://shop_images/Frame_33.svg",
-            "title": "Address",
-            "textbox": "<p>16 Sea Beach Way, <br/>Port Kennedy, WA 6172</p>",
-            "link": "https://maps.app.goo.gl/2ixW2SmkmZXn92418",
-            "link_label": ""
+            "title": "Wine & spirits",
+            "textbox": "<p>If beer isn’t your thing, there’s plenty more to sip on. Enjoy a glass of wine at Millbrook Winery, Peel Estate or St Johns Wine, or head to Mandurah and sample some awesome gin at Little Stiller.</p>",
+            "bg_icon": "shopify://shop_images/Vector_56.svg"
+          }
+        },
+        "card_sights": {
+          "type": "card",
+          "settings": {
+            "title": "Take in the sights",
+            "textbox": "<p>Grab some takeaway tins from us and head out to explore the beautiful surrounds. Soak up the views at Point Peron, take a trip to Penguin Island, watch the windsurfers in Safety Bay or enjoy a leisurely stroll along the stunning Rockingham foreshore.</p>",
+            "bg_icon": "shopify://shop_images/Vector_57.svg"
+          }
+        },
+        "card_golf": {
+          "type": "card",
+          "settings": {
+            "title": "Golf & good times",
+            "textbox": "<p>We’re surrounded by some fantastic golf courses. Take a two-minute walk from the brewery for a round at Kennedy Bay Links, followed by a well-earned beer at Birdie. Or jump in the car for a short drive to Secret Harbour Golf Club, Rockingham Golf Club, Mandurah Country Club or Meadow Springs Golf and Country Club.</p>",
+            "bg_icon": "shopify://shop_images/Group_1_3.svg"
           }
         }
       },
       "block_order": [
-        "map_visit",
-        "contact_item_address"
+        "card_beer",
+        "card_wine",
+        "card_sights",
+        "card_golf"
       ],
-      "name": "Contact",
+      "name": "Cards Grid",
       "settings": {
-        "image_top_left": "shopify://shop_images/Vector_61.svg",
-        "padding_top": 100,
+        "padding_top": 72,
+        "padding_bottom": 72
+      }
+    },
+    "rich_text_closing": {
+      "type": "rich-text",
+      "blocks": {
+        "textbox_closing": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>What are you waiting for? Come and enjoy delicious food, great drinks and the beautiful surroundings of Kennedy Bay. Whether you’re stopping in for a quick pint or making a day of it, we’d love to see you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "textbox_closing"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "",
+        "padding_top": 0,
         "padding_bottom": 100
       }
     },
-    "image_with_text_explore": {
+    "image_with_text_location": {
       "type": "image-with-text",
       "blocks": {
+        "title_location": {
+          "type": "title",
+          "settings": {
+            "title": "Always <br><span class=\"text-bg green\">on point!</span>"
+          }
+        },
         "list_item_beer": {
           "type": "list_item",
           "settings": {
-            "icon": "shopify://shop_images/Vector_44.svg",
-            "title": "Explore the local beer scene.",
-            "textbox": "<p>Make a day of it and discover some of the great breweries in our neck of the woods. Fathom, White Lakes, King Road, Boundary Island, Wedgetail and Found Lab are all worth adding to your beer tour.</p>"
+            "icon": "shopify://shop_images/Vector_49.svg",
+            "title": "Explore the local beer scene:",
+            "textbox": "<p>Fathom, White Lakes, King Road, Boundary Island, Wedgetail and Found Lab are all worth adding to your beer tour.</p>"
           }
         },
         "list_item_wine": {
           "type": "list_item",
           "settings": {
-            "icon": "shopify://shop_images/Vector_44.svg",
-            "title": "Wine & spirits.",
-            "textbox": "<p>If beer isn’t your thing, there’s plenty more to sip on. Enjoy a glass of wine at Millbrook Winery, Peel Estate or St Johns Wine, or head to Mandurah and sample some awesome gin at Little Stiller.</p>"
+            "icon": "shopify://shop_images/Vector_50.svg",
+            "title": "Wine & spirits:",
+            "textbox": "<p>Enjoy a glass of wine at Millbrook Winery, Peel Estate or St Johns Wine, or sample some gin at Little Stiller.</p>"
           }
         },
         "list_item_sights": {
           "type": "list_item",
           "settings": {
-            "icon": "shopify://shop_images/Vector_44.svg",
-            "title": "Take in the sights.",
-            "textbox": "<p>Grab some takeaway tins from us and head out to explore the beautiful surrounds. Soak up the views at Point Peron, take a trip to Penguin Island, watch the windsurfers in Safety Bay or enjoy a leisurely stroll along the stunning Rockingham foreshore.</p>"
+            "icon": "shopify://shop_images/Vector_51.svg",
+            "title": "Golf & good times:",
+            "textbox": "<p>Take a two-minute walk from the brewery for a round at Kennedy Bay Links, followed by a well-earned beer at Birdie.</p>"
           }
         },
-        "list_item_golf": {
-          "type": "list_item",
+        "buttons_location": {
+          "type": "buttons",
           "settings": {
-            "icon": "shopify://shop_images/Vector_44.svg",
-            "title": "Golf & good times.",
-            "textbox": "<p>We’re surrounded by some fantastic golf courses. Take a two-minute walk from the brewery for a round at Kennedy Bay Links, followed by a well-earned beer at Birdie. Or jump in the car for a short drive to Secret Harbour Golf Club, Rockingham Golf Club, Mandurah Country Club or Meadow Springs Golf and Country Club.</p>"
+            "button_label_1": "Contact us",
+            "button_link_1": "https://www.longpointbrewingco.com.au/pages/contact",
+            "button_class_1": "button--white",
+            "button_label_2": "",
+            "button_link_2": "shopify://pages/contact",
+            "button_class_2": "",
+            "button_label_3": "",
+            "button_link_3": "shopify://pages/contact",
+            "button_class_3": ""
           }
         }
       },
       "block_order": [
+        "title_location",
         "list_item_beer",
         "list_item_wine",
         "list_item_sights",
-        "list_item_golf"
+        "buttons_location"
       ],
       "name": "Image with Text",
       "settings": {
-        "image": "shopify://shop_images/LPBC_VENUE.jpg",
-        "section_bg_color": "#f0e7d8",
-        "image_top_left": "shopify://shop_images/Vector_42.svg",
-        "image_bottom_right": "shopify://shop_images/Vector_43.svg",
-        "padding_top": 100,
-        "padding_bottom": 100
-      }
-    },
-    "call_to_action_visit": {
-      "type": "call-to-action",
-      "blocks": {
-        "title_visit": {
-          "type": "title",
-          "settings": {
-            "title": "What are you waiting for?"
-          }
-        },
-        "textbox_visit": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>Come and enjoy delicious food, great drinks and the beautiful surroundings of Kennedy Bay. Whether you’re stopping in for a quick pint or making a day of it, we’d love to see you.</p>"
-          }
-        },
-        "button_visit": {
-          "type": "button",
-          "settings": {
-            "button_label": "Contact us",
-            "button_link": "shopify://pages/contact",
-            "button_class": "button--white"
-          }
-        }
-      },
-      "block_order": [
-        "title_visit",
-        "textbox_visit",
-        "button_visit"
-      ],
-      "name": "Call to Action",
-      "settings": {
-        "image": "shopify://shop_images/005.jpg",
-        "background_color": "",
-        "card_background_color": "#fbad48",
-        "background_icons_color": "#f68e4e",
-        "inner_background_color": "#f0e7d8",
-        "text_color": "#373737",
+        "image": "shopify://shop_images/017_1.jpg",
+        "section_bg_color": "#fbad48",
+        "image_top_right": "shopify://shop_images/Vector_86.svg",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -243,9 +219,10 @@
   "order": [
     "image_banner_location",
     "main",
-    "rich_text_visit",
-    "contact_visit",
-    "image_with_text_explore",
-    "call_to_action_visit"
+    "rich_text_intro",
+    "simple_image_location",
+    "cards_grid_location",
+    "rich_text_closing",
+    "image_with_text_location"
   ]
 }
