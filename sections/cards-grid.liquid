@@ -10,6 +10,11 @@
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
   }
+
+  #CardsGrid-{{ section.id }} .cards-grid__card {
+    background-color: {{ section.settings.card_background_color }};
+    color: {{ section.settings.card_text_color }};
+  }
 {%- endstyle -%}
 
 <div class="cards-grid-section section-{{ section.id }}-padding" id="CardsGrid-{{ section.id }}">
@@ -46,6 +51,22 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#53BCAE"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#ffffff"
+    },
     {
       "type": "header",
       "content": "Spacing"

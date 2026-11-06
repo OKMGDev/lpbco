@@ -81,6 +81,54 @@
         "padding_bottom": 0
       }
     },
+    "image_cards_spaces": {
+      "type": "image-cards",
+      "blocks": {
+        "card_beach_bar": {
+          "type": "card",
+          "settings": {
+            "title": "Beach Bar",
+            "textbox": "<p>Sun, shade, pints and the closest seat to the playground. Ideal for watching the kids while you relax with a frothy beer in hand.</p>"
+          }
+        },
+        "card_taproom": {
+          "type": "card",
+          "settings": {
+            "title": "The Taproom",
+            "textbox": "<p>Flame grill, open kitchen and brewing tanks - the heart of LPBC in one room.</p>"
+          }
+        },
+        "card_sunset": {
+          "type": "card",
+          "settings": {
+            "title": "Sunset Lounge",
+            "textbox": "<p>Ocean views, a balcony to sit out on and the wind in your hair while the sun goes down over the water.</p>"
+          }
+        },
+        "card_kiosk": {
+          "type": "card",
+          "settings": {
+            "title": "Little Point Kiosk",
+            "textbox": "<p>Built for the early risers, slinging coffees, pastries and coastal favourites from the wee hours.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "card_beach_bar",
+        "card_taproom",
+        "card_sunset",
+        "card_kiosk"
+      ],
+      "name": "Image cards",
+      "settings": {
+        "title": "",
+        "background_color": "#f0e7d8",
+        "card_background_color": "#ffffff",
+        "card_text_color": "#406174",
+        "padding_top": 72,
+        "padding_bottom": 36
+      }
+    },
     "cards_grid_location": {
       "type": "cards-grid",
       "blocks": {
@@ -89,7 +137,7 @@
           "settings": {
             "title": "Explore the local beer scene",
             "textbox": "<p>Make a day of it and discover some of the great breweries in our neck of the woods. Fathom, White Lakes, King Road, Boundary Island, Wedgetail and Found Lab are all worth adding to your beer tour.</p>",
-            "bg_icon": "shopify://shop_images/Vector_58.svg"
+            "bg_icon": ""
           }
         },
         "card_wine": {
@@ -97,7 +145,7 @@
           "settings": {
             "title": "Wine & spirits",
             "textbox": "<p>If beer isn’t your thing, there’s plenty more to sip on. Enjoy a glass of wine at Millbrook Winery, Peel Estate or St Johns Wine, or head to Mandurah and sample some awesome gin at Little Stiller.</p>",
-            "bg_icon": "shopify://shop_images/Vector_56.svg"
+            "bg_icon": ""
           }
         },
         "card_sights": {
@@ -105,7 +153,7 @@
           "settings": {
             "title": "Take in the sights",
             "textbox": "<p>Grab some takeaway tins from us and head out to explore the beautiful surrounds. Soak up the views at Point Peron, take a trip to Penguin Island, watch the windsurfers in Safety Bay or enjoy a leisurely stroll along the stunning Rockingham foreshore.</p>",
-            "bg_icon": "shopify://shop_images/Vector_57.svg"
+            "bg_icon": ""
           }
         },
         "card_golf": {
@@ -113,7 +161,7 @@
           "settings": {
             "title": "Golf & good times",
             "textbox": "<p>We’re surrounded by some fantastic golf courses. Take a two-minute walk from the brewery for a round at Kennedy Bay Links, followed by a well-earned beer at Birdie. Or jump in the car for a short drive to Secret Harbour Golf Club, Rockingham Golf Club, Mandurah Country Club or Meadow Springs Golf and Country Club.</p>",
-            "bg_icon": "shopify://shop_images/Group_1_3.svg"
+            "bg_icon": ""
           }
         }
       },
@@ -125,7 +173,9 @@
       ],
       "name": "Cards Grid",
       "settings": {
-        "padding_top": 72,
+        "card_background_color": "#406174",
+        "card_text_color": "#f0e7d8",
+        "padding_top": 36,
         "padding_bottom": 72
       }
     },
@@ -157,7 +207,7 @@
         "title_location": {
           "type": "title",
           "settings": {
-            "title": "Always <br><span class=\"text-bg green\">on point!</span>"
+            "title": "Always <br><span class=\"text-bg blue\">on point!</span>"
           }
         },
         "list_item_beer": {
@@ -209,9 +259,10 @@
       "name": "Image with Text",
       "settings": {
         "image": "shopify://shop_images/017_1.jpg",
-        "section_bg_color": "#fbad48",
-        "image_top_right": "shopify://shop_images/Vector_86.svg",
-        "padding_top": 100,
+        "section_bg_color": "#638675",
+        "text_color": "#f0e7d8",
+        "layout": "stacked",
+        "padding_top": 0,
         "padding_bottom": 100
       }
     }
@@ -221,6 +272,7 @@
     "main",
     "rich_text_intro",
     "simple_image_location",
+    "image_cards_spaces",
     "cards_grid_location",
     "rich_text_closing",
     "image_with_text_location"

@@ -1,0 +1,65 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.image-cards-section {
+  .image-cards__title {
+    @include heading_h4;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .image-cards__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.4rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .image-cards__card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  .image-cards__media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background-color: #e7dfd2;
+  }
+
+  .image-cards__image,
+  .image-cards__placeholder {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .image-cards__placeholder {
+    background:
+      linear-gradient(135deg, rgba(64, 97, 116, 0.08), rgba(64, 97, 116, 0.18));
+  }
+
+  .image-cards__content {
+    padding: 2.4rem 2rem 2.8rem;
+  }
+
+  .image-cards__card-title {
+    @include heading_h6;
+    margin: 0 0 1.2rem;
+    line-height: 1.12;
+    color: inherit;
+  }
+
+  .image-cards__card-text {
+    @include fs_18;
+    margin: 0;
+  }
+}

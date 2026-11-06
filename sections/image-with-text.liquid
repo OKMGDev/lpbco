@@ -21,8 +21,11 @@
 {%- endstyle -%}
 
 <div
-  class="image-with-text-section section-{{ section.id }}-padding {% if section.settings.image == blank %}no-image{% endif %}"
+  class="image-with-text-section image-with-text-section--{{ section.settings.layout | default: 'split' }} section-{{ section.id }}-padding {% if section.settings.image == blank %}no-image{% endif %}{% if section.settings.text_color != blank %} has-text-color{% endif %}"
   id="ImageWithText-{{ section.id }}"
+  {% if section.settings.text_color != blank %}
+    style="color: {{ section.settings.text_color }};"
+  {% endif %}
 >
   {%- if section.settings.image_top_left != blank -%}
     <div class="image-with-text__image-top-left">
@@ -202,6 +205,27 @@
       "type": "color",
       "id": "section_bg_color",
       "label": "Section background color"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout",
+      "options": [
+        {
+          "value": "split",
+          "label": "Image beside text"
+        },
+        {
+          "value": "stacked",
+          "label": "Image above text"
+        }
+      ],
+      "default": "split"
     },
     {
       "type": "header",
