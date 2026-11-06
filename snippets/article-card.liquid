@@ -110,7 +110,7 @@
                 rel="noopener noreferrer"
               {% endif %}
             >
-              {{ article.title | truncate: 50 | escape }}
+              {{ article.title | escape }}
               {%- if is_external_link -%}
                 <span class="article-card__external-icon" aria-hidden="true">
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
