@@ -36,6 +36,9 @@
 @use 'sections/landing-banner';
 @use 'sections/countdown';
 @use 'sections/email-signup';
+@use 'sections/buttons-links';
+@use 'sections/social-icons';
+@use 'sections/wall-of-fame';
 
 // Use utilities (variables available via setup)
 @use 'utilities';

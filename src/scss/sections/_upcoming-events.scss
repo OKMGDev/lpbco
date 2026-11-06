@@ -16,29 +16,17 @@
     }
   }
 
-  .upcoming-events-swiper {
-    position: relative;
+  .upcoming-events__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
 
-    .swiper-button-prev {
-      position: absolute;
-      top: 50%;
-      right: 100%;
-      transform: translateY(-50%);
-      width: 4rem;
-      height: 4rem;
-      object-fit: cover;
-      z-index: 1;
+    @media (max-width: $breakpoint-tablet) {
+      gap: 3rem;
     }
 
-    .swiper-button-next {
-      position: absolute;
-      top: 50%;
-      left: 100%;
-      transform: translateY(-50%);
-      width: 4rem;
-      height: 4rem;
-      object-fit: cover;
-      z-index: 1;
+    @media (max-width: $breakpoint-mobile) {
+      gap: 2.4rem;
     }
   }
 }
@@ -93,35 +81,46 @@
     }
 
     .upcoming-events__event-title {
-      font-size: 5.2rem;
-      line-height: 1.1em;
-      margin: 0 0 2rem;
+      font-size: 3.6rem;
+      line-height: 1.15em;
+      margin: 0 0 1.2rem;
       color: $color-text;
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
 
       @media (max-width: $breakpoint-tablet) {
-        font-size: 4.2rem;
+        font-size: 3rem;
       }
 
       @media (max-width: $breakpoint-mobile) {
-        font-size: 3rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
       }
     }
 
     .upcoming-events__dates {
-      margin-bottom: 3rem;
-      @include fs_32;
-      transform: uppercase;
+      margin-bottom: 1.6rem;
+      @include fs_24;
+      text-transform: uppercase;
       color: $color-text;
 
       @media (max-width: $breakpoint-mobile) {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
       }
     }
 
     .upcoming-events__details {
       @include fs_20;
       color: $color-text;
+      max-width: 54rem;
+
+      p {
+        margin: 0 0 0.8em;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
 
     a {

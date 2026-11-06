@@ -124,5 +124,17 @@
       opacity: 0.7;
 
     }
+
+    .article-card__external-icon {
+      display: inline-flex;
+      align-items: center;
+      margin-left: 0.8rem;
+      vertical-align: middle;
+      opacity: 0.8;
+
+      svg {
+        display: block;
+      }
+    }
   }
 }

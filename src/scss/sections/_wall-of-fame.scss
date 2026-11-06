@@ -1,0 +1,96 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.wall-of-fame-section {
+  .wall-of-fame__title {
+    @include heading_h4;
+    color: $color-deep-water;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 3.2rem;
+    transform: rotate(-2deg);
+    line-height: 1.1em;
+  }
+
+  .wall-of-fame {
+    display: block;
+  }
+
+  .wall-of-fame__grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.6rem;
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1.2rem;
+    }
+  }
+
+  .wall-of-fame__item {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    background-color: $color-sand;
+  }
+
+  .wall-of-fame__item[hidden] {
+    display: none;
+  }
+
+  .wall-of-fame__image,
+  .wall-of-fame__placeholder svg,
+  .wall-of-fame__placeholder .placeholder-svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .wall-of-fame__placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-sand;
+    color: $color-text-light;
+  }
+
+  .wall-of-fame__empty {
+    grid-column: 1 / -1;
+    padding: 4rem 2.4rem;
+    text-align: center;
+    color: $color-text-light;
+    background-color: $color-sand;
+    @include fs_18;
+  }
+
+  .wall-of-fame__controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    margin-top: 3.2rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.6rem;
+      margin-top: 2.4rem;
+    }
+  }
+
+  .wall-of-fame__button {
+    &:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+  }
+
+  .wall-of-fame__page {
+    min-width: 5ch;
+    text-align: center;
+    color: $color-text;
+    @include fs_18;
+  }
+}

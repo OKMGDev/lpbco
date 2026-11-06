@@ -1,0 +1,69 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.social-icons-section {
+  .social-icons__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.4rem;
+    text-align: center;
+  }
+
+  .social-icons__title {
+    @include fs_32;
+    margin: 0;
+    color: $color-text;
+  }
+
+  .social-icons__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.4rem;
+    margin: 0;
+    padding: 0;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.6rem;
+    }
+  }
+
+  .social-icons__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.8rem;
+    height: 4.8rem;
+    color: var(--social-icons-color, #{$color-text});
+    transition: opacity 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  .social-icons__svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    color: inherit;
+
+    svg,
+    .icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+
+  .social-icons__custom-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    object-fit: contain;
+    display: block;
+  }
+}

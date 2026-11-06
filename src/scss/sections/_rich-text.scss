@@ -37,6 +37,37 @@
     z-index: 2;
   }
 
+  &.rich-text--left {
+    .rich-text__content {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .rich-text__title {
+      justify-self: flex-start;
+      align-self: flex-start;
+      text-align: left;
+    }
+
+    .rich-text__textbox {
+      width: 100%;
+
+      ul {
+        padding-left: 1.2em;
+        margin: 0;
+        text-align: left;
+
+        li {
+          margin-bottom: 1.2rem;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
   .rich-text__stamp {
     @include fs_24;
 

@@ -1,0 +1,31 @@
+@use '../setup' as *;
+@use '../base' as *;
+
+.buttons-links {
+  .buttons-links__heading {
+    @include heading_h4;
+    margin: 0 0 3.2rem;
+    text-align: center;
+    color: $color-text;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  .buttons-links__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      gap: 1.2rem;
+    }
+
+    .button {
+      margin: 0;
+    }
+  }
+}

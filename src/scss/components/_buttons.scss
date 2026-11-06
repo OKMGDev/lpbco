@@ -52,6 +52,82 @@ a.button {
       background-color: $color-night-sky;
     }
   }
+
+  &.button--deep-water {
+    color: white;
+    background-color: $color-deep-water;
+
+    &:hover {
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--coastal {
+    color: white;
+    background-color: $color-coastal;
+
+    &:hover {
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--night-sky {
+    color: white;
+    background-color: $color-night-sky;
+
+    &:hover {
+      background-color: $color-deep-water;
+    }
+  }
+
+  &.button--sunset {
+    color: $color-night-sky;
+    background-color: $color-sunset;
+
+    &:hover {
+      color: white;
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--pink {
+    color: $color-night-sky;
+    background-color: $color-pink;
+
+    &:hover {
+      color: white;
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--sand {
+    color: $color-night-sky;
+    background-color: $color-sand;
+
+    &:hover {
+      color: white;
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--floraland {
+    color: white;
+    background-color: $color-floraland;
+
+    &:hover {
+      background-color: $color-night-sky;
+    }
+  }
+
+  &.button--seafoam {
+    color: $color-night-sky;
+    background-color: $color-saform;
+
+    &:hover {
+      color: white;
+      background-color: $color-night-sky;
+    }
+  }
 }
 
 
