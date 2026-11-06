@@ -25,9 +25,18 @@
     assign article_link = article.url
     assign is_external_link = false
     assign external_link_metafield = article.metafields.custom.external_link
+    assign external_url = blank
 
     if external_link_metafield != blank and external_link_metafield.value != blank
-      assign article_link = external_link_metafield.value
+      if external_link_metafield.value.url != blank
+        assign external_url = external_link_metafield.value.url
+      else
+        assign external_url = external_link_metafield.value
+      endif
+    endif
+
+    if external_url != blank
+      assign article_link = external_url
       assign is_external_link = true
     endif
   -%}
