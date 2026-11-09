@@ -67,65 +67,6 @@
         "content_max_width": 1000,
         "accent_color": "",
         "padding_top": 100,
-        "padding_bottom": 0
-      }
-    },
-    "simple_image_location": {
-      "type": "simple-image",
-      "name": "Simple Image",
-      "settings": {
-        "image": "shopify://shop_images/LPBC_VENUE.jpg",
-        "image_width": "full",
-        "image_custom_width": 250,
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "image_cards_spaces": {
-      "type": "image-cards",
-      "blocks": {
-        "card_beach_bar": {
-          "type": "card",
-          "settings": {
-            "title": "Beach Bar",
-            "textbox": "<p>Sun, shade, pints and the closest seat to the playground. Ideal for watching the kids while you relax with a frothy beer in hand.</p>"
-          }
-        },
-        "card_taproom": {
-          "type": "card",
-          "settings": {
-            "title": "The Taproom",
-            "textbox": "<p>Flame grill, open kitchen and brewing tanks - the heart of LPBC in one room.</p>"
-          }
-        },
-        "card_sunset": {
-          "type": "card",
-          "settings": {
-            "title": "Sunset Lounge",
-            "textbox": "<p>Ocean views, a balcony to sit out on and the wind in your hair while the sun goes down over the water.</p>"
-          }
-        },
-        "card_kiosk": {
-          "type": "card",
-          "settings": {
-            "title": "Little Point Kiosk",
-            "textbox": "<p>Built for the early risers, slinging coffees, pastries and coastal favourites from the wee hours.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "card_beach_bar",
-        "card_taproom",
-        "card_sunset",
-        "card_kiosk"
-      ],
-      "name": "Image cards",
-      "settings": {
-        "title": "",
-        "background_color": "#f0e7d8",
-        "card_background_color": "#ffffff",
-        "card_text_color": "#406174",
-        "padding_top": 72,
         "padding_bottom": 36
       }
     },
@@ -198,7 +139,7 @@
         "content_max_width": 1000,
         "accent_color": "",
         "padding_top": 0,
-        "padding_bottom": 100
+        "padding_bottom": 36
       }
     },
     "image_with_text_location": {
@@ -209,52 +150,10 @@
           "settings": {
             "title": "Always <br><span class=\"text-bg blue\">on point!</span>"
           }
-        },
-        "list_item_beer": {
-          "type": "list_item",
-          "settings": {
-            "icon": "shopify://shop_images/Vector_49.svg",
-            "title": "Explore the local beer scene:",
-            "textbox": "<p>Fathom, White Lakes, King Road, Boundary Island, Wedgetail and Found Lab are all worth adding to your beer tour.</p>"
-          }
-        },
-        "list_item_wine": {
-          "type": "list_item",
-          "settings": {
-            "icon": "shopify://shop_images/Vector_50.svg",
-            "title": "Wine & spirits:",
-            "textbox": "<p>Enjoy a glass of wine at Millbrook Winery, Peel Estate or St Johns Wine, or sample some gin at Little Stiller.</p>"
-          }
-        },
-        "list_item_sights": {
-          "type": "list_item",
-          "settings": {
-            "icon": "shopify://shop_images/Vector_51.svg",
-            "title": "Golf & good times:",
-            "textbox": "<p>Take a two-minute walk from the brewery for a round at Kennedy Bay Links, followed by a well-earned beer at Birdie.</p>"
-          }
-        },
-        "buttons_location": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Contact us",
-            "button_link_1": "https://www.longpointbrewingco.com.au/pages/contact",
-            "button_class_1": "button--white",
-            "button_label_2": "",
-            "button_link_2": "shopify://pages/contact",
-            "button_class_2": "",
-            "button_label_3": "",
-            "button_link_3": "shopify://pages/contact",
-            "button_class_3": ""
-          }
         }
       },
       "block_order": [
-        "title_location",
-        "list_item_beer",
-        "list_item_wine",
-        "list_item_sights",
-        "buttons_location"
+        "title_location"
       ],
       "name": "Image with Text",
       "settings": {
@@ -271,8 +170,6 @@
     "image_banner_location",
     "main",
     "rich_text_intro",
-    "simple_image_location",
-    "image_cards_spaces",
     "cards_grid_location",
     "rich_text_closing",
     "image_with_text_location"
