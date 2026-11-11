@@ -84,7 +84,7 @@
           "type": "ai_gen_block_ac90a80",
           "settings": {
             "button_label": "View bottomless brunch menu",
-            "menu_image": "shopify://shop_images/Bottomless_brunch_Long_1.png",
+            "menu_image": "shopify://shop_images/Bottomless_brunch_Long.png",
             "image_alt": "Bottomless brunch menu",
             "desktop_width_percent": 100,
             "button_color": "#52bcae",

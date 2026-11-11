@@ -46,7 +46,7 @@
       "name": "All Events",
       "settings": {
         "metaobject_type": "events",
-        "padding_top": 100,
+        "padding_top": 20,
         "padding_bottom": 100
       }
     },

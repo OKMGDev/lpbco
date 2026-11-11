@@ -548,9 +548,9 @@
         "image_bottom_right": "shopify://shop_images/Vector_71.svg",
         "title": "INSIGHTS FROM OUR BREWHOUSE",
         "textbox": "",
-        "blog": "media",
+        "blog": "insights",
         "button_text": "View all",
-        "button_link": "shopify://blogs/media",
+        "button_link": "shopify://blogs/insights",
         "padding_top": 100,
         "padding_bottom": 100
       }

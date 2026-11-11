@@ -53,9 +53,9 @@
         "image_bottom_right": "shopify://shop_images/Vector_29.svg",
         "title": "Related Posts",
         "textbox": "",
-        "blog": "media",
+        "blog": "insights",
         "button_text": "",
-        "button_link": "shopify://blogs/media",
+        "button_link": "shopify://blogs/insights",
         "padding_top": 100,
         "padding_bottom": 100
       }

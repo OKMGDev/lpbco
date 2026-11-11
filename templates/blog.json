@@ -15,7 +15,7 @@
         "heading_insights": {
           "type": "heading",
           "settings": {
-            "heading": "Media"
+            "heading": "Insights"
           }
         }
       },
@@ -39,9 +39,9 @@
         "background_color": "#53bcae",
         "image_top_left": "shopify://shop_images/Vector_70.svg",
         "image_bottom_right": "shopify://shop_images/Vector_71.svg",
-        "title": "Recent Publications",
+        "title": "Insights",
         "textbox": "",
-        "blog": "media",
+        "blog": "insights",
         "button_text": "",
         "button_link": "",
         "padding_top": 100,
