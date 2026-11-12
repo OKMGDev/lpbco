@@ -67,7 +67,7 @@
         "content_max_width": 1000,
         "accent_color": "#f9ad8e",
         "padding_top": 100,
-        "padding_bottom": 40
+        "padding_bottom": 100
       }
     },
     "brand_guidelines_downloads": {
@@ -83,7 +83,9 @@
             "button_label": "Download PDF",
             "button_style": "button--orange",
             "open_new_tab": true,
-            "force_download": false
+            "force_download": false,
+            "background_color": "",
+            "text_color": ""
           }
         },
         "download_logos": {
@@ -96,7 +98,9 @@
             "button_label": "Download ZIP",
             "button_style": "button--orange",
             "open_new_tab": true,
-            "force_download": false
+            "force_download": false,
+            "background_color": "",
+            "text_color": ""
           }
         },
         "download_dropbox": {
@@ -109,7 +113,9 @@
             "button_label": "Open Dropbox",
             "button_style": "button--deep-water",
             "open_new_tab": true,
-            "force_download": false
+            "force_download": false,
+            "background_color": "",
+            "text_color": ""
           }
         }
       },
@@ -127,7 +133,7 @@
         "text_color": "#373737",
         "card_background_color": "#ffffff",
         "card_text_color": "#373737",
-        "padding_top": 40,
+        "padding_top": 100,
         "padding_bottom": 100
       }
     }
