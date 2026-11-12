@@ -1,0 +1,315 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #BrandGuidelines-{{ section.id }} {
+    {%- if section.settings.background_color != blank -%}
+      background-color: {{ section.settings.background_color }};
+    {%- endif -%}
+    {%- if section.settings.text_color != blank -%}
+      color: {{ section.settings.text_color }};
+    {%- endif -%}
+  }
+
+  #BrandGuidelines-{{ section.id }} .brand-guidelines__card {
+    background-color: {{ section.settings.card_background_color }};
+    color: {{ section.settings.card_text_color }};
+  }
+{%- endstyle -%}
+
+<div class="brand-guidelines-section section-{{ section.id }}-padding" id="BrandGuidelines-{{ section.id }}">
+  <div class="page-width">
+    {%- if section.settings.heading != blank or section.settings.intro != blank -%}
+      <div class="brand-guidelines__header" style="max-width: {{ section.settings.content_max_width }}px;">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="brand-guidelines__heading">{{ section.settings.heading }}</h2>
+        {%- endif -%}
+        {%- if section.settings.intro != blank -%}
+          <div class="brand-guidelines__intro rte">{{ section.settings.intro }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="brand-guidelines__grid">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign card_bg = section.settings.card_background_color
+            assign card_text = section.settings.card_text_color
+            if block.settings.background_color != blank
+              assign card_bg = block.settings.background_color
+            endif
+            if block.settings.text_color != blank
+              assign card_text = block.settings.text_color
+            endif
+          -%}
+          <article
+            class="brand-guidelines__card"
+            style="background-color: {{ card_bg }}; color: {{ card_text }};"
+            {{ block.shopify_attributes }}
+          >
+            {%- if block.settings.preview_image != blank -%}
+              <div class="brand-guidelines__card-media">
+                {{
+                  block.settings.preview_image
+                  | image_url: width: 800
+                  | image_tag:
+                    loading: 'lazy',
+                    alt: block.settings.preview_image.alt | default: block.settings.title,
+                    class: 'brand-guidelines__card-image',
+                    sizes: '(min-width: 990px) 33vw, (min-width: 750px) 50vw, 100vw',
+                    widths: '200, 300, 400, 600, 800'
+                }}
+              </div>
+            {%- endif -%}
+
+            <div class="brand-guidelines__card-body">
+              {%- if block.settings.file_type != blank -%}
+                <span class="brand-guidelines__file-type">{{ block.settings.file_type | escape }}</span>
+              {%- endif -%}
+
+              {%- if block.settings.title != blank -%}
+                <h3 class="brand-guidelines__card-title">{{ block.settings.title }}</h3>
+              {%- endif -%}
+
+              {%- if block.settings.description != blank -%}
+                <div class="brand-guidelines__card-text rte">{{ block.settings.description }}</div>
+              {%- endif -%}
+
+              {%- if block.settings.button_label != blank and block.settings.file_url != blank -%}
+                <div class="brand-guidelines__card-action">
+                  <a
+                    href="{{ block.settings.file_url }}"
+                    class="button {{ block.settings.button_style }}"
+                    {% if block.settings.open_new_tab %}
+                      target="_blank" rel="noopener noreferrer"
+                    {% endif %}
+                    {% if block.settings.force_download %}
+                      download
+                    {% endif %}
+                  >
+                    {{- block.settings.button_label | escape -}}
+                  </a>
+                </div>
+              {%- elsif block.settings.button_label != blank -%}
+                <div class="brand-guidelines__card-action">
+                  <a role="link" aria-disabled="true" class="button {{ block.settings.button_style }}">
+                    {{- block.settings.button_label | escape -}}
+                  </a>
+                </div>
+              {%- endif -%}
+            </div>
+          </article>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand guidelines",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Brand assets"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Download our brand guidelines and assets for approved use. For Dropbox links, use a shared link ending in ?dl=1 for direct download.</p>"
+    },
+    {
+      "type": "range",
+      "id": "content_max_width",
+      "min": 400,
+      "max": 1200,
+      "step": 20,
+      "unit": "px",
+      "label": "Intro max width",
+      "default": 800
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section background",
+      "default": "#F0E7D8"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Section text",
+      "default": "#373737"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card text",
+      "default": "#373737"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "download",
+      "name": "Download item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "preview_image",
+          "label": "Preview image"
+        },
+        {
+          "type": "text",
+          "id": "file_type",
+          "label": "File type label",
+          "default": "PDF",
+          "info": "Shown as a small badge (e.g. PDF, ZIP, AI)"
+        },
+        {
+          "type": "inline_richtext",
+          "id": "title",
+          "label": "Title",
+          "default": "Brand guidelines"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Full brand guidelines including logo usage, colour palette, and typography.</p>"
+        },
+        {
+          "type": "text",
+          "id": "file_url",
+          "label": "Download / Dropbox link",
+          "info": "Paste a Shopify Files CDN URL or Dropbox shared link. For Dropbox direct download, append ?dl=1"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "Button label",
+          "default": "Download"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "Button style",
+          "options": [
+            { "value": "", "label": "Default" },
+            { "value": "button--orange", "label": "Orange" },
+            { "value": "button--white", "label": "White" },
+            { "value": "button--deep-water", "label": "Deep water" },
+            { "value": "button--coastal", "label": "Coastal" },
+            { "value": "button--night-sky", "label": "Night sky" }
+          ],
+          "default": "button--orange"
+        },
+        {
+          "type": "checkbox",
+          "id": "open_new_tab",
+          "label": "Open in new tab",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "force_download",
+          "label": "Force download attribute",
+          "default": false,
+          "info": "Works best with same-origin Shopify Files URLs. Leave off for Dropbox links."
+        },
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Card background override"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Card text override"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand guidelines",
+      "blocks": [
+        {
+          "type": "download",
+          "settings": {
+            "file_type": "PDF",
+            "title": "Brand guidelines",
+            "description": "<p>Full brand guidelines including logo usage, colour palette, and typography.</p>",
+            "button_label": "Download PDF"
+          }
+        },
+        {
+          "type": "download",
+          "settings": {
+            "file_type": "ZIP",
+            "title": "Logo pack",
+            "description": "<p>Primary and secondary logos in PNG, SVG, and EPS formats.</p>",
+            "button_label": "Download ZIP"
+          }
+        },
+        {
+          "type": "download",
+          "settings": {
+            "file_type": "Dropbox",
+            "title": "Full brand folder",
+            "description": "<p>Complete brand asset library hosted on Dropbox.</p>",
+            "button_label": "Open Dropbox"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

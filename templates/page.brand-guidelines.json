@@ -1,0 +1,182 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner_brand_guidelines": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_brand_guidelines": {
+          "type": "heading",
+          "settings": {
+            "heading": "Brand guidelines"
+          }
+        }
+      },
+      "block_order": [
+        "heading_brand_guidelines"
+      ],
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "background_type": "single",
+        "overlay_opacity": 30,
+        "banner_type": "inner-pages",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "transition_type": "fade"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "rich_text_brand_intro": {
+      "type": "rich-text",
+      "blocks": {
+        "title_brand_intro": {
+          "type": "title",
+          "settings": {
+            "title": "Keep it <span class=\"text-bg blue\">on brand.</span>",
+            "title_size": "smaller"
+          }
+        },
+        "textbox_brand_intro": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>Everything you need to represent Long Point Brewing Co. the right way — logos, colours, typography, and usage rules. Download the assets below or open our shared Dropbox folder.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_brand_intro",
+        "textbox_brand_intro"
+      ],
+      "name": "Rich Text",
+      "settings": {
+        "custom_class": "",
+        "content_max_width": 1000,
+        "accent_color": "#f9ad8e",
+        "padding_top": 100,
+        "padding_bottom": 40
+      }
+    },
+    "brand_guidelines_downloads": {
+      "type": "brand-guidelines",
+      "blocks": {
+        "download_guidelines": {
+          "type": "download",
+          "settings": {
+            "file_type": "PDF",
+            "title": "Brand guidelines",
+            "description": "<p>Full brand guidelines including logo usage, colour palette, and typography.</p>",
+            "file_url": "",
+            "button_label": "Download PDF",
+            "button_style": "button--orange",
+            "open_new_tab": true,
+            "force_download": false
+          }
+        },
+        "download_logos": {
+          "type": "download",
+          "settings": {
+            "file_type": "ZIP",
+            "title": "Logo pack",
+            "description": "<p>Primary and secondary logos in PNG, SVG, and EPS formats.</p>",
+            "file_url": "",
+            "button_label": "Download ZIP",
+            "button_style": "button--orange",
+            "open_new_tab": true,
+            "force_download": false
+          }
+        },
+        "download_dropbox": {
+          "type": "download",
+          "settings": {
+            "file_type": "Dropbox",
+            "title": "Full brand folder",
+            "description": "<p>Complete brand asset library hosted on Dropbox.</p>",
+            "file_url": "",
+            "button_label": "Open Dropbox",
+            "button_style": "button--deep-water",
+            "open_new_tab": true,
+            "force_download": false
+          }
+        }
+      },
+      "block_order": [
+        "download_guidelines",
+        "download_logos",
+        "download_dropbox"
+      ],
+      "name": "Brand guidelines",
+      "settings": {
+        "heading": "Download assets",
+        "intro": "<p>Add your Shopify Files or Dropbox links in the theme editor. For Dropbox direct downloads, use a shared link with <strong>?dl=1</strong>.</p>",
+        "content_max_width": 800,
+        "background_color": "#f0e7d8",
+        "text_color": "#373737",
+        "card_background_color": "#ffffff",
+        "card_text_color": "#373737",
+        "padding_top": 40,
+        "padding_bottom": 100
+      }
+    },
+    "call_to_action_brand": {
+      "type": "call-to-action",
+      "blocks": {
+        "title_brand_cta": {
+          "type": "title",
+          "settings": {
+            "title": "Need something else?"
+          }
+        },
+        "textbox_brand_cta": {
+          "type": "textbox",
+          "settings": {
+            "textbox": "<p>If you need custom assets, approvals, or have a partnership request — get in touch.</p>"
+          }
+        },
+        "button_brand_cta": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "shopify://pages/contact",
+            "button_class": "button--white"
+          }
+        }
+      },
+      "block_order": [
+        "title_brand_cta",
+        "textbox_brand_cta",
+        "button_brand_cta"
+      ],
+      "name": "Call to Action",
+      "settings": {
+        "background_color": "",
+        "card_background_color": "#b6dfe9",
+        "background_icons_color": "#f8f5ed",
+        "inner_background_color": "#53bcae",
+        "text_color": "",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    }
+  },
+  "order": [
+    "image_banner_brand_guidelines",
+    "main",
+    "rich_text_brand_intro",
+    "brand_guidelines_downloads",
+    "call_to_action_brand"
+  ]
+}
