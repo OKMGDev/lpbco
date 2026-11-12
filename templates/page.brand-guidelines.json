@@ -130,53 +130,12 @@
         "padding_top": 40,
         "padding_bottom": 100
       }
-    },
-    "call_to_action_brand": {
-      "type": "call-to-action",
-      "blocks": {
-        "title_brand_cta": {
-          "type": "title",
-          "settings": {
-            "title": "Need something else?"
-          }
-        },
-        "textbox_brand_cta": {
-          "type": "textbox",
-          "settings": {
-            "textbox": "<p>If you need custom assets, approvals, or have a partnership request — get in touch.</p>"
-          }
-        },
-        "button_brand_cta": {
-          "type": "button",
-          "settings": {
-            "button_label": "Contact us",
-            "button_link": "shopify://pages/contact",
-            "button_class": "button--white"
-          }
-        }
-      },
-      "block_order": [
-        "title_brand_cta",
-        "textbox_brand_cta",
-        "button_brand_cta"
-      ],
-      "name": "Call to Action",
-      "settings": {
-        "background_color": "",
-        "card_background_color": "#b6dfe9",
-        "background_icons_color": "#f8f5ed",
-        "inner_background_color": "#53bcae",
-        "text_color": "",
-        "padding_top": 0,
-        "padding_bottom": 100
-      }
     }
   },
   "order": [
     "image_banner_brand_guidelines",
     "main",
     "rich_text_brand_intro",
-    "brand_guidelines_downloads",
-    "call_to_action_brand"
+    "brand_guidelines_downloads"
   ]
 }
