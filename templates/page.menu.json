@@ -99,29 +99,29 @@
       ],
       "settings": {}
     },
-    "rich_text_GDqGgR": {
+    "rich_text_BVf7yA": {
       "type": "rich-text",
       "blocks": {
-        "title_AG7DaJ": {
+        "title_6Eh9NH": {
           "type": "title",
           "settings": {
             "title": "",
             "title_size": "bigger"
           }
         },
-        "subtitle_y4gFgY": {
+        "subtitle_Jezr4t": {
           "type": "subtitle",
           "settings": {
             "subtitle": ""
           }
         },
-        "textbox_epEqzG": {
+        "textbox_iMx4hM": {
           "type": "textbox",
           "settings": {
             "textbox": ""
           }
         },
-        "button_PyKEn6": {
+        "button_BDiz3Q": {
           "type": "button",
           "settings": {
             "button_label": "",
@@ -131,19 +131,24 @@
         }
       },
       "block_order": [
-        "title_AG7DaJ",
-        "subtitle_y4gFgY",
-        "textbox_epEqzG",
-        "button_PyKEn6"
+        "title_6Eh9NH",
+        "subtitle_Jezr4t",
+        "textbox_iMx4hM",
+        "button_BDiz3Q"
       ],
       "name": "Rich Text",
       "settings": {
         "custom_class": "",
         "content_max_width": 600,
         "accent_color": "",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 36,
+        "padding_bottom": 36
       }
+    },
+    "blocks_eEDYiG": {
+      "type": "_blocks",
+      "name": "Book a table button",
+      "settings": {}
     },
     "simple_image_ap4ykz": {
       "type": "simple-image",
@@ -185,7 +190,8 @@
     "main",
     "rich_text_AqFdTy",
     "179359672376aaa2da",
-    "rich_text_GDqGgR",
+    "rich_text_BVf7yA",
+    "blocks_eEDYiG",
     "simple_image_ap4ykz",
     "simple_image_X7B3z3",
     "rich_text_TNpbFq"
