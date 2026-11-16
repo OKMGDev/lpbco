@@ -104,52 +104,6 @@
       "name": "Book a table button",
       "settings": {}
     },
-    "rich_text_UmmBFK": {
-      "type": "rich-text",
-      "blocks": {
-        "title_zmjhae": {
-          "type": "title",
-          "settings": {
-            "title": "",
-            "title_size": "bigger"
-          }
-        },
-        "subtitle_HNEaBe": {
-          "type": "subtitle",
-          "settings": {
-            "subtitle": ""
-          }
-        },
-        "textbox_VtcVwE": {
-          "type": "textbox",
-          "settings": {
-            "textbox": ""
-          }
-        },
-        "button_Gtr6tk": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style": "default"
-          }
-        }
-      },
-      "block_order": [
-        "title_zmjhae",
-        "subtitle_HNEaBe",
-        "textbox_VtcVwE",
-        "button_Gtr6tk"
-      ],
-      "name": "Rich Text",
-      "settings": {
-        "custom_class": "",
-        "content_max_width": 600,
-        "accent_color": "",
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "simple_image_ap4ykz": {
       "type": "simple-image",
       "name": "Simple Image",
@@ -191,7 +145,6 @@
     "rich_text_AqFdTy",
     "179359672376aaa2da",
     "blocks_eEDYiG",
-    "rich_text_UmmBFK",
     "simple_image_ap4ykz",
     "simple_image_X7B3z3",
     "rich_text_TNpbFq"
