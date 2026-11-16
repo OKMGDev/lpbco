@@ -79,6 +79,24 @@
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
           }
+        },
+        "leat_unified_loyalty_sdk_product_points_MfdFEQ": {
+          "type": "shopify://apps/leat-unified-loyalty/blocks/sdk-product-points/a4b3d2b7-542d-424e-b7f4-602578988f92",
+          "settings": {
+            "visibility": "always",
+            "text": "",
+            "show_loyalty_link": false,
+            "loyalty_link_text": "Learn more",
+            "loyalty_page_url": "",
+            "font_size": 14,
+            "text_alignment": "left",
+            "text_color": "",
+            "background_color": "",
+            "border_radius": 4,
+            "padding_top": 8,
+            "padding_bottom": 8,
+            "padding_horizontal": 0
+          }
         }
       },
       "block_order": [
@@ -88,7 +106,8 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "buy_buttons"
+        "buy_buttons",
+        "leat_unified_loyalty_sdk_product_points_MfdFEQ"
       ],
       "settings": {
         "enable_sticky_info": false,
