@@ -99,29 +99,34 @@
       ],
       "settings": {}
     },
-    "rich_text_BVf7yA": {
+    "blocks_eEDYiG": {
+      "type": "_blocks",
+      "name": "Book a table button",
+      "settings": {}
+    },
+    "rich_text_UmmBFK": {
       "type": "rich-text",
       "blocks": {
-        "title_6Eh9NH": {
+        "title_zmjhae": {
           "type": "title",
           "settings": {
             "title": "",
             "title_size": "bigger"
           }
         },
-        "subtitle_Jezr4t": {
+        "subtitle_HNEaBe": {
           "type": "subtitle",
           "settings": {
             "subtitle": ""
           }
         },
-        "textbox_iMx4hM": {
+        "textbox_VtcVwE": {
           "type": "textbox",
           "settings": {
             "textbox": ""
           }
         },
-        "button_BDiz3Q": {
+        "button_Gtr6tk": {
           "type": "button",
           "settings": {
             "button_label": "",
@@ -131,10 +136,10 @@
         }
       },
       "block_order": [
-        "title_6Eh9NH",
-        "subtitle_Jezr4t",
-        "textbox_iMx4hM",
-        "button_BDiz3Q"
+        "title_zmjhae",
+        "subtitle_HNEaBe",
+        "textbox_VtcVwE",
+        "button_Gtr6tk"
       ],
       "name": "Rich Text",
       "settings": {
@@ -144,11 +149,6 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
-    },
-    "blocks_eEDYiG": {
-      "type": "_blocks",
-      "name": "Book a table button",
-      "settings": {}
     },
     "simple_image_ap4ykz": {
       "type": "simple-image",
@@ -190,8 +190,8 @@
     "main",
     "rich_text_AqFdTy",
     "179359672376aaa2da",
-    "rich_text_BVf7yA",
     "blocks_eEDYiG",
+    "rich_text_UmmBFK",
     "simple_image_ap4ykz",
     "simple_image_X7B3z3",
     "rich_text_TNpbFq"
