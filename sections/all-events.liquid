@@ -16,7 +16,7 @@
   assign events_metaobject_type = section.settings.metaobject_type | default: 'events'
   assign events_metaobject = shop.metaobjects[events_metaobject_type]
   if events_metaobject != blank
-    assign events = events_metaobject.values
+    assign events = events_metaobject.values | sort: 'start_date'
   else
     assign events = blank
   endif
